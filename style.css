@@ -17,6 +17,133 @@ body {
   color: black;
 }
 
+.loginbtn:hover {
+  opacity: 0.8;
+}
+
+.loginbtn {
+  float: right;
+  color:#333;
+  top: 8px;
+  right: 16px;
+  padding: 6px;
+  margin-right: 450px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.login input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #d8837d;
+  border: none;
+
+}
+
+.LoginHead {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.login .rmb {
+  color: #333;
+}
+
+.login .submit {
+  background: rgb(201, 199, 199);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login .container {
+  padding: 16px;
+}
+
+.login span.psw {
+  float: right;
+  padding-top: 16px;
+  color: #333;
+}
+
+.login .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow:hidden; /* scroll */
+  background-color: rgb(0,0,0); /* blur */
+  background-color: rgba(0,0,0,0.4); /* opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content */
+.login .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 45%; 
+}
+
+/*  Button (x) */
+.login .close {
+  text-align: right;
+  padding-right: 1%;
+  position: relative;
+  z-index: 1000;
+  color:#333;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.login .close:hover, .close:focus {
+  cursor: pointer;
+}
+
+/* Zoom Animation */
+.login .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/*  small screens */
+@media screen and (max-width: 300px) {
+  .login span.psw {
+      display: block;
+      float: none;
+  }
+
+  .login .cancelbtn {
+      width: 100%;
+  }
+}
+
 
 .header #search[type=text] { /* here I used the search ID  with[type=text] meaning the user can input in text  */
   float: right;
