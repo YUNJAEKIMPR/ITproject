@@ -21,11 +21,12 @@
     don't get confuse by class and ID class in css is define as a '.' while ID is '#'.
     Class can be used as names for many elemnents while ID is used for a specific element -->
     <div class="header"> <!-- a div tag is to define a section of the webpage-->
-    <!-- login button -->
+    <!-- login button
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button class="btn btn-primary me-md-2" type="button"><a href="login.html">login</a></button>
         <button class="btn btn-primary" type="button"><a href="register.html">sign in</a></button>
-      </div>
+      </div> -->
+
       <div class="name">
         <a href="WebMain.html"><h1>Cook For You</h1></a> <!--h1 is the biggess out and is often used as a title for the web page, there are 6 hs h1-h6 1 being the largest 
         and 6 smallest -->
@@ -33,7 +34,50 @@
       <div class="searchbox"> <!--this is to create a searchbox allowing the user to type inside-->
         <input id="search" type="text" placeholder="Search...">  <!--placeholder is to allow the input box to have a text inside -->
         <button type="submit" ><i class="fa fa-search"></i></button> <!--button just means button lol and i means icon, whilst fa fa-search is an shortcut of an icon taken from an icon website-->
+        <div><button class="loginbtn" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-sign-in" style="padding-right: 10px;"></i>Login</button></div>
       </div>
+
+      <div class="login">
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php">
+            <span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal">&times;</span>
+            <div class="LoginHead">
+              <h1>Login</h1>
+            </div>
+
+            <script>
+              // get modal
+              var modal = document.getElementById('id01');
+              
+              // close when click outside
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
+            </script>
+
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+      
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+      
+              <button type="submit" class="submit">Login</button>
+              <label class="rmb">
+                <input type="checkbox" checked="checked" name="remember" > Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <br>
       <div class="nav"> <!-- define a navigation bar-->
         <div class="dropdown"> <!-- creates a dropdown button-->
