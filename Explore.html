@@ -1,125 +1,163 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cook For You</title> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--all of this here are links to different style sheets we used link rel href to link them to this wep page, while script is to obtain the java plugins-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cook For You</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--all of this here are links to different style sheets we used link rel href to link them to this wep page, while script is to obtain the java plugins-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <style>
+        #title {
+            display: block;
+            border: padding 100px
+        }
 
+        #short {
+            border: width 100px
+        }
+
+        #long {
+            border: width 100px
+        }
     </style>
 </head>
-  <body>
-    <div class="header"> 
-      <div class="name">
-        <a href="WebMain.html"><h1>Cook For You</h1></a>
-      </div>
-      <div class="searchbox"> 
-        <input id="search" type="text" placeholder="Search...">  
-        <button type="submit" ><i class="fa fa-search"></i></button> 
-      </div>
-      <br>
-      <div class="nav"> 
-        <div class="dropdown"> 
-          <button class="dropbtn"> 
-            <i class="fa fa-bars"></i>
-          </button>
-          <div class="contents"> 
-            <a href="#">Option 1</a> 
-            <a href="#">Option 2</a>
-            <a href="Contact.html">Contact Us</a>
-          </div>
+
+<body>
+    <div class="header">
+        <div class="name">
+            <a href="WebMain.html">
+                <h1>Cook For You</h1>
+            </a>
         </div>
-        <a href="">Ingrediens</a>
-        <a href="Explore.html">Explore</a>
-        <a href="Recipe.html">Recipe</a>
-        <a href="About.html">About us</a>
-      </div>
+        <div class="searchbox">
+            <input id="search" type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <br>
+        <div class="nav">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="contents">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="Contact.html">Contact Us</a>
+                </div>
+            </div>
+            <a href="WebMain.html">Home</a>
+            <a href="">Ingredients</a>
+            <a href="Explore.html">Explore</a>
+            <a href="Recipe.html">Recipe</a>
+            <a href="About.html">About us</a>
+
+        </div>
     </div>
-    <br> 
-    <div class="about us">
-        <h1 item="title";>what are you craving today?</h1>
-        <hr>
-        <p>select your mode</p>
-        <select name="select mode" > 
-            <!-- this should be little emogi later -->
-            <option value="happy mode" selected>
-                very happy
-            </option>
-            <option value="happy">
-                happy
-            </option>
-            <option value="soso">
-                soso
-            </option>
-            <option value="unhappy">
-                unhappy
-            </option>
-            <option value="very unhappy">
-                very unhappy
-            </option>           
-        </select>
-        <p>theme</p>
-        <select name="select occasion">
-            <option value="casual">
-                casual
-            </option>
-            <option value="classic">
-                classic
-            </option>
-            <option value="party">
-                party
-            </option>
-        </select>
-        <p>cuisine</p> 
-        <!-- this question might not need -->
-            <select name="cuisine">
-                <option value="Maxican">
-                    Maxican
-                </option>
-                <option value="Italian">
-                    Italian
-                </option>
-                <option value="Vietnam">
-                    Vietnam
-                </option>
-                <option value="French">
-                    French
-                </option>
-                <option value="international">
-                    international
-                </option>
-            </select>
-        <p>flavor</p>
-        <select name="flavor" multiple>
-            <option value="spicy">
-                spicy
-            </option>
-            <option value="sweet">
-                sweet
-            </option>
-            <option value="sour">
-                sour
-            </option>
-            <option value="fresh">
-                fresh
-            </option>
-            <option value="oily">
-                oily
-            </option>
-        </select>
-        <p>what ingredient do you have?</p> 
-        <!-- this can be textarea or we can make user to select. 
-        Based on the information up there, we can choose some recieps and 
-        ask whether they have thoes kind of ingredients -->
-        <textarea name="ingredient" lows="5" cols="100" placeholder="In my fridge.."></textarea>
-        <button type="submit" ><i class="fa fa-search"></i></button>
+    <br>
+    <!-- title -->
+    <div class="Explore">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>what are you craving today?</h1>
+                    <hr>
+                    <br>
+                    <p>select your mode</p>
+                    <select name="select mode">
+                        <!-- this should be little emogi later -->
+                        <option value="happy mode" selected>
+                            very happy
+                        </option>
+                        <option value="happy">
+                            happy
+                        </option>
+                        <option value="soso">
+                            soso
+                        </option>
+                        <option value="unhappy">
+                            unhappy
+                        </option>
+                        <option value="very unhappy">
+                            very unhappy
+                        </option>
+                    </select>
+                    <br>
+                    <br>
+                    <p>theme</p>
+                    <select name="select occasion">
+                        <option value="casual">
+                            casual
+                        </option>
+                        <option value="classic">
+                            classic
+                        </option>
+                        <option value="party">
+                            party
+                        </option>
+                    </select>
+                    <p>cuisine</p>
+                    <!-- this question might not need -->
+                    <select name="cuisine">
+                        <option value="Maxican">
+                            Maxican
+                        </option>
+                        <option value="Italian">
+                            Italian
+                        </option>
+                        <option value="Vietnam">
+                            Vietnam
+                        </option>
+                        <option value="French">
+                            French
+                        </option>
+                        <option value="international">
+                            international
+                        </option>
+                    </select>
+                    <p>flavor</p>
+                    <select name="flavor" multiple>
+                        <option value="spicy">
+                            spicy
+                        </option>
+                        <option value="sweet">
+                            sweet
+                        </option>
+                        <option value="sour">
+                            sour
+                        </option>
+                        <option value="fresh">
+                            fresh
+                        </option>
+                        <option value="oily">
+                            oily
+                        </option>
+                    </select>
+                    <p>what ingredient do you have?</p>
+                    <!-- this can be textarea or we can make user to select. 
+                    Based on the information up there, we can choose some recieps and 
+                    ask whether they have thoes kind of ingredients -->
+                    <div class="textIp">
+                        <textarea name="ingredient" lows="5" cols="100" placeholder="In my fridge.."></textarea>
+                        <button type="submit"><i class="fa fa-location-arrow"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
