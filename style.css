@@ -175,6 +175,21 @@ body {
   cursor: pointer;
 }
 
+.textIp button{
+  position: absolute;
+  padding: 6px 10px;
+  margin-left: 10px;
+  background: rgb(201, 199, 199);
+  box-shadow: 5px 5px 5px lightgray;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.textIp button:hover {
+  background: rgb(63, 63, 62);
+}
+
 .header .searchbox button:hover {
   background: rgb(63, 63, 62);
 }
