@@ -326,6 +326,19 @@ body {
   opacity: 0.9;
 }
 
+.recip {
+  background-color: rgb(235, 235, 235);
+  box-shadow: 0 10px 15px rgb(65 65 65 / 5%);
+  border: none;
+}
+
+.navbar {
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 5px lightgray;
+  overflow: hidden;
+}
+
 .mySlides .h1 {
   float: left;
 }
