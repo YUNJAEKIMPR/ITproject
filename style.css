@@ -329,7 +329,7 @@ body {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: 0.6s ease;
 }
 
 .active, .dot:hover {
@@ -344,7 +344,7 @@ body {
 .mySlides .topcard {
   margin: 10px 40px 0px 40px;
   background-color: var(--primary-color);
-  box-shadow: 0 10px 15px rgb(65 65 65 / 5%);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   border: none;
   border-radius: 12px;
   transition: 0.3s;
@@ -402,6 +402,7 @@ body {
   background-color: var(--fakeImg);
   width: 100%;
   padding: 20px;
+  box-shadow: 5px 5px 5px var(--tertiary-color)
 }
 
 .footer {
