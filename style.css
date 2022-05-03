@@ -204,7 +204,7 @@ body {
   position: absolute;
   padding: 6px 10px;
   margin-left: 10px;
-  background: var(--primary-color);
+  background: #f1f1f1;
   box-shadow: 5px 5px 5px var(--tertiary-color);
   font-size: 17px;
   border: none;
@@ -353,14 +353,14 @@ body {
 
 .recip {
   background-color: rgb(235, 235, 235);
-  box-shadow: 0 10px 15px rgb(65 65 65 / 5%);
+  box-shadow: 0 10px 15px var(--tertiary-color);
   border: none;
 }
 
 .navbar {
   margin-bottom: 10px;
   background-color: white;
-  box-shadow: 5px 5px 5px lightgray;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   overflow: hidden;
 }
 
@@ -408,6 +408,18 @@ body {
   padding: 10px;
   text-align: center;
   background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.about-us {
+  color: var(--secondary-color);
+}
+
+.contact {
+  color: var(--secondary-color);
+}
+
+.explore {
   color: var(--secondary-color);
 }
 
