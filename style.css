@@ -165,7 +165,7 @@ body {
   padding: 6px;
   width: 4in;
   border: 1px;
-  color: var(--secondary-color);
+  color: black;
   box-shadow: var(--secondary-color);
   position: absolute;
   box-shadow: 5px 5px 5px var(--tertiary-color);
