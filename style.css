@@ -44,6 +44,7 @@ body {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  line-height: 2px;
 }
 
 .join .cancelbtn {
@@ -54,10 +55,11 @@ body {
 
 }
 
-.joinHead {
+.joinHead h1 {
   text-align: center;
-  margin: 6px 0 8px 0;
-  position: relative;
+  margin: 6px 0 4px 0;
+  position: relative; 
+  line-height: 2px;
 }
 
 .join .submit {
@@ -90,7 +92,7 @@ body {
   overflow:hidden; /* scroll */
   background-color: rgb(0,0,0); /* blur */
   background-color: rgba(0,0,0,0.4); /* opacity */
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 /* Modal Content */
