@@ -1,29 +1,31 @@
 /* This is css which is important to html as it gives the web page its look and also behavior*/
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color:rgb(255, 255, 255);
+  background-color:var(--head);
+}
+
+.Gname h1{
+  color: palevioletred;
+}
+
+.Gname:hover {
+  opacity: 0.8;
 }
 
 .header {
   padding: 40px; 
   text-align: left;
-  background:rgb(241, 241, 241);
-  box-shadow: 5px 5px 5px lightgray;
+  background:var(--primary-color);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   background-size: 100px 100px;
 }
 
-.header .name {
-  align-items: center;
-  color: black;
-}
-
-.loginbtn:hover {
+.joinbtn:hover {
   opacity: 0.8;
 }
 
-.loginbtn {
-  float: right;
-  color:#333;
+.joinbtn {
+  float: right; 
   top: 8px;
   right: 16px;
   padding: 6px;
@@ -33,16 +35,16 @@ body {
   
 }
 
-.login input[type=text], input[type=password] {
+.join input[type=text], input[type=password] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 8px 8px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
-.login .cancelbtn {
+.join .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #d8837d;
@@ -50,36 +52,32 @@ body {
 
 }
 
-.LoginHead {
+.joinHead {
   text-align: center;
-  margin: 24px 0 12px 0;
+  margin: 6px 0 8px 0;
   position: relative;
 }
 
-.login .rmb {
-  color: #333;
-}
-
-.login .submit {
+.join .submit {
   background: rgb(201, 199, 199);
-  padding: 14px 20px;
+  padding: 12px 10px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
 }
 
-.login .container {
+.join .container {
   padding: 16px;
 }
 
-.login span.psw {
+.join span.psw {
   float: right;
   padding-top: 16px;
   color: #333;
 }
 
-.login .modal {
+.join .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -94,15 +92,19 @@ body {
 }
 
 /* Modal Content */
-.login .modal-content {
+.join .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: auto auto auto auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 45%; 
+  width: 30%;
+}
+
+.alacc {
+  margin-bottom: -20px;
 }
 
 /*  Button (x) */
-.login .close {
+.join .close {
   text-align: right;
   padding-right: 1%;
   position: relative;
@@ -112,12 +114,12 @@ body {
   font-weight: bold;
 }
 
-.login .close:hover, .close:focus {
+.join .close:hover, .close:focus {
   cursor: pointer;
 }
 
 /* Zoom Animation */
-.login .animate {
+.join .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
 }
@@ -134,78 +136,35 @@ body {
 
 /*  small screens */
 @media screen and (max-width: 300px) {
-  .login span.psw {
+  .join span.psw {
       display: block;
       float: none;
   }
 
-  .login .cancelbtn {
+  .join .cancelbtn {
       width: 100%;
   }
 }
-/* register */
-input[id*="popup"]+label+div{
-  opacity:0;visibility:hidden;transition:all 1s;
-}
-input[id*="popup"]:checked+label+div{
-  opacity:1;visibility:visible;
-}
-input[id*="popup"]+label{
-  display:inline-block;
-  padding:20px;
-  background:gray;
-  color:black;
-  position: relative; left:700px; top:-50px;
-}
-input[id*="popup"]+label+div{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:100;
 
+.join .cancelbtn:hover {
+  opacity: 0.8;
 }
-input[id*="popup"]+label+div>div{
-  position:absolute;
-  top:50%;
-  left: 50%;
-  transform:translate(-50%,-50%);
-  width: 700px;
-  height:600px;
-  background:#fff;
-  padding:20px;
-  z-index:2;
+
+.join .submit:hover {
+  opacity: 0.8;
 }
-input[id*="popup"]+label+div>div>label {
-  position:absolute;
-  top:0%;
-  right:0%;
-  transform:translate(40%,-40%);
-  padding:20px;
-  border-radius:100%;
-  z-index:1;
-}
-input[id*="popup"]+label+div>label{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  /* background:white; */
-  z-index:1;
-}
+
 .header #search[type=text] { /* here I used the search ID  with[type=text] meaning the user can input in text  */
   float: right;
   top: 8px;
-  right: 16px;
+  right: 65px;
   padding: 6px;
   width: 4in;
   border: 1px;
-  color: black;
-  box-shadow: black;
+  color: var(--secondary-color);
+  box-shadow: var(--secondary-color);
   position: absolute;
-  box-shadow: 5px 5px 5px lightgray;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   background-color: white;
   margin-top: 40px;
   margin-right: 75px;
@@ -216,21 +175,37 @@ input[id*="popup"]+label+div>label{
   float: right;
   position: absolute;
   top: 48px;
-  right: 40px;
+  right: 90px;
   padding: 6px 10px;
-  background: rgb(201, 199, 199);
-  box-shadow: 5px 5px 5px lightgray;
+  background: #c9c7c7;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   font-size: 17px;
   border: none;
   cursor: pointer;
+}
+
+.header .searchbox .moon {
+  float: right;
+  position: absolute;
+  background: rgb(201, 199, 199);
+  padding: 5px 3px;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  top: 48px;
+  right: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.moon:hover {
+  opacity: 0.8;
 }
 
 .textIp button{
   position: absolute;
   padding: 6px 10px;
   margin-left: 10px;
-  background: rgb(201, 199, 199);
-  box-shadow: 5px 5px 5px lightgray;
+  background: var(--primary-color);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -245,14 +220,14 @@ input[id*="popup"]+label+div>label{
 }
 
 .nav {
-  background-color: white;
-  box-shadow: 5px 5px 5px lightgray;
+  background-color: var(--head);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
   overflow: hidden;
 }
 
 .nav a {
   float: left;
-  color: black;
+  color: var(--secondary-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -276,9 +251,9 @@ input[id*="popup"]+label+div>label{
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  color: black;
+  color: var(--secondary-color);
   padding: 14px 16px;
-  background-color: white;
+  background-color: var(--head);
   margin: 0;
 }
 
@@ -320,11 +295,11 @@ input[id*="popup"]+label+div>label{
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 48%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: black;
+  color: var(--secondary-color);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -368,12 +343,12 @@ input[id*="popup"]+label+div>label{
 
 .mySlides .topcard {
   margin: 10px 40px 0px 40px;
-  background-color: rgb(235, 235, 235);
+  background-color: var(--primary-color);
   box-shadow: 0 10px 15px rgb(65 65 65 / 5%);
   border: none;
   border-radius: 12px;
   transition: 0.3s;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .recip {
@@ -399,7 +374,7 @@ input[id*="popup"]+label+div>label{
 }
 
 .topcard .card-body {
-  color: black;
+  color: var(--secondary-color);
 }
 
 .topcard:hover{
@@ -414,16 +389,17 @@ input[id*="popup"]+label+div>label{
 .sidebar {
   flex: 30%;
   padding: 50px;
+  color: var(--secondary-color);
 }
 
 .main {   
   flex: 70%;
-  background-color: white;
   padding: 50px;
+  color: var(--secondary-color);
 }
 
 .exampleimg {
-  background-color: rgb(247, 169, 169);
+  background-color: var(--fakeImg);
   width: 100%;
   padding: 20px;
 }
@@ -431,6 +407,24 @@ input[id*="popup"]+label+div>label{
 .footer {
   padding: 10px;
   text-align: center;
-  background: rgb(235, 235, 235);
-  color: black;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Default mode */
+:root {
+  --head: #fff;
+  --primary-color: #f1f1f1;
+  --secondary-color: #1a1a1a;
+  --tertiary-color: #d3d3d3;
+  --fakeImg: #f7a9a9;
+}
+
+/*Dark mode*/
+.dark-theme {
+  --head: #272727;
+  --primary-color: #141414;
+  --secondary-color: #f8f8f8;
+  --tertiary-color: #111111;
+  --fakeImg: #111111;
 }
