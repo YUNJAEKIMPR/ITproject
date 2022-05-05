@@ -20,6 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
     integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
     crossorigin="anonymous"></script>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> -->
   <link rel="stylesheet" href="style.css">
   <style>
     .searchbox {
@@ -57,8 +58,7 @@
       </div>
       <button type="submit"><i class="fa fa-search"></i></button>
       <!--button just means button lol and i means icon, whilst fa fa-search is an shortcut of an icon taken from an icon website-->
-      <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'"><i
-            class="fa fa-sign-in" style="padding-right: 10px;"></i>Join us</button></div>
+      <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join us!</button></div>
     </div>
 
     <div class="join">
@@ -103,7 +103,7 @@
 
             <button type="submit" class="submit">Join now!</button>
             <label class="alacc">
-              <p>Already have an account? <a href="Login.html" style="text-decoration: underline;">Login!</a></p>
+              <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
             </label>
           </div>
 
@@ -119,7 +119,8 @@
       <!-- define a navigation bar-->
       
       <a href="WebMain.html">Home</a>
-      <a href="">Ingredients</a>
+      <a href="Article.html">Table Talk</a>
+      <a href="">Grocery</a>
       <a href="Explore.html">Explore</a>
       <a href="Recipe.html">Recipe</a>
       <a href="About.html">About us</a>
@@ -127,142 +128,38 @@
   </div>
   <br> <!-- br means line break-->
 
-  <div class="slideshow-container">
-    <!-- this is bootstrap, I used it to create a slideshow, it can be a slideshow which change pictures every 3 seconds or the user just presses on the arrow key, here I'm using arrow keys which are defined as previous and next-->
-    <div class="mySlides">
-      <div class="card mb-3 topcard" style="max-width: 4000px;">
-        <!-- class="card" is to create a card in bootstrap while mb-3 is margin 3. A margin defines space around an html element -->
-        <div class="row g-0">
-          <!--when using bootstrap the webpage will be devided into rows and collumn a row will always be defined first before collumn. g-0 is gutters which are gaps between content-->
-          <div class="col-md-4 Image">
-            <!-- col is shortened for collumn and within a web page it is divided into 12 collumns. currently im using 4 collumns for the image-->
-            <img src="\Images\food1.jpg" class="img-fluid rounded-start" style="  height: 100%; width: 100%; ">
-            <!-- to add in image you'll use Img src="image link" and the class I use is bootstrap which allows the image to be responsive and have round coners-->
+  <div class="login">
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                <h1 item="title" ;>Login</h1>
+                <hr>
+                <!-- login form -->
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            
+              </div>
           </div>
-          <div class="col-md-8">
-            <div class="card-body description">
-              <h1>Image 1</h1>
-              <p>blah blah blah</p>
-              <h6 class="card-text"><a href="">More Info</a></h6>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-
-    <div class="mySlides">
-      <div class="card mb-3 topcard" style="max-width: 4000px;">
-        <div class="row g-0">
-          <div class="col-md-4 Image">
-            <img src="\Images\food3.jpg" class="img-fluid rounded-start" style="  height: 100%; width: 100%; ">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h1>Image 2</h1>
-              <p>blah blah blah</p>
-              <h6 class="card-text"><a href="">More Info</a></h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mySlides">
-      <div class="card mb-3 topcard" style="max-width: 4000px;">
-        <div class="row g-0">
-          <div class="col-md-4 Image">
-            <img src="\Images\food3.jpg" class="img-fluid rounded-start" style="  height: 100%; width: 100%; ">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h1>Image 3</h1>
-              <p>blah blah blah</p>
-              <h6 class="card-text"><a href="">More Info</a></h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <!-- this is hyperlink for the arrows and javascript condition if click move to next slide-->
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  </div>
-  <br>
-
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <!-- this is for the dots it shows what slide number the user is on-->
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
+  
 
-  <script>
-    // this is the javascript for the slide show 
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script>
-
-  <br>
-
-  <div class="row">
-    <!-- this is just the content of the webpage-->
-    <div class="sidebar">
-      <h2>Articles</h2>
-      <p>blah</p>
-      <p>blah</p>
-      <p>blah</p>
-      <p>blah</p>
-      <h3>Based on feelings</h3>
-      <p>What do you feel right now?</p>
-      <div class="exampleimg" style="height:100px;">Depressed</div><br>
-      <!-- so i got lazy to find images so I decided to make a class called exampleimg or should I say fake lol-->
-      <div class="exampleimg" style="height:100px;">Sleep deprive</div><br>
-      <div class="exampleimg" style="height:100px;">Wanna get isekaid</div>
-    </div>
-    <div class="main">
-      <h2>What's new today?</h2>
-      <h5>Great breakfast to start the day</h5>
-      <div class="exampleimg" style="height:256px;">mmm mmm mmm sooo good, what? no image just imagine a good food yo
-      </div>
-
-      <br>
-
-      <h5>On the road trip</h5>
-      <div class="exampleimg" style="height:256px;">just bring snack lel</div>
-
-    </div>
-  </div>
-
-  <div class="footer">
-    <h2>Footer</h2>
-  </div>
+ 
 
   <!-- Script for dark theme and icon switch + stay dark or light -->
   <script>
