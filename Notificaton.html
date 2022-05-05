@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cook For You</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .searchbox {
+      position: relative 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="Gname">
+      <a href="WebMain.html">
+        <h1>Cook For You</h1>
+      </a>
+    </div>
+    <div class="searchbox">
+      <input id="search" type="text" placeholder="Search...">
+      <div class="moon">
+        <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+      </div>
+      <button type="submit"><i class="fa fa-search"></i></button>
+      <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'"><i
+            class="fa fa-sign-in" style="padding-right: 10px;"></i>Join us</button></div>
+    </div>
+
+    <div class="join">
+      <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <div class="joinHead">
+            <h1>Sign up</h1>
+          </div>
+
+          <script>
+            // get modal
+            var modal = document.getElementById('id01');
+
+            // close when click outside
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="uname"><b>First name</b></label>
+            <input type="text" placeholder="Enter First Name" name="fname" required>
+
+            <label for="uname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+            <button type="submit" class="submit">Join now!</button>
+            <label class="alacc">
+              <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+    <div class="nav">
+      <!-- define a navigation bar-->
+      <a href="WebMain.html">Home</a>
+      <a href="Article.html">Table Talk</a>
+      <a href="Explore.html">Explore</a>
+      <a href="Recipe.html">Recipe</a>
+      <a href="About.html">About us</a>
+    </div>
+  </div>
+  <br> 
+  <div class="name">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col">
+            <div class="container-fluid main" style="height:100vh;padding-left:0px;">
+        
+                <div class="d-block d-md-none menu">
+        
+                    <div class="bar"></div>
+                
+                </div>
+                
+                <div class="expand-menu nav flex-column">
+                
+                    <a href="Setting.html" class="nav-link active mt-auto"><i class="far fa-user-circle"></i> Profile Setting</a>
+                        <a href="Notificaton.html" class="nav-link"><i class="far fa-bell"></i> Notifications</a>
+                        <a href="Heart.html" class="nav-link"><i class="far fa-file-alt"></i> Heart history</a>
+                        <a href="Bookmark.html" class="nav-link mb-auto"><i class="fas fa-cogs"></i> Bookmark History</a>    
+                
+                </div>
+                
+                <div class="row align-items-center" style="height:100%">
+            
+                <div class="col-md-3 d-none d-md-block" style="height:100%" >
+                
+                    <div class="container-fluid nav sidebar flex-column">
+                    
+                        <a href="profile.html" class="nav-link active mt-auto"><i class="far fa-user-circle"></i> Setting</a>
+                        <a href="Notificaton.html" class="nav-link"><i class="far fa-bell"></i> Notifications</a>
+                        <a href="Heart.html" class="nav-link"><i class="far fa-file-alt"></i> Heart history</a>
+                        <a href="Save.html" class="nav-link mb-auto"><i class="fas fa-cogs"></i> saved recipe</a>
+                    
+                    </div>
+                
+                </div>
+                <div class="col-md-9">
+                    
+                    <div class="container content clear-fix">
+                
+                    <h2 class="mt-5 mb-5">Notifications</h2>
+                    
+                    <div class="row" style="height:100%">
+                    
+                        
+                        <div class="col-md-9">
+                            
+                            <div class="container">
+                   
+                            
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+                    
+                </div>
+            
+            </div>
+            
+        </div>
+        <!-- $(document).ready(function(){
+    
+            $('.menu').on('click', function() {
+                $('.bar').toggleClass('animate');
+                $('.expand-menu').toggleClass('animate');
+                $('.expand-menu .nav-link').toggleClass('animate');
+                setTimeout(function(){
+                    $('.expand-menu .nav-link').toggleClass('animate-show');
+                },500)
+            })
+            
+        }) -->
+        
+        
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
