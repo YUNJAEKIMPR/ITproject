@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cook For You</title>
+  <title>Login</title>
   <!--this is just to set the title of the webpage-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--all of this here are links to different style sheets we used link rel href to link them to this wep page, while script is to obtain the java plugins-->
@@ -21,125 +21,68 @@
     integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
     crossorigin="anonymous"></script>
   <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> -->
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .searchbox {
-      position: relative 100px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">  
 </head>
 
 <body>
-  <!--header for the web
-    note that 'class' is to name the elements of the website
-    don't get confuse by class and ID class in css is define as a '.' while ID is '#'.
-    Class can be used as names for many elemnents while ID is used for a specific element -->
-  <div class="header">
-    <!-- a div tag is to define a section of the webpage-->
-    <!-- login button
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button"><a href="login.html">login</a></button>
-        <button class="btn btn-primary" type="button"><a href="register.html">sign in</a></button>
-      </div> -->
 
-    <div class="Gname">
-      <a href="WebMain.html">
-        <h1>Cook For You</h1>
-      </a>
-      <!--h1 is the biggess out and is often used as a title for the web page, there are 6 hs h1-h6 1 being the largest 
-        and 6 smallest -->
-    </div>
-    <div class="searchbox">
-      <!--this is to create a searchbox allowing the user to type inside-->
-      <input id="search" type="text" placeholder="Search...">
-      <!--placeholder is to allow the input box to have a text inside -->
-      <div class="moon">
-        <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
-      </div>
-      <button type="submit"><i class="fa fa-search"></i></button>
-      <!--button just means button lol and i means icon, whilst fa fa-search is an shortcut of an icon taken from an icon website-->
-      <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join us!</button></div>
-    </div>
-
-    <div class="join">
-      <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <div class="joinHead">
-            <h1>Sign up</h1>
-          </div>
-
-          <script>
-            // get modal
-            var modal = document.getElementById('id01');
-
-            // close when click outside
-            window.onclick = function (event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
+  <div class="login_diplay">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <br>
+            <br> <br>
+            <h3 class="cook4u">Cook For You</h3>
+            <br> 
+            <p class="login_title_text">Let's cook something cool!</p>   
+            <br> <br> 
+            <img class="homecook" src="Images/homecook.jpg" alt="image could not load">
+            <style>
+              .homecook {
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 50%;
+                }
+              .login_diplay{
+                border-style: solid;
+                border-width: thin;
+                text-align: center;
+                background-color: rgb(201, 199, 199) ;
+                height: 100%;
+                width: 50%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                overflow-x: hidden;
+                padding-top: 20px;
               }
-            }
-          </script>
-
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label for="uname"><b>First name</b></label>
-            <input type="text" placeholder="Enter First Name" name="fname" required>
-
-            <label for="uname"><b>Last Name</b></label>
-            <input type="text" placeholder="Enter Last Name" name="lname" required>
-
-            <label for="uname"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <label for="psw"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Confirm Password" name="cpsw" required>
-
-            <button type="submit" class="submit">Join now!</button>
-            <label class="alacc">
-              <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
-            </label>
+              .login_title_text{
+                font-size: 20px;
+              }
+              .cook4u{
+                font-weight: bold;
+              }
+            </style>
           </div>
-
-          <div class="container" style="background-color:#f1f1f1; height: fit-content;">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'"
-              class="cancelbtn">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <br>
-    <div class="nav"> 
-      <!-- define a navigation bar-->
-      
-      <a href="WebMain.html">Home</a>
-      <a href="Article.html">Table Talk</a>
-      <a href="">Grocery</a>
-      <a href="Explore.html">Explore</a>
-      <a href="Recipe.html">Recipe</a>
-      <a href="About.html">About us</a>
+        </div>
     </div>
   </div>
-  <br> <!-- br means line break-->
+
 
   <div class="login">
       <div class="container">
           <div class="row">
               <div class="col">
-                <h1 item="title" ;>Login</h1>
+                <h4 class="login_title">Welcome back!</h4>
+                <br>
                 <hr>
                 <!-- login form -->
                 <form>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -148,10 +91,43 @@
                   <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    <br> <br> <br>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Sign In</button>
+                  <br> <br>
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
                 </form>
-            
+                <style>
+                  .btn.btn-primary{
+                    padding: 12px 100px;
+                    font-size: 14;
+                    color: black;
+                    align-items: center;
+                    left: 50%;
+                    position: absolute;
+                    margin: 0;
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+
+                  }
+                  .login{
+                    border-style: solid;
+                    border-width: thin;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    overflow-x: hidden;
+                    padding-top: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 75%;
+                    transform: translate(-50%, -50%);
+                    height: 60%;
+                  }
+                  .login_title{
+                    text-align: center;
+                  }
+                </style>
               </div>
           </div>
       </div>
@@ -193,7 +169,7 @@
     }
 
   </script>
-
+  
 </body>
 
 </html>
