@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cook For You</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="header"> <!--Webpage header-->
+            <div class="Gname"> <!--Web name-->
+                <a href="Homepage.html" class="text-decoration-none"> <!--Bootstrap class to remove text underline for <a> -->
+                  <h1 class="d-none d-lg-block">Cook For You</h1>
+                </a>
+              </div>
+              <div class="Right"> <!--this is to create a searchbox allowing the user to type inside-->
+                <div class="moon">
+                  <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+                </div>
+                <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join us!</button></div>
+              </div>
+          
+              <div class="join"> <!--create modal which is a pop up box-->
+                <div id="id01" class="modal">
+                  <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                      title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                      <h1>Sign up</h1>
+                    </div>
+          
+                    <script>
+                      // get modal
+                      var modal = document.getElementById('id01');
+          
+                      // close when click outside
+                      window.onclick = function (event) {
+                        if (event.target == modal) {
+                          modal.style.display = "none";
+                        }
+                      }
+                    </script>
+          
+                    <div class="container"> <!-- creates a container sort of like a box for the user to sign up-->
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                      <label for="uname"><b>First name</b></label>
+                      <input type="text" placeholder="Enter First Name" name="fname" required>
+          
+                      <label for="uname"><b>Last Name</b></label>
+                      <input type="text" placeholder="Enter Last Name" name="lname" required>
+          
+                      <label for="uname"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+          
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+          
+                      <label for="psw"><b>Confirm Password</b></label>
+                      <input type="password" placeholder="Confirm Password" name="cpsw" required>
+          
+                      <button type="submit" class="submit">Join now!</button>
+                      <label class="alacc">
+                        <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                      </label>
+                    </div>
+          
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+
+            <br>
+
+            <nav class="navbar navbar-expand-lg navbar-light nav"> <!--navigation bar redesign using bootstrap-->
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Recipes</a>
+                      </li>
+                      <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">about us</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </nav>              
+        </div>
+        <br>
+
+
+        <div class="row">
+            <div class="flex-container">
+                <div class="SideCol">
+                    <div class="contentSide">
+                        <h5 style="text-align: center;">What do you want to cook?</h5>
+                        <div class="form-text" style="text-align: center;">We would like to know more about you</div>
+                        <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <p style="float: left;">How do you feel today?</p>
+                                <select name="select mode" style="float: right;">
+                                    <option>very happy</option>
+                                    <option>happy</option>
+                                    <option>okay</option>
+                                    <option>sad</option>
+                                    <option>depressed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="float: left;">type of food</p>
+                                <select name="select mode" style="float: right;">
+                                    <option>Dropdown button</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="float: left;">cuisine</p>
+                                <select name="select mode" style="float: right;">
+                                    <option>Dropdown button</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="float: left;">flavor</p>
+                                <select name="select mode" style="float: right;">
+                                    <option>Dropdown button</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="float: left;">In a diet?</p>
+                                <div class="form-check form-check-inline" style=" float:right">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">no</label>
+                                  </div>
+                                  <div class="form-check form-check-inline" style="float: right;">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">yes</label>
+                                </div>
+                            </div>
+                            <div class="form-text" style="text-align: center;">Ingredients you already have</div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 style="float: left;" class="card-title">Vegetables</h5>
+                            <div class="logo" style="float: right;" >
+                                <img src="" class="card-img-top" alt="image">
+                            </div>
+
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+            <div class="mainCol">
+                <div class="contentMain">
+                    <h5 style="text-align: center;">Found 215 Recipes</h5>
+                    <div class="form-text" style="text-align: center;">design a comprehensive plan</div>
+                    <br>
+                    <div class="Filter">
+                        <nav class="navbar navbar-expand-lg navbar-light nav">
+                            <div class="container-fluid">
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">test 1</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">test 2</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">test 3</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">test   4</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </nav>
+                    </div>
+                    <br>
+                    <div class="row row-cols-1 row-cols-md-4">
+                        <div class="col mb-4">
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">food 1</h5>
+                              <p class="card-text">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col mb-4">
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">food 2</h5>
+                                <p class="card-text">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col mb-4">
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">food 3</h5>
+                                <p class="card-text">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col mb-4">
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">food 4</h5>
+                                <p class="card-text">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">food 5</h5>
+                              <p class="card-text">Description</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col mb-4">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">food 6</h5>
+                              <p class="card-text">Description</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col mb-4">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">food 7</h5>
+                              <p class="card-text">Description</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col mb-4">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">food 8</h5>
+                              <p class="card-text">Description</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
