@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="text-lowercase">
   <!--header START-->
   <div class="header">
     <!--Webpage header-->
@@ -36,67 +36,51 @@
       <div class="moon">
         <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
       </div>
-      <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join us!</button>
+      <div>
+        <button class="joinbtn" data-bs-toggle="modal" data-bs-target="#sign-up">Join us!</button>
       </div>
     </div>
 
     <div class="join">
       <!--create modal which is a pop up box-->
-      <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <div class="joinHead">
-            <h1>Sign up</h1>
-          </div>
-
-          <script>
-            // get modal
-            var modal = document.getElementById('id01');
-
-            // close when click outside
-            window.onclick = function (event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            }
-          </script>
-
-          <div class="container">
-            <!-- creates a container sort of like a box for the user to sign up-->
-            <div class="Signup" style="box-sizing: border-box !important;">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-
-              <label for="uname"><b>First name</b></label>
-              <input type="text" placeholder="Enter First Name" name="fname" required>
-
-              <label for="uname"><b>Last Name</b></label>
-              <input type="text" placeholder="Enter Last Name" name="lname" required>
-
-              <label for="uname"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-
-              <label for="psw"><b>Confirm Password</b></label>
-              <input type="password" placeholder="Confirm Password" name="cpsw" required>
-
-              <button type="submit" class="submit">Join now!</button>
-              <label class="alacc">
-                <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
-              </label>
+      <div id="sign-up" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="container" style="background-color:#f1f1f1; height: fit-content;">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                class="cancelbtn">Cancel</button>
+            <div class="modal-body">
+              <div class="Signup">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="uname"><b>First name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                <label for="uname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                <button type="submit" class="submit">Join now!</button>
+                <label class="alacc">
+                  <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
-
-
-
-        </form>
+        </div>
       </div>
     </div>
 
@@ -145,131 +129,167 @@
   <!--header START-->
 
   <br>
-  
+
   <!--Grid START-->
-  <div class="grid">
+  <div>
     <section>
-      <aside>
-        <!--The side bar-->
-        <div class="container">
-          <div class="row">
-            <div class="content1">
+      <!--The side bar-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4">
+            <div class="border bg-light rounded">
               <br>
-              <h5 style="text-align:center;">what do you want to cook?</h5>
-              <div class="card form-control mx-auto d-flex"
-                style="width: 18rem; padding-right: 20px; height: 1rem; text-align: center; justify-content: center; background-color: #FFF2CC; border: 1px solid #D6B656;">
+              <h5 class="text-center">what do you want to cook?</h5>
+              <div class="alert alert-warning text-center mx-5" role="alert">
                 let us know more about you
               </div>
-              <br>
-              <br>
-              <div class="Questions">
-                <div class="QP">
-                  <h5>How do you feel today?</h5>
-                  <div class="emojiPick">
-                    <input id="checkbox1" type="checkbox" class="Inp1" />
-                    <label for="checkbox1" class="Lb1"></label>
+              <div class="row">
+                <div class="col-6">
+                  <div class="px-3 text-center">
+                    How do you feel today?
                   </div>
                 </div>
-                <br>
-                <br>
-                <div class="QP">
-                  <h5>type of food</h5>
-                  <div class="emojiPick2">
-                    <input id="checkbox2" type="checkbox" class="Inp2" />
-                    <label for="checkbox2" class="Lb2"></label>
-                  </div>
-                </div>
-                <br>
-                <br>
-                <div class="QP">
-                  <h5>cuisine</h5>
+                <div class="col-6">
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       Dropdown button
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Italian</a></li>
-                      <li><a class="dropdown-item" href="#">Japanese</a></li>
-                      <li><a class="dropdown-item" href="#">American</a></li>
-                      <li><a class="dropdown-item" href="#">Chinese</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </div>
-                </div>
-                <br>
-                <br>
-                <div class="QP">
-                  <h5>flavor</h5>
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown button
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Sweer</a></li>
-                      <li><a class="dropdown-item" href="#">Sour</a></li>
-                      <li><a class="dropdown-item" href="#">Salty</a></li>
-                      <li><a class="dropdown-item" href="#">bitter</a></li>
-                      <li><a class="dropdown-item" href="#">savory</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <br>
-                <br>
-                <div class="QP">
-                  <h5>in a diet?</h5>
-                  <div class="radioBtn">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
-                      <label class="form-check-label" for="inlineRadio1">yes</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
-                      <label class="form-check-label" for="inlineRadio2">no</label>
-                    </div>
-                  </div>
-  
                 </div>
               </div>
-            </div>
-            <div class="content2">
-              <div class="card form-control mx-auto d-flex"
-                style="width: 18rem; padding-right: 20px; height: 1rem; text-align: center; justify-content: center; background-color: #FFF2CC; border: 1px solid #D6B656;">
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <div class="px-3 text-center">
+                    type of food
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <div class="px-3 text-center">
+                    cuisine
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <div class="px-3 text-center">
+                    flavor
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <div class="px-3 text-center">
+                    How do you feel today?
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label" for="inlineRadio1">yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label" for="inlineRadio2">no</label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="alert alert-warning text-center mx-5" role="alert">
                 ingredient that you already have
               </div>
 
-              <br>
               <!--Ingredients card START-->
               <div class="Ingredients">
-                <div class="card" style="width: 93.8%; margin-bottom: 10px;">
+                <div class="card">
                   <div class="card-header">
                     <h1>Ingredients</h1>
                   </div>
-                  <div class="card-body col-12">
+                  <div class="card-body">
                     <div class="row">
-                      <div class="col-sm-4">
-                        <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title">Veggies</h5>
-                            <p class="card-text">With supporting image for additional content. </p>
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault"></label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title">Veggies</h5>
-                            <p class="card-text">With supporting image for additional content. </p>
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault"></label>
-                          </div>
-                        </div>
-                      </div>
                       <div class="col-sm-5">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Veggies</h5>
+                            <p class="card-text">With supporting image for additional content. </p>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Veggies</h5>
+                            <p class="card-text">With supporting image for additional content. </p>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card" style="margin-top:10px">
+                          <div class="card-body">
+                            <h5 class="card-title">Veggies</h5>
+                            <p class="card-text">With supporting image for additional content. </p>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
                         <div class="card" style="margin-top:10px">
                           <div class="card-body">
                             <h5 class="card-title">Veggies</h5>
@@ -289,7 +309,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-4">
                         <div class="card" style="margin-top:10px">
                           <div class="card-body">
                             <h5 class="card-title">Veggies</h5>
@@ -314,15 +334,25 @@
                 </div>
               </div>
               <!--Ingredients card END-->
-
+              <br>
               <!--Meat card START-->
               <div class="Meat">
-                <div class="card" style="width: 93.8%; margin-bottom: 10px;">
+                <div class="card">
                   <div class="card-header">
                     <h1>Meat</h1>
                   </div>
-                  <div class="card-body col-12">
+                  <div class="card-body ">
                     <div class="row">
+                      <div class="col-sm-5">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">meat</h5>
+                            <p class="card-text">With supporting image for additional content. </p>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                        </div>
+                      </div>
                       <div class="col-sm-6">
                         <div class="card">
                           <div class="card-body">
@@ -333,17 +363,27 @@
                           </div>
                         </div>
                       </div>
+                      <div class="col-sm-6">
+                        <div class="card" style="margin-top:10px">
+                          <div class="card-body">
+                            <h5 class="card-title">meat</h5>
+                            <p class="card-text">With supporting image for additional content. </p>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="card" style="margin-top:10px">
+                          <div class="card-body">
+                            <h5 class="card-title">meat</h5>
+                            <p class="card-text">With supporting image for additional content. </p>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                        </div>
+                      </div>
                       <div class="col-sm-4">
-                        <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title">meat</h5>
-                            <p class="card-text">With supporting image for additional content. </p>
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault"></label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-5">
                         <div class="card" style="margin-top:10px">
                           <div class="card-body">
                             <h5 class="card-title">meat</h5>
@@ -363,17 +403,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-5">
-                        <div class="card" style="margin-top:10px">
-                          <div class="card-body">
-                            <h5 class="card-title">meat</h5>
-                            <p class="card-text">With supporting image for additional content. </p>
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault"></label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-5">
+                      <div class="col-sm-4">
                         <div class="card" style="margin-top:10px">
                           <div class="card-body">
                             <h5 class="card-title">meat</h5>
@@ -388,90 +418,295 @@
                 </div>
               </div>
               <!--Meat card END-->
-
+              <br>
+              <div class="button text-center">
+                <a href="#" class="btn btn-primary">Show more</a>
+              </div>
+              <br>
             </div>
+
+
+          </div>
+          <div class="col-8">
+            <!--Content main -->
+            <div class="border bg-light rounded">
+              <br>
+              <h5 style="text-align:center;">Found 215 Recipes</h5>
+              <div class="alert alert-warning text-center mx-5" role="alert">
+                we found something :)
+              </div>
+              <br>
+              <div class="rounded ps-3">
+                <div class="btn-group mr-2  px-2" role="group" aria-label="First group" >
+                  <button type="button" class="btn btn-secondary">Bleh</button>
+                </div>
+                <div class="btn-group mr-2 px-2" role="group" aria-label="Second group">
+                  <button type="button" class="btn btn-secondary">Bleh</button>
+                </div>
+                <div class="btn-group px-2" role="group" aria-label="Third group">
+                  <button type="button" class="btn btn-secondary">Bleh</button>
+                </div>
+                <div class="btn-group px-2" role="group" aria-label="Fourth group">
+                  <button type="button" class="btn btn-secondary">Bleh</button>
+                </div> 
+                <div class="btn-group px-2" role="group" aria-label="Fourth group">
+                  <button type="button" class="btn btn-secondary">Bleh</button>
+                </div>
+              </div>
+              <br>
+              <div class="row pe-4 ps-4">
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row pe-4 ps-4">
+                <div class="col-sm-3 ">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="button text-center">
+                <a href="#" class="btn btn-primary">Show more</a>
+              </div>
+              <br>
+            </div>
+            <br>
+            <!--PERSONAL Suggestion-->
+            <div class="border bg-light rounded">
+              <br>
+              <h5 style="text-align:center;">Personal Suggestion</h5>
+              <br>
+              <div class="row pe-4 ps-4">
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="button text-center">
+                <a href="#" class="btn btn-primary">Show more</a>
+              </div>
+              <br>
+            </div>
+            <br>
+            <!--TOP MATCH-->
+            <!--PERSONAL Suggestion-->
+            <div class="border bg-light rounded">
+              <br>
+              <h5 style="text-align:center;">Top Match (Today)</h5>
+              <br>
+              <div class="row pe-4 ps-4">
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">food</h5>
+                      <p class="card-text">food food food food food food food food food</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <a href="#" class="btn btn-primary">view content</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="button text-center">
+                <a href="#" class="btn btn-primary">Show more</a>
+              </div>
+              <br>
+            </div>
+            <br>
           </div>
         </div>
-      </aside>
-  
-      <div>
-        <div class="container"></div>
       </div>
-      <div> 3</div>
     </section>
   </div>
   <!--Grid END-->
-  
+
   <br>
-  
+
   <!-- Footer START -->
-  <footer class="text-center text-lg-start bg-light text-muted">
-    <!-- Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Social media -->
-
-    <!-- Web Links  -->
-    <section>
-      <div class="container text-center text-md-start mt-2">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Contact
-            </h6>
-            <p><i class="fas fa-home me-3"></i>Address: 702 Nguyen Van Linh District 7, Ho Chi Minh City</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              enquiriesCookForYou@hub.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> (+84) 28 3776 1369</p>
-            <p><i class="fas fa-print me-3"></i> Tel: (+84) 24 3726 1460</p>
-          </div>
-          <!-- Grid column -->
+  <footer class="bg-light overflow-hidden border-top">
+    <div class="row p-3 p-0">
+      <div class="col-6 ">
+        <div>
+          <h6 class="mb-4">Contact us</h6>
+          <p><i class="fas fa-phone mr-3"></i> (+84) 28 3776 1369</p>
+          <p><i class="fas fa-home mr-3"></i> 702 nguyen van linh st, dist 7, hcm</p>
+          <p><i class="fas fa-envelope mr-3"></i> enquiriescookforyou@hub.com</p>
         </div>
-        <!-- Grid row -->
       </div>
-    </section>
-    <!-- Web Links  -->
+      <div class="row">
+        <div class="col-6">
+          <div>
+            <h6 class="mb-4">Follow us</h6>
+            <!-- Facebook -->
+            <a class="btn btn-primary btn-floating border-0 m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
-    
-    <div class="text-end p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2022
-      <a class="text-reset fw-bold" href="#">Cookforyou.com</a>
+            <!-- Twitter -->
+            <a class="btn btn-primary btn-floating border-0 m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-primary btn-floating border-0 m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-primary btn-floating border-0 m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-primary btn-floating border-0 m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn btn-primary btn-floating border-0 m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+  
 
+    <!-- Copyright -->
+    <div class="text-lg-start p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2022:
+      <a class="text-primary text-decoration-none fw-bold" href="#">Cookforyou.com</a>
+    </div>
+    <!-- Copyright -->
   </footer>
   <!-- Footer END -->
 
