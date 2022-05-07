@@ -230,6 +230,10 @@ input[type=password] {
     overflow: hidden;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: var(--secondary-color);
+}
+
 :root {
     /* Default mode */
     --head: #fff;
@@ -239,6 +243,9 @@ input[type=password] {
     --fakeImg: #f7a9a9;
     --Gname: #f78fa7;
     --profileSide: #f7a9a9;
+    --footer1 : #f8f9fa;
+    --cborder : #dee2e6;
+    --head2: #fff;
 }
 
 
@@ -251,5 +258,63 @@ input[type=password] {
     --fakeImg: #111111;
     --Gname: #ffc1cc;
     --profileSide: #1a1a1a;
+    --footer1: #272727;
+    --cborder : #1a1a1a;
+    --head2 : #00000033;
 }
 
+/* bootstrap styling */
+.border {
+    border: 1px solid var(--cborder) !important;
+}
+
+.bg-light {
+    background-color: var(--footer1) !important;
+}
+
+
+.Contact {
+    color: var(--secondary-color) !important;
+}
+
+.Follow h6 {
+    color: var(--secondary-color) !important;
+}
+
+.fbottom {
+    color: var(--secondary-color) !important;
+}
+
+.sidebText {
+    color: var(--secondary-color) !important;
+}
+
+.card {
+    border: 1px solid var(--cborder) !important; 
+}
+
+.card-header {
+    background-color: var(--head) !important;
+}
+
+.cb {
+    background-color: var(--head2) !important;
+}
+
+.Vcb {
+    background-color: var(--head) !important;
+}
+
+.sidebMain {
+    color: var(--secondary-color) !important;
+}
+
+.border-top {
+    border: 1px solid var(--cborder) !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f78fa7;
+    border-color: #f78fa7;
+}
