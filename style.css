@@ -1,0 +1,589 @@
+body {
+    /* This is css which is important to html as it gives the web page its look and also behavior*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--head);
+    transition: 0.3s;
+    height: 100%;
+    text-transform: lowercase;
+}
+
+@media screen and (max-width: 900px) {
+
+    /* variable group name padding */
+    .Gname {
+        padding: 5%;
+    }
+
+}
+
+.Gname a {
+    /* fixed name */
+    color: var(--Gname);
+}
+
+.Gname:hover {
+    opacity: 0.8;
+}
+
+.header {
+    /* header */
+    padding: 40px;
+    text-align: left;
+    background: var(--primary-color);
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    background-size: 100px 100px;
+    transition: 0.3s;
+}
+
+.joinbtn:hover {
+    opacity: 0.8;
+}
+
+.joinbtn {
+    text-transform: lowercase;
+    float: right;
+    top: 8px;
+    right: 16px;
+    padding: 6px;
+    margin-right: 0px;
+    border: none;
+    cursor: pointer;
+}
+
+.join input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0 0 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 2px;
+}
+
+.join .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #d8837d;
+    border: none;
+
+}
+
+.joinHead h1 {
+    text-align: center;
+    margin: 6px 0 4px 0;
+    position: relative;
+    line-height: 2px;
+}
+
+.join .submit {
+    background: rgb(201, 199, 199);
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.join .container {
+    padding: 16px;
+    width: 100%;
+}
+
+.join span.psw {
+    float: right;
+    padding-top: 16px;
+    color: #333;
+}
+
+.join .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* scroll */
+    background-color: rgb(0, 0, 0);
+    /* blur */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity */
+    padding-top: 100px;
+}
+
+.join .modal-content {
+    /* Modal Content */
+    background-color: #fefefe;
+    margin: auto auto auto auto;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.alacc {
+    margin-bottom: -20px;
+}
+
+.join .close {
+    /*  Button (x) */
+    text-align: right;
+    padding-right: 1%;
+    position: relative;
+    z-index: 1000;
+    color: #333;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.join .close:hover,
+.close:focus {
+    cursor: pointer;
+}
+
+/* Zoom Animation */
+.join .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/*  small screens */
+@media screen and (max-width: 300px) {
+    .join span.psw {
+        display: block;
+        float: none;
+    }
+
+    .join .cancelbtn {
+        width: 100%;
+    }
+}
+
+.join .cancelbtn:hover {
+    opacity: 0.8;
+}
+
+.join .submit:hover {
+    opacity: 0.8;
+}
+
+#search[type=text] {
+    /*Search bar */
+    right: 65px;
+    padding: 6px;
+    width: 4in;
+    border: 1px;
+    color: black;
+    background-color: #ececec;
+    transition: 0.3s;
+}
+
+.submit button:hover {
+    opacity: 0.6;
+}
+
+.submit button {
+    /*Search bar submit button */
+    float: right;
+    top: 48px;
+    right: 90px;
+    padding: 6px 10px;
+    background: #c9c7c7;
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.header .Right button {
+    float: right;
+    position: absolute;
+    top: 48px;
+    right: 94px;
+    padding: 6px 10px;
+    background: #c9c7c7;
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header .Right .moon {
+    float: right;
+    position: absolute;
+    background: #c9c7c7;
+    padding: 5px 3px;
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    top: 48px;
+    right: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.moon:hover {
+    opacity: 0.8;
+}
+
+.nav {
+    margin-bottom: 10px;
+    background-color: var(--head);
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    overflow: hidden;
+}
+
+:root {
+    /* Default mode */
+    --head: #fff;
+    --primary-color: #f1f1f1;
+    --secondary-color: #1a1a1a;
+    --tertiary-color: #d3d3d3;
+    --fakeImg: #f7a9a9;
+    --Gname: #f78fa7;
+    --profileSide: #f7a9a9;
+}
+
+
+.dark-theme {
+    /*Dark mode*/
+    --head: #272727;
+    --primary-color: #141414;
+    --secondary-color: #f8f8f8;
+    --tertiary-color: #111111;
+    --fakeImg: #111111;
+    --Gname: #ffc1cc;
+    --profileSide: #1a1a1a;
+}
+
+/* .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.flex-container > div {
+    background-color: var(--primary-color);
+    padding: 50px;
+    margin: 0px 35px 0px;
+    color: var(--secondary-color);
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    height: fit-content;
+}
+
+.SideCol {
+    flex: 25%;  
+    margin-right: 8px !important;
+}
+  
+.mainCol {   
+    flex: 75%;
+    margin-left: 8px !important;
+}
+
+.content h5 {
+    text-align: center;
+}
+
+.filter .nav {
+    background-color: var(--head);
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    overflow: hidden;
+} */
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+.grid section{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    padding-left: 5vh;
+    padding-right: 3vh;
+    grid-gap: 2vh;
+    margin: auto;
+}
+
+.grid section>* {
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+    background-color: var(--primary-color);
+    min-height: 40vh;
+    /* demo purpose*/
+}
+
+aside {
+    grid-row: auto / span 2;
+}
+
+@media (max-width: 768px) {
+    section {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    section>* {
+        grid-row: auto/ span 1;
+        min-height: 25vh;
+        /* demo purpose*/
+    }
+
+    div:nth-child(2) {
+        order: -1;
+    }
+}
+
+/*  IE */
+.grid section {
+    display: -ms-grid;
+    -ms-grid-columns: 3fr 2.5vh 4fr;
+    -ms-grid-rows: auto 2.5vh auto;
+}
+
+aside {
+    -ms-grid-row-start: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+}
+
+div:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+div:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
+@media (max-width: 768px) {
+    section {
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: auto 2.5vh auto 2.5vh auto;
+    }
+
+    section>* {
+        -ms-grid-row-span: 1;
+        min-height: 25vh;
+        /* demo purpose*/
+    }
+
+    aside {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    div:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    div:nth-child(3) {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+}
+
+:root { /*Emoji picker background */
+    --blue: #0074D9;
+    --darkblue: #005FB2;
+}
+
+.QP h5 {
+    padding-left: 150px;
+}
+
+.emojiPick { /* emoji picker Sad/Happy START */
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    top: -45px;
+    right: 220px;
+}
+
+.Inp1[type=checkbox] {
+    display: none;
+}
+
+.Inp1+.Lb1 {
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid var(--darkblue);
+    border-radius: 50%;
+    background: var(--blue);
+    transition: .1s all;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.Inp1+.Lb1:hover {
+    transform: scale(.95);
+}
+
+.Inp1+.Lb1:after {
+    content: "😊";
+}
+
+.Inp1:checked+.Lb1 {
+    background: var(--darkblue);
+    transform: scale(1.1);
+}
+
+.Inp1:checked+.Lb1:hover {
+    background: var(--blue);
+    transform: scale(1.05);
+}
+
+.Inp1:checked+.Lb1:after { /* emoji picker END */
+    content: "😥";
+}
+
+.emojiPick2 { /* emoji Food START */
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    top: -45px;
+    right: 220px;
+}
+
+.Inp2[type=checkbox] {
+    display: none;
+}
+
+.Inp2+.Lb2 {
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid var(--darkblue);
+    border-radius: 50%;
+    background: var(--blue);
+    transition: .1s all;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.Inp2+.Lb2:hover {
+    transform: scale(.95);
+}
+
+.Inp2+.Lb2:after {
+    content: "🍔";
+}
+
+.Inp2:checked+.Lb2 {
+    background: var(--darkblue);
+    transform: scale(1.1);
+}
+
+.Inp2:checked+.Lb2:hover {
+    background: var(--blue);
+    transform: scale(1.05);
+}
+
+.Inp2:checked+.Lb2:after { /* emoji picker END */
+    content: "🥗";
+}
+
+.emojiPick3 { /* emoji Food START */
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    top: -45px;
+    right: 220px;
+}
+
+.Inp3[type=checkbox] {
+    display: none;
+}
+
+.Inp3+.Lb3 {
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid var(--darkblue);
+    border-radius: 50%;
+    background: var(--blue);
+    transition: .1s all;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.Inp3+.Lb3:hover {
+    transform: scale(.95);
+}
+
+.Inp3+.Lb3:after {
+    content: "🇺🇸";
+}
+
+.Inp3:checked+.Lb3 {
+    background: var(--darkblue);
+    transform: scale(1.1);
+}
+
+.Inp3:checked+.Lb3:hover {
+    background: var(--blue);
+    transform: scale(1.05);
+}
+
+.Inp3:checked+.Lb3:after { /* emoji picker END */
+    content: "🥗";
+}
+
+.dropdown {
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    top: -39px;
+    right: 155px;
+}
+
+.radioBtn {
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    top: -32px;
+    right: 175px;
+}
+
