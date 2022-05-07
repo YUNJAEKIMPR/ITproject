@@ -294,3 +294,24 @@ body { /* This is css which is important to html as it gives the web page its lo
     box-shadow: 5px 5px 5px var(--tertiary-color);
     overflow: hidden;
 }
+.rec_title{
+    padding:50px;
+}
+#Ingredients{ 
+    width: 500px;
+    padding: 50px;
+}
+#nutrition{
+    width: 500px;
+    padding : 50px;
+}
+#review{
+    width: 500px;
+    padding : 50px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}

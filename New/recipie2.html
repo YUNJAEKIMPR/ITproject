@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="rec_title">Condensed milk custard filo pie</h1>
+    <br>
+    <img src="https://www.dimitrasdishes.com/wp-content/uploads/2021/01/WEB-HOR-Top-Table-3.jpg">
+    <div class="recipe">
+        <div class="row">
+          <div class="col" id="Ingredients">
+            <h3>ingredients</h3>
+            <br><br>
+            — 100g butter, melted
+            <br><br>
+            — 10 sheets filo pastry
+            <br><br>
+            — 395g can sweetened condensed milk
+            <br><br>
+            — 250ml (1 cup) milk
+            <br><br>
+            — 2 eggs
+            <br><br>
+            — 1 tsp vanilla extract
+            <br><br>
+            — icing sugar, to dust
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <h3>description</h3>
+            <br><br>
+            1. preheat the oven to 180c/160c fan.
+            <br><br>
+            2. brush a 4.5cm-deep, 1.5l (6 cup) baking dish with a little melted butter.
+            <br><br>
+            3. place 1 pastry sheet on a clean work surface.
+            <br><br>
+            4. cover the remaining sheets with a clean, dry tea towel and then a damp tea towel. 
+            <br><br>
+            5. brush the pastry with a little melted butter. 
+            <br><br>
+            6. from 1 short end, drag the pastry until it forms an accordion-like strip about 2cm wide. 
+            <br><br>
+            7. place around the edge of the prepared dish. 
+            <br><br>
+            8. repeat with the remaining pastry sheets, working towards the centre and scrunching slightly to fit as necessary, until the base of the dish is covered. place the dish on a baking tray. 
+            <br><br>
+            9.bake for 20 minutes or until golden and crisp. 
+            <br><br>
+            10.remove from the oven.
+            <br><br>
+            11.whisk the sweetened condensed milk, milk eggs and vanilla in a jug until combined. 
+            <br><br>
+            12.carefully pour mixture all over the pastry. 
+            <br><br>
+            13.bake for 20 minutes or until set. 
+            <br><br>
+            14.set aside for 10 minutes to cool slightly. 
+            <br><br>
+            15.serve warm dusted with icing sugar.
+            
+
+          </div>
+          <div class="col" id="nutrition">
+            <h3>nutrition</h3>
+            <br><br>
+            protein 6.6g
+            <br><br>
+            total fat 14.4g
+            <br><br>
+            cholesterol 0.1g
+            <br><br>
+            carbohydrate total 34.8g
+            <br><br>
+            sugars 24.3g
+            <br><br>
+            dietary fiber 0.4g
+            <br><br>
+            sodium 170.1mg
+            <br><br>
+            calcium 153.1mg
+            <br><br>
+            magnesium 17.6mg
+            <br><br>
+            potassium 214.8mg
+            <br><br>
+            iron 1mg
+            <br><br>
+            zinc 1mg
+            <br><br>
+            phosphorus 160.5mg
+            <br><br>
+            niacin b3 1mg
+            <br><br>
+            folic acid b9 36.2
+
+          </div>
+          <div class="col" id="review">
+              <h3>reviews</h3>
+         
+        </div>
+      </div>
+
+    
+</body>
+
+</html>
