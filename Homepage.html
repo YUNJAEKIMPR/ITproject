@@ -1,1582 +1,1147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Cook For You</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
-        ></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <script
-            src="https://kit.fontawesome.com/f945b90c71.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body class="text-lowercase">
-        <!--header START-->
-        <div class="header">
-            <!--Webpage header-->
-            <div class="Gname">
-                <!--Web name-->
-                <a href="Homepage.html" class="text-decoration-none">
-                    <!--Bootstrap class to remove text underline for <a> -->
-                    <h1 class="d-none d-lg-block">Cook For You</h1>
-                </a>
-            </div>
-            <div class="Right">
-                <!--this is to create a searchbox allowing the user to type inside-->
-                <div class="moon">
-                    <img
-                        src="images/moon.png"
-                        id="icon"
-                        style="width: 30px; height: 30px"
-                        alt="moon"
-                    />
-                </div>
-                <div>
-                    <button
-                        class="joinbtn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#sign-up"
-                    >
-                        Join us!
-                    </button>
-                </div>
-            </div>
-            <div class="join">
-                <!--create modal which is a pop up box-->
-                <div id="sign-up" class="modal fade" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Sign up</h5>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                    aria-label="Close"
-                                ></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="Signup">
-                                    <label for="uname"
-                                        ><strong>Username</strong></label
-                                    >
-                                    <input
-                                        type="text"
-                                        placeholder="Enter Username"
-                                        name="uname"
-                                        required
-                                    />
-                                    <label for="uname"
-                                        ><strong>First name</strong></label
-                                    >
-                                    <input
-                                        type="text"
-                                        placeholder="Enter First Name"
-                                        name="fname"
-                                        required
-                                    />
-                                    <label for="uname"
-                                        ><strong>Last Name</strong></label
-                                    >
-                                    <input
-                                        type="text"
-                                        placeholder="Enter Last Name"
-                                        name="lname"
-                                        required
-                                    />
-                                    <label for="uname"
-                                        ><strong>Email</strong></label
-                                    >
-                                    <input
-                                        type="text"
-                                        placeholder="Enter Email"
-                                        name="email"
-                                        required
-                                    />
-                                    <label for="psw"
-                                        ><strong>Password</strong></label
-                                    >
-                                    <input
-                                        type="password"
-                                        placeholder="Enter Password"
-                                        name="psw"
-                                        required
-                                    />
-                                    <label for="psw"
-                                        ><strong
-                                            >Confirm Password</strong
-                                        ></label
-                                    >
-                                    <input
-                                        type="password"
-                                        placeholder="Confirm Password"
-                                        name="cpsw"
-                                        required
-                                    />
-                                    <button type="submit" class="submit">
-                                        Join now!
-                                    </button>
-                                    <label class="alacc">
-                                        <p>
-                                            Already have an account?
-                                            <a
-                                                href="Login.html"
-                                                style="
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cook For You</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script src="https://kit.fontawesome.com/f945b90c71.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="text-lowercase">
+	<!--header START-->
+	<div class="header">
+		<!--Webpage header-->
+		<div class="Gname">
+			<!--Web name-->
+			<a href="Homepage.html" class="text-decoration-none">
+				<!--Bootstrap class to remove text underline for <a> -->
+				<h1 class="d-none d-lg-block">Cook For You</h1>
+			</a>
+		</div>
+		<div class="Right">
+			<!--this is to create a searchbox allowing the user to type inside-->
+			<div class="moon">
+				<img src="images/moon.png" id="icon" style="width: 30px; height: 30px" alt="moon" />
+			</div>
+			<div>
+				<button class="joinbtn" data-bs-toggle="modal" data-bs-target="#sign-up">
+					Join us!
+				</button>
+			</div>
+		</div>
+		<div class="join">
+			<!--create modal which is a pop up box-->
+			<div id="sign-up" class="modal fade" tabindex="-1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Sign up</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="Signup">
+								<label for="uname"><strong>Username</strong></label>
+								<input type="text" placeholder="Enter Username" name="uname" required />
+								<label for="uname"><strong>First name</strong></label>
+								<input type="text" placeholder="Enter First Name" name="fname" required />
+								<label for="uname"><strong>Last Name</strong></label>
+								<input type="text" placeholder="Enter Last Name" name="lname" required />
+								<label for="uname"><strong>Email</strong></label>
+								<input type="text" placeholder="Enter Email" name="email" required />
+								<label for="psw"><strong>Password</strong></label>
+								<input type="password" placeholder="Enter Password" name="psw" required />
+								<label for="psw"><strong>Confirm Password</strong></label>
+								<input type="password" placeholder="Confirm Password" name="cpsw" required />
+								<button type="submit" class="submit">
+									Join now!
+								</button>
+								<label class="alacc">
+									<p>
+										Already have an account?
+										<a href="Login.html" style="
                                                     text-decoration: underline;
-                                                "
-                                                >Login!</a
-                                            >
-                                        </p>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-secondary"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br />
-            <nav class="navbar navbar-expand-lg navbar-light nav">
-                <!--navigation bar redesign using bootstrap-->
-                <div class="container-fluid">
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#"
-                                    >Grocery</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Recipes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">about us</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input
-                                id="search"
-                                class="form-control me-2"
-                                type="text"
-                                placeholder="Search..."
-                            />
-                            <div class="submit">
-                                <button type="submit">
-                                    <i
-                                        class="fa fa-search"
-                                        aria-hidden="true"
-                                    ></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!--header START-->
-        <br />
-        <!--Grid START-->
-        <div>
-            <section>
-                <!--The side bar-->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="border bg-light rounded sidebText">
-                                <br />
-                                <h5 class="text-center">
-                                    what do you want to cook?
-                                </h5>
-                                <div
-                                    class="alert alert-warning text-center mx-5"
-                                    role="alert"
-                                >
-                                    let us know more about you
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="px-3 text-center">
-                                            How do you feel today?
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                style="width: 160px"
-                                                type="button"
-                                                id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Choose mood
-                                            </button>
-                                            <ul
-                                                class="dropdown-menu"
-                                                aria-labelledby="dropdownMenuButton1"
-                                            >
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >😁 Very Happy</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >😃 Happy</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >😔 Sad</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >😥 Very Sad</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="px-3 text-center">
-                                            type of food
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                style="width: 160px"
-                                                type="button"
-                                                id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Choose type
-                                            </button>
-                                            <ul
-                                                class="dropdown-menu"
-                                                aria-labelledby="dropdownMenuButton1"
-                                            >
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >option 1</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >option 2</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >option 3</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="px-3 text-center">
-                                            cuisine
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                style="width: 160px"
-                                                type="button"
-                                                id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Choose cuisine
-                                            </button>
-                                            <ul
-                                                class="dropdown-menu"
-                                                aria-labelledby="dropdownMenuButton1"
-                                            >
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >🍔 Fast food</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >🥗 Healthy</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >🍨 Dessert</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="px-3 text-center">
-                                            flavor
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                style="width: 160px"
-                                                type="button"
-                                                id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Choose flavor
-                                            </button>
-                                            <ul
-                                                class="dropdown-menu"
-                                                aria-labelledby="dropdownMenuButton1"
-                                            >
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >Sweet</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >Sour</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >Salty</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >Bitter</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        class="dropdown-item"
-                                                        href="#"
-                                                        >Savory</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="px-3 text-center">
-                                            How do you feel today?
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div
-                                            class="form-check form-check-inline"
-                                        >
-                                            <input
-                                                class="form-check-input"
-                                                type="radio"
-                                                name="inlineRadioOptions"
-                                                id="inlineRadio1"
-                                                value="option1"
-                                            />
-                                            <label
-                                                class="form-check-label"
-                                                for="inlineRadio1"
-                                                >yes</label
-                                            >
-                                        </div>
-                                        <div
-                                            class="form-check form-check-inline"
-                                        >
-                                            <input
-                                                class="form-check-input"
-                                                type="radio"
-                                                name="inlineRadioOptions"
-                                                id="inlineRadio2"
-                                                value="option2"
-                                            />
-                                            <label
-                                                class="form-check-label"
-                                                for="inlineRadio2"
-                                                >no</label
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div
-                                    class="alert alert-warning text-center mx-5"
-                                    role="alert"
-                                >
-                                    ingredient that you already have
-                                </div>
-                                <!--Ingredients card START-->
-                                <div class="Ingredients pe-3 ps-3">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h1>Ingredients</h1>
-                                        </div>
-                                        <div class="card-body cb">
-                                            <div class="row">
-                                                <div class="col-sm-5">
-                                                    <div class="card">
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="card">
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                Veggies
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Ingredients card END-->
-                                <br />
-                                <!--Meat card START-->
-                                <div class="Meat pe-3 ps-3">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h1>Meat</h1>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-sm-5">
-                                                    <div class="card">
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="card">
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-5">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div
-                                                        class="card"
-                                                        style="margin-top: 10px"
-                                                    >
-                                                        <div
-                                                            class="card-body Vcb"
-                                                        >
-                                                            <h5
-                                                                class="card-title"
-                                                            >
-                                                                meat
-                                                            </h5>
-                                                            <p
-                                                                class="card-text"
-                                                            >
-                                                                With supporting
-                                                                image for
-                                                                additional
-                                                                content.
-                                                            </p>
-                                                            <input
-                                                                class="form-check-input"
-                                                                type="checkbox"
-                                                                value=""
-                                                                id="flexCheckDefault"
-                                                            />
-                                                            <label
-                                                                class="form-check-label"
-                                                                for="flexCheckDefault"
-                                                            ></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Meat card END-->
-                                <br />
-                                <div class="button text-center">
-                                    <a href="#" class="btn btn-primary"
-                                        >Show more</a
-                                    >
-                                </div>
-                                <br />
-                            </div>
-                        </div>
-                        <!--Content main -->
-                        <div class="col-sm-8">
-                            <div class="border bg-light rounded sidebMain">
-                                <br />
-                                <h5 style="text-align: center">
-                                    Found 215 Recipes
-                                </h5>
-                                <div
-                                    class="alert alert-warning text-center mx-5"
-                                    role="alert"
-                                >
-                                    we found something :)
-                                </div>
-                                <br />
-                                <div class="rounded ps-3">
-                                    <div
-                                        class="btn-group mr-2 px-2"
-                                        role="group"
-                                        aria-label="First group"
-                                    >
-                                        <button
-                                            type="button"
-                                            class="btn btn-secondary"
-                                        >
-                                            Bleh
-                                        </button>
-                                    </div>
-                                    <div
-                                        class="btn-group mr-2 px-2"
-                                        role="group"
-                                        aria-label="Second group"
-                                    >
-                                        <button
-                                            type="button"
-                                            class="btn btn-secondary"
-                                        >
-                                            Bleh
-                                        </button>
-                                    </div>
-                                    <div
-                                        class="btn-group px-2"
-                                        role="group"
-                                        aria-label="Third group"
-                                    >
-                                        <button
-                                            type="button"
-                                            class="btn btn-secondary"
-                                        >
-                                            Bleh
-                                        </button>
-                                    </div>
-                                    <div
-                                        class="btn-group px-2"
-                                        role="group"
-                                        aria-label="Fourth group"
-                                    >
-                                        <button
-                                            type="button"
-                                            class="btn btn-secondary"
-                                        >
-                                            Bleh
-                                        </button>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row pe-4 ps-4 text-dark">
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row pe-4 ps-4 text-dark">
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="button text-center text-dark">
-                                    <a href="#" class="btn btn-primary"
-                                        >Show more</a
-                                    >
-                                </div>
-                                <br />
-                            </div>
-                            <br />
-                            <!--PERSONAL Suggestion-->
-                            <div class="border bg-light rounded sidebMain">
-                                <br />
-                                <h5 style="text-align: center">
-                                    Personal Suggestion
-                                </h5>
-                                <br />
-                                <div class="row pe-4 ps-4 text-dark">
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="button text-center">
-                                    <a href="#" class="btn btn-primary"
-                                        >Show more</a
-                                    >
-                                </div>
-                                <br />
-                            </div>
-                            <br />
-                            <!--TOP MATCH-->
-                            <!--PERSONAL Suggestion-->
-                            <div class="border bg-light rounded sidebMain">
-                                <br />
-                                <h5 style="text-align: center">
-                                    Top Match (Today)
-                                </h5>
-                                <br />
-                                <div class="row pe-4 ps-4 text-dark">
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">food</h5>
-                                                <p class="card-text">
-                                                    food food food food food
-                                                    food food food food
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-muted"
-                                                        >Last updated 3 mins
-                                                        ago</small
-                                                    >
-                                                </p>
-                                                <a
-                                                    href="#"
-                                                    class="btn btn-primary"
-                                                    >view content</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="button text-center">
-                                    <a href="#" class="btn btn-primary"
-                                        >Show more</a
-                                    >
-                                </div>
-                                <br />
-                            </div>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--Grid END-->
-        <br />
-        <!-- Footer START -->
-        <footer class="bg-light overflow-hidden border-top">
-            <div class="row p-3 p-0">
-                <div class="col-12">
-                    <div class="Contact">
-                        <h6 class="mb-4">Contact us</h6>
-                        <p>
-                            <i class="fas fa-phone mr-3" aria-hidden="true"></i>
-                            (+84) 28 3776 1369
-                        </p>
-                        <p>
-                            <i
-                                class="fas fa-envelope mr-3"
-                                aria-hidden="true"
-                            ></i>
-                            enquiriescookforyou@hub.com
-                        </p>
-                        <p>
-                            <i class="fas fa-home mr-3" aria-hidden="true"></i>
-                            702 nguyen van linh st, dist 7, hcm
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="Follow">
-                        <h6 class="mb-4">Follow us</h6>
-                        <!-- Facebook -->
-                        <a
-                            class="btn btn-primary btn-floating border-0"
-                            style="background-color: #3b5998"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-facebook" aria-hidden="true"></i
-                        ></a>
-                        <!-- Twitter -->
-                        <a
-                            class="btn btn-primary btn-floating border-0"
-                            style="background-color: #55acee"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-twitter" aria-hidden="true"></i
-                        ></a>
-                        <!-- Google -->
-                        <a
-                            class="btn btn-primary btn-floating border-0"
-                            style="background-color: #dd4b39"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-google" aria-hidden="true"></i
-                        ></a>
-                        <!-- Instagram -->
-                        <a
-                            class="btn btn-primary btn-floating border-0"
-                            style="background-color: #ac2bac"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-instagram" aria-hidden="true"></i
-                        ></a>
-                        <!-- Linkedin -->
-                        <a
-                            class="btn btn-primary btn-floating border-0"
-                            style="background-color: #0082ca"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-linkedin" aria-hidden="true"></i
-                        ></a>
-                        <!-- Github -->
-                        <a
-                            class="btn btn-primary btn-floating border-0"
-                            style="background-color: #333333"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-github" aria-hidden="true"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="text-lg-start p-3 fbottom"
-                style="background-color: rgba(0, 0, 0, 0.2)"
-            >
-                © 2022:
-                <a class="text-primary text-decoration-none fw-bold" href="#"
-                    >Cookforyou.com</a
-                >
-            </div>
-        </footer>
-        <!-- Footer END -->
-        <script>
-            var icon = document.getElementById("icon");
-            if (localStorage.getItem("theme") == null) {
-                localStorage.setItem("theme", "light");
-            }
-            let localData = localStorage.getItem("theme");
-            if (localData == "light") {
-                icon.src = "images/moon.png";
-                document.body.classList.remove("dark-theme");
-            } else if (localData == "dark") {
-                icon.src = "images/sun.png";
-                document.body.classList.add("dark-theme");
-            }
-            icon.onclick = function () {
-                document.body.classList.toggle("dark-theme");
-                if (document.body.classList.contains("dark-theme")) {
-                    icon.src = "images/sun.png";
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    icon.src = "images/moon.png";
-                    localStorage.setItem("theme", "light");
-                }
-            };
-        </script>
-    </body>
+                                                ">Login!</a>
+									</p>
+								</label>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<nav class="navbar navbar-expand-lg navbar-light nav">
+			<!--navigation bar redesign using bootstrap-->
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">Grocery</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Recipes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">about us</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input id="search" class="form-control me-2" type="text" placeholder="Search..." />
+						<div class="submit">
+							<button type="submit">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!--header START-->
+	<br />
+	<!--Grid START-->
+	<div>
+		<section>
+			<!--The side bar-->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="border bg-light rounded sidebText">
+							<br />
+							<h5 class="text-center">
+								what do you want to cook?
+							</h5>
+							<div class="alert alert-warning text-center mx-5" role="alert">
+								let us know more about you
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<div class="px-3 text-center">
+										How do you feel today?
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" style="width: 160px" type="button"
+											id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+											Choose mood
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+											<li>
+												<a class="dropdown-item" href="#">😁 Very Happy</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">😃 Happy</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">😔 Sad</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">😥 Very Sad</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="row">
+								<div class="col-6">
+									<div class="px-3 text-center">
+										type of food
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" style="width: 160px" type="button"
+											id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+											Choose type
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+											<li>
+												<a class="dropdown-item" href="#">option 1</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">option 2</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">option 3</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="row">
+								<div class="col-6">
+									<div class="px-3 text-center">
+										cuisine
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" style="width: 160px" type="button"
+											id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+											Choose cuisine
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+											<li>
+												<a class="dropdown-item" href="#">🍔 Fast food</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">🥗 Healthy</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">🍨 Dessert</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="row">
+								<div class="col-6">
+									<div class="px-3 text-center">
+										flavor
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" style="width: 160px" type="button"
+											id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+											Choose flavor
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+											<li>
+												<a class="dropdown-item" href="#">Sweet</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">Sour</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">Salty</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">Bitter</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#">Savory</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="row">
+								<div class="col-6">
+									<div class="px-3 text-center">
+										How do you feel today?
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+											value="option1" />
+										<label class="form-check-label" for="inlineRadio1">yes</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+											value="option2" />
+										<label class="form-check-label" for="inlineRadio2">no</label>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="alert alert-warning text-center mx-5" role="alert">
+								ingredient that you already have
+							</div>
+							<!--Ingredients card START-->
+							<div class="Ingredients pe-3 ps-3">
+								<div class="card">
+									<div class="card-header">
+										<h1>Ingredients</h1>
+									</div>
+									<div class="card-body cb">
+										<div class="row">
+											<div class="col-sm-5">
+												<div class="card">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="card">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															Veggies
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Ingredients card END-->
+							<br />
+							<!--Meat card START-->
+							<div class="Meat pe-3 ps-3">
+								<div class="card">
+									<div class="card-header">
+										<h1>Meat</h1>
+									</div>
+									<div class="card-body">
+										<div class="row">
+											<div class="col-sm-5">
+												<div class="card">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="card">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="card" style="margin-top: 10px">
+													<div class="card-body Vcb">
+														<h5 class="card-title">
+															meat
+														</h5>
+														<p class="card-text">
+															With supporting image for additional content.
+														</p>
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+														<label class="form-check-label" for="flexCheckDefault"></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Meat card END-->
+							<br />
+							<div class="button text-center">
+								<a href="#" class="btn btn-primary">Show more</a>
+							</div>
+							<br />
+						</div>
+					</div>
+					<!--Content main -->
+					<div class="col-sm-8">
+						<div class="border bg-light rounded sidebMain">
+							<br />
+							<h5 style="text-align: center">
+								Found 215 Recipes
+							</h5>
+							<div class="alert alert-warning text-center mx-5" role="alert">
+								we found something :)
+							</div>
+							<br />
+							<div class="rounded ps-3">
+								<div class="btn-group mr-2 px-2" role="group" aria-label="First group">
+									<button type="button" class="btn btn-secondary">
+										Bleh
+									</button>
+								</div>
+								<div class="btn-group mr-2 px-2" role="group" aria-label="Second group">
+									<button type="button" class="btn btn-secondary">
+										Bleh
+									</button>
+								</div>
+								<div class="btn-group px-2" role="group" aria-label="Third group">
+									<button type="button" class="btn btn-secondary">
+										Bleh
+									</button>
+								</div>
+								<div class="btn-group px-2" role="group" aria-label="Fourth group">
+									<button type="button" class="btn btn-secondary">
+										Bleh
+									</button>
+								</div>
+							</div>
+							<br />
+							<div class="row pe-4 ps-4 text-dark">
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<button data-bs-toggle="modal" data-bs-target="#view" class="btn btn-primary">
+												view content
+											</button>
+										</div>
+									</div>
+									<!--RECIPE MODAL-->
+									<div class="modal fade" id="view">
+										<div class="modal-dialog modal-xl">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="view">
+														Food <title></title>
+													</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="container-fluid">
+														<!--Left-->
+														<div class="row">
+															<div class="col-sm-8">
+																<div class="row">
+																	<div class="col-sm-6">
+																		<h5>
+																			general
+																		</h5>
+																		<div class="foodescript ps-4">
+																			<h5>
+																				food name
+																			</h5>
+																			<p>
+																				<b>
+																					Description:</b>
+																				blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+																				blah blah blah blah blah blah blah blah
+																			</p>
+																			<p>
+																				<b>Cuisine:</b>
+																				abc
+																			</p>
+																			<p>
+																				<b>
+																					Culture:</b>
+																				xyz
+																			</p>
+																		</div>
+																		<div class="alert alert-warning text-center" role="alert">
+																			Good for people in bad mood (e.g., sad, sorrow, unconfident)
+																		</div>
+																		<div class="ingreps">
+																			<h5>
+																				Ingredients
+																			</h5>
+																			<div class="row">
+																				<div class="col-sm-4 ps-4">
+																					<div class="card">
+																						<div class="card-body">
+																							1
+																						</div>
+																					</div>
+																				</div>
+																				<div class="col-sm-3">
+																					<div class="card">
+																						<div class="card-body">
+																							2
+																						</div>
+																					</div>
+																				</div>
+																				<div class="col-sm-4">
+																					<div class="card">
+																						<div class="card-body">
+																							3
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<br />
+																		<div class="Steps">
+																			<h5>
+																				Steps
+																			</h5>
+																			<div class="position-relative m-4">
+																				<div class="progress" style=" height: 1px; ">
+																					<div class="progress-bar" role="progressbar" style=" width: 50%; "
+																						aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+																				</div>
+																				<button type="button"
+																					class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
+																					style=" width: 2rem; height: 2rem; ">
+																					1
+																				</button>
+																				<button type="button"
+																					class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
+																					style=" width: 2rem; height: 2rem; ">
+																					2
+																				</button>
+																				<button type="button"
+																					class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill"
+																					style=" width: 2rem; height: 2rem; ">
+																					3
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="col-sm-4">
+																		<h5>
+																			Nutrients
+																		</h5>
+																		<div class="nutrients">
+																			<div class="row ps-4">
+																				<div class="col-sm-12">
+																					<div class="card">
+																						<div class="card-body">
+																							1
+																						</div>
+																					</div>
+																					<br />
+																				</div>
+																				<div class="col-sm-12">
+																					<div class="card">
+																						<div class="card-body">
+																							2
+																						</div>
+																					</div>
+																					<br />
+																				</div>
+																				<div class="col-sm-12">
+																					<div class="card">
+																						<div class="card-body">
+																							3
+																						</div>
+																					</div>
+																					<br />
+																				</div>
+																				<div class="col-sm-12">
+																					<div class="card">
+																						<div class="card-body">
+																							4
+																						</div>
+																					</div>
+																					<br />
+																				</div>
+																				<div class="col-sm-12">
+																					<div class="card">
+																						<div class="card-body">
+																							5
+																						</div>
+																					</div>
+																					<br />
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-sm-4">
+																<div class="reviewsOthers">
+																	<h5>
+																		Review
+																	</h5>
+																	<div class="row">
+																		<div class="col-sm-8">
+																			<div class="card">
+																				<div class="card-body">
+																					This is some text within a card body.
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<br />
+																	<div class="row">
+																		<div class="col-sm-8">
+																			<div class="card">
+																				<div class="card-body">
+																					This is some text within a card body.
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+
+																	<br />
+																	<div class="row">
+																		<div class="col-sm-8">
+																			<div class="card">
+																				<div class="card-body">
+																					This is some text within a card body.
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<hr />
+																<div class="type">
+																	<form>
+																		<div class="mb-3">
+																			<label for="recipient-name" class="col-form-label">Stars:</label>
+																			<div class="ratings">
+																				<i class="fa fa-star rating-color" aria-hidden="true"></i>
+																				<i class="fa fa-star rating-color" aria-hidden="true"></i>
+																				<i class="fa fa-star rating-color" aria-hidden="true"></i>
+																				<i class="fa fa-star rating-color" aria-hidden="true"></i>
+																				<i class="fa fa-star" aria-hidden="true"></i>
+																			</div>
+																		</div>
+																		<div class="mb-3">
+																			<label for="message-text" class="col-form-label">Write
+																				Review:</label>
+																			<textarea class="form-control" id="message-text"></textarea>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+														Close
+													</button>
+													<button type="button" class="btn btn-primary">
+														Save changes
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--RECIPE MODAL-->
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="row pe-4 ps-4 text-dark">
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="button text-center text-dark">
+								<a href="#" class="btn btn-primary">Show more</a>
+							</div>
+							<br />
+						</div>
+						<br />
+						<!--PERSONAL Suggestion-->
+						<div class="border bg-light rounded sidebMain">
+							<br />
+							<h5 style="text-align: center">
+								Personal Suggestion
+							</h5>
+							<br />
+							<div class="row pe-4 ps-4 text-dark">
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="button text-center">
+								<a href="#" class="btn btn-primary">Show more</a>
+							</div>
+							<br />
+						</div>
+						<br />
+						<!--TOP MATCH-->
+						<!--PERSONAL Suggestion-->
+						<div class="border bg-light rounded sidebMain">
+							<br />
+							<h5 style="text-align: center">
+								Top Match (Today)
+							</h5>
+							<br />
+							<div class="row pe-4 ps-4 text-dark">
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">food</h5>
+											<p class="card-text">
+												food food food food food
+												food food food food
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins
+													ago</small>
+											</p>
+											<a href="#" class="btn btn-primary">view content</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="button text-center">
+								<a href="#" class="btn btn-primary">Show more</a>
+							</div>
+							<br />
+						</div>
+						<br />
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!--Grid END-->
+	<br />
+	<!-- Footer START -->
+	<footer class="bg-light overflow-hidden border-top">
+		<div class="row p-3 p-0">
+			<div class="col-12">
+				<div class="Contact">
+					<h6 class="mb-4">Contact us</h6>
+					<p>
+						<i class="fas fa-phone mr-3" aria-hidden="true"></i>
+						(+84) 28 3776 1369
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3" aria-hidden="true"></i>
+						enquiriescookforyou@hub.com
+					</p>
+					<p>
+						<i class="fas fa-home mr-3" aria-hidden="true"></i>
+						702 nguyen van linh st, dist 7, hcm
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="Follow">
+					<h6 class="mb-4">Follow us</h6>
+					<!-- Facebook -->
+					<a class="btn btn-primary btn-floating border-0" style="background-color: #3b5998" href="#!" role="button"><i
+							class="fab fa-facebook" aria-hidden="true"></i></a>
+					<!-- Twitter -->
+					<a class="btn btn-primary btn-floating border-0" style="background-color: #55acee" href="#!" role="button"><i
+							class="fab fa-twitter" aria-hidden="true"></i></a>
+					<!-- Google -->
+					<a class="btn btn-primary btn-floating border-0" style="background-color: #dd4b39" href="#!" role="button"><i
+							class="fab fa-google" aria-hidden="true"></i></a>
+					<!-- Instagram -->
+					<a class="btn btn-primary btn-floating border-0" style="background-color: #ac2bac" href="#!" role="button"><i
+							class="fab fa-instagram" aria-hidden="true"></i></a>
+					<!-- Linkedin -->
+					<a class="btn btn-primary btn-floating border-0" style="background-color: #0082ca" href="#!" role="button"><i
+							class="fab fa-linkedin" aria-hidden="true"></i></a>
+					<!-- Github -->
+					<a class="btn btn-primary btn-floating border-0" style="background-color: #333333" href="#!" role="button"><i
+							class="fab fa-github" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="text-lg-start p-3 fbottom" style="background-color: rgba(0, 0, 0, 0.2)">
+			© 2022:
+			<a class="text-primary text-decoration-none fw-bold" href="#">Cookforyou.com</a>
+		</div>
+	</footer>
+	<!-- Footer END -->
+	<script>
+		var icon = document.getElementById("icon");
+		if (localStorage.getItem("theme") == null) {
+			localStorage.setItem("theme", "light");
+		}
+		let localData = localStorage.getItem("theme");
+		if (localData == "light") {
+			icon.src = "images/moon.png";
+			document.body.classList.remove("dark-theme");
+		} else if (localData == "dark") {
+			icon.src = "images/sun.png";
+			document.body.classList.add("dark-theme");
+		}
+		icon.onclick = function () {
+			document.body.classList.toggle("dark-theme");
+			if (document.body.classList.contains("dark-theme")) {
+				icon.src = "images/sun.png";
+				localStorage.setItem("theme", "dark");
+			} else {
+				icon.src = "images/moon.png";
+				localStorage.setItem("theme", "light");
+			}
+		};
+	</script>
+</body>
+
 </html>

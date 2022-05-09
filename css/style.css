@@ -1,361 +1,359 @@
 body {
-    /* This is css which is important to html as it gives the web page its look and also behavior*/
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--head);
-    transition: 0.3s;
-    height: 100%;
+  /* This is css which is important to html as it gives the web page its look and also behavior*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--head);
+  transition: 0.3s;
+  height: 100%;
 }
 
 @media screen and (max-width: 900px) {
-
-    /* variable group name padding */
-    .Gname {
-        padding: 5%;
-    }
-
+  /* variable group name padding */
+  .Gname {
+    padding: 5%;
+  }
 }
 
 .Gname a {
-    /* fixed name */
-    color: var(--Gname);
+  /* fixed name */
+  color: var(--Gname);
 }
 
 .Gname:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .header {
-    /* header */
-    padding: 40px;
-    text-align: left;
-    background: var(--primary-color);
-    box-shadow: 5px 5px 5px var(--tertiary-color);
-    background-size: 100px 100px;
-    transition: 0.3s;
+  /* header */
+  padding: 40px;
+  text-align: left;
+  background: var(--primary-color);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  background-size: 100px 100px;
+  transition: 0.3s;
 }
 
 .joinbtn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .joinbtn {
-    text-transform: lowercase;
-    float: right;
-    top: 8px;
-    right: 16px;
-    padding: 6px;
-    margin-right: 0px;
-    border: none;
-    cursor: pointer;
+  text-transform: lowercase;
+  float: right;
+  top: 8px;
+  right: 16px;
+  padding: 6px;
+  margin-right: 0px;
+  border: none;
+  cursor: pointer;
 }
 
-.join input[type=text],
-input[type=password] {
-    width: 100%;
-    padding: 8px 8px;
-    margin: 8px 0 0 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    line-height: 2px;
+.join input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 8px;
+  margin: 8px 0 0 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  line-height: 2px;
 }
 
 .join .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #d8837d;
-    border: none;
-
+  width: auto;
+  padding: 10px 18px;
+  background-color: #d8837d;
+  border: none;
 }
 
 .joinHead h1 {
-    text-align: center;
-    margin: 6px 0 4px 0;
-    position: relative;
-    line-height: 2px;
+  text-align: center;
+  margin: 6px 0 4px 0;
+  position: relative;
+  line-height: 2px;
 }
 
 .join .submit {
-    background: rgb(201, 199, 199);
-    padding: 12px 10px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  background: rgb(201, 199, 199);
+  padding: 12px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
 .join .container {
-    padding: 16px;
-    width: 100%;
+  padding: 16px;
+  width: 100%;
 }
 
 .join span.psw {
-    float: right;
-    padding-top: 16px;
-    color: #333;
+  float: right;
+  padding-top: 16px;
+  color: #333;
 }
 
 .alacc {
-    margin-bottom: -20px;
+  margin-bottom: -20px;
 }
 
 .join .close {
-    /*  Button (x) */
-    text-align: right;
-    padding-right: 1%;
-    position: relative;
-    z-index: 1000;
-    color: #333;
-    font-size: 35px;
-    font-weight: bold;
+  /*  Button (x) */
+  text-align: right;
+  padding-right: 1%;
+  position: relative;
+  z-index: 1000;
+  color: #333;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .join .close:hover,
 .close:focus {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* Zoom Animation */
 .join .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
-    from {
-        -webkit-transform: scale(0)
-    }
+  from {
+    -webkit-transform: scale(0);
+  }
 
-    to {
-        -webkit-transform: scale(1)
-    }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes animatezoom {
-    from {
-        transform: scale(0)
-    }
+  from {
+    transform: scale(0);
+  }
 
-    to {
-        transform: scale(1)
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
 /*  small screens */
 @media screen and (max-width: 300px) {
-    .join span.psw {
-        display: block;
-        float: none;
-    }
+  .join span.psw {
+    display: block;
+    float: none;
+  }
 
-    .join .cancelbtn {
-        width: 100%;
-    }
+  .join .cancelbtn {
+    width: 100%;
+  }
 }
 
 .join .cancelbtn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .join .submit:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-#search[type=text] {
-    /*Search bar */
-    right: 65px;
-    padding: 6px;
-    width: 4in;
-    border: 1px;
-    color: black;
-    background-color: #ececec;
-    transition: 0.3s;
+#search[type="text"] {
+  /*Search bar */
+  right: 65px;
+  padding: 6px;
+  width: 4in;
+  border: 1px;
+  color: black;
+  background-color: #ececec;
+  transition: 0.3s;
 }
 
 .submit button:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .submit button {
-    /*Search bar submit button */
-    float: right;
-    top: 48px;
-    right: 90px;
-    padding: 6px 10px;
-    background: #c9c7c7;
-    box-shadow: 5px 5px 5px var(--tertiary-color);
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
+  /*Search bar submit button */
+  float: right;
+  top: 48px;
+  right: 90px;
+  padding: 6px 10px;
+  background: #c9c7c7;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
-
 .header .Right button {
-    float: right;
-    position: absolute;
-    top: 48px;
-    right: 94px;
-    padding: 6px 10px;
-    background: #c9c7c7;
-    box-shadow: 5px 5px 5px var(--tertiary-color);
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+  float: right;
+  position: absolute;
+  top: 48px;
+  right: 94px;
+  padding: 6px 10px;
+  background: #c9c7c7;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .header .Right .moon {
-    float: right;
-    position: absolute;
-    background: #c9c7c7;
-    padding: 5px 3px;
-    box-shadow: 5px 5px 5px var(--tertiary-color);
-    top: 48px;
-    right: 40px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+  float: right;
+  position: absolute;
+  background: #c9c7c7;
+  padding: 5px 3px;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  top: 48px;
+  right: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .moon:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .nav {
-    margin-bottom: 10px;
-    background-color: var(--head);
-    box-shadow: 5px 5px 5px var(--tertiary-color);
-    transition: 0s;
-    overflow: hidden;
+  margin-bottom: 10px;
+  background-color: var(--head);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  transition: 0s;
+  overflow: hidden;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 :root {
-    /* Default mode */
-    --head: #fff;
-    --primary-color: #f1f1f1;
-    --secondary-color: #1a1a1a;
-    --tertiary-color: #d3d3d3;
-    --fakeImg: #f7a9a9;
-    --Gname: #f78fa7;
-    --profileSide: #f7a9a9;
-    --footer1: #f8f9fa;
-    --cborder: #dee2e6;
-    --head2: #fff;
+  /* Default mode */
+  --head: #fff;
+  --primary-color: #f1f1f1;
+  --secondary-color: #1a1a1a;
+  --tertiary-color: #d3d3d3;
+  --fakeImg: #f7a9a9;
+  --Gname: #f78fa7;
+  --profileSide: #f7a9a9;
+  --footer1: #f8f9fa;
+  --cborder: #dee2e6;
+  --head2: #fff;
 }
 
-
 .dark-theme {
-    /*Dark mode*/
-    --head: #272727;
-    --primary-color: #141414;
-    --secondary-color: #f8f8f8;
-    --tertiary-color: #111111;
-    --fakeImg: #111111;
-    --Gname: #ffc1cc;
-    --profileSide: #1a1a1a;
-    --footer1: #272727;
-    --cborder: #1a1a1a;
-    --head2: #00000033;
+  /*Dark mode*/
+  --head: #272727;
+  --primary-color: #141414;
+  --secondary-color: #f8f8f8;
+  --tertiary-color: #111111;
+  --fakeImg: #111111;
+  --Gname: #ffc1cc;
+  --profileSide: #1a1a1a;
+  --footer1: #272727;
+  --cborder: #1a1a1a;
+  --head2: #00000033;
 }
 
 /* bootstrap styling */
 .border {
-    border: 1px solid var(--cborder) !important;
+  border: 1px solid var(--cborder) !important;
 }
 
 .bg-light {
-    background-color: var(--footer1) !important;
+  background-color: var(--footer1) !important;
 }
 
-
 .Contact {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .Follow h6 {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .fbottom {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .sidebText {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .card {
-    border: 1px solid var(--cborder) !important;
+  border: 1px solid var(--cborder) !important;
 }
 
 .card-header {
-    background-color: var(--head) !important;
+  background-color: var(--head) !important;
 }
 
 .cb {
-    background-color: var(--head2) !important;
+  background-color: var(--head2) !important;
 }
 
 .Vcb {
-    background-color: var(--head) !important;
+  background-color: var(--head) !important;
 }
 
 .sidebMain {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .border-top {
-    border: 1px solid var(--cborder) !important;
+  border: 1px solid var(--cborder) !important;
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #f78fa7;
-    border-color: #f78fa7;
+  color: #fff;
+  background-color: #f78fa7;
+  border-color: #f78fa7;
 }
 
 .btn-primary:hover {
-    background-color: palevioletred;
-    border-color: #f78fa7;
+  background-color: palevioletred;
+  border-color: #f78fa7;
 }
 
 .login {
-    border-style: solid;
-    border-width: thin;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 25px;
-    padding-bottom: 20px;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    height: 55%;
-    width: 30%;
+  border-style: solid;
+  border-width: thin;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  height: 55%;
+  width: 30%;
 }
 
 .homecook {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .bg-dark {
-    border-style: solid;
-    border-width: thick;
-    border-color: gray !important;
-    text-align: center;
-    background-color: rgb(201, 199, 199) !important;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
+  border-style: solid;
+  border-width: thick;
+  border-color: gray !important;
+  text-align: center;
+  background-color: rgb(201, 199, 199) !important;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.rating-color {
+  color: #fbc634 !important;
 }
