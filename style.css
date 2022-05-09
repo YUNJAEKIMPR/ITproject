@@ -359,3 +359,7 @@ input[type=password] {
     overflow-x: hidden;
     padding-top: 20px;
 }
+
+.rating-color{
+    color:#fbc634 !important;
+}
