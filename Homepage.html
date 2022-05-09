@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,14 +23,8 @@
             src="https://kit.fontawesome.com/f945b90c71.js"
             crossorigin="anonymous"
         ></script>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
         <link rel="stylesheet" href="style.css" />
     </head>
-
     <body class="text-lowercase">
         <!--header START-->
         <div class="header">
@@ -46,9 +40,10 @@
                 <!--this is to create a searchbox allowing the user to type inside-->
                 <div class="moon">
                     <img
-                        src="/Images/moon.png"
+                        src="Images/moon.png"
                         id="icon"
                         style="width: 30px; height: 30px"
+                        alt="moon"
                     />
                 </div>
                 <div>
@@ -61,7 +56,6 @@
                     </button>
                 </div>
             </div>
-
             <div class="join">
                 <!--create modal which is a pop up box-->
                 <div id="sign-up" class="modal fade" tabindex="-1">
@@ -78,48 +72,55 @@
                             </div>
                             <div class="modal-body">
                                 <div class="Signup">
-                                    <label for="uname"><b>Username</b></label>
+                                    <label for="uname"
+                                        ><strong>Username</strong></label
+                                    >
                                     <input
                                         type="text"
                                         placeholder="Enter Username"
                                         name="uname"
                                         required
                                     />
-
-                                    <label for="uname"><b>First name</b></label>
+                                    <label for="uname"
+                                        ><strong>First name</strong></label
+                                    >
                                     <input
                                         type="text"
                                         placeholder="Enter First Name"
                                         name="fname"
                                         required
                                     />
-
-                                    <label for="uname"><b>Last Name</b></label>
+                                    <label for="uname"
+                                        ><strong>Last Name</strong></label
+                                    >
                                     <input
                                         type="text"
                                         placeholder="Enter Last Name"
                                         name="lname"
                                         required
                                     />
-
-                                    <label for="uname"><b>Email</b></label>
+                                    <label for="uname"
+                                        ><strong>Email</strong></label
+                                    >
                                     <input
                                         type="text"
                                         placeholder="Enter Email"
                                         name="email"
                                         required
                                     />
-
-                                    <label for="psw"><b>Password</b></label>
+                                    <label for="psw"
+                                        ><strong>Password</strong></label
+                                    >
                                     <input
                                         type="password"
                                         placeholder="Enter Password"
                                         name="psw"
                                         required
                                     />
-
                                     <label for="psw"
-                                        ><b>Confirm Password</b></label
+                                        ><strong
+                                            >Confirm Password</strong
+                                        ></label
                                     >
                                     <input
                                         type="password"
@@ -127,7 +128,6 @@
                                         name="cpsw"
                                         required
                                     />
-
                                     <button type="submit" class="submit">
                                         Join now!
                                     </button>
@@ -135,7 +135,7 @@
                                         <p>
                                             Already have an account?
                                             <a
-                                                href="./Login.html"
+                                                href="Login.html"
                                                 style="
                                                     text-decoration: underline;
                                                 "
@@ -158,9 +158,7 @@
                     </div>
                 </div>
             </div>
-
             <br />
-
             <nav class="navbar navbar-expand-lg navbar-light nav">
                 <!--navigation bar redesign using bootstrap-->
                 <div class="container-fluid">
@@ -188,17 +186,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Recipes</a>
                             </li>
-                            <!-- <li class="nav-item dropdown"> This is the drop down menu
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="#">about us</a>
                             </li>
@@ -212,7 +199,10 @@
                             />
                             <div class="submit">
                                 <button type="submit">
-                                    <i class="fa fa-search"></i>
+                                    <i
+                                        class="fa fa-search"
+                                        aria-hidden="true"
+                                    ></i>
                                 </button>
                             </div>
                         </form>
@@ -221,9 +211,7 @@
             </nav>
         </div>
         <!--header START-->
-
         <br />
-
         <!--Grid START-->
         <div>
             <section>
@@ -503,7 +491,6 @@
                                 >
                                     ingredient that you already have
                                 </div>
-
                                 <!--Ingredients card START-->
                                 <div class="Ingredients pe-3 ps-3">
                                     <div class="card">
@@ -1004,7 +991,6 @@
                                 <br />
                             </div>
                         </div>
-
                         <!--Content main -->
                         <div class="col-sm-8">
                             <div class="border bg-light rounded sidebMain">
@@ -1479,9 +1465,7 @@
             </section>
         </div>
         <!--Grid END-->
-
         <br />
-
         <!-- Footer START -->
         <footer class="bg-light overflow-hidden border-top">
             <div class="row p-3 p-0">
@@ -1489,15 +1473,19 @@
                     <div class="Contact">
                         <h6 class="mb-4">Contact us</h6>
                         <p>
-                            <i class="fas fa-phone mr-3"></i> (+84) 28 3776 1369
+                            <i class="fas fa-phone mr-3" aria-hidden="true"></i>
+                            (+84) 28 3776 1369
                         </p>
                         <p>
-                            <i class="fas fa-envelope mr-3"></i>
+                            <i
+                                class="fas fa-envelope mr-3"
+                                aria-hidden="true"
+                            ></i>
                             enquiriescookforyou@hub.com
                         </p>
                         <p>
-                            <i class="fas fa-home mr-3"></i> 702 nguyen van linh
-                            st, dist 7, hcm
+                            <i class="fas fa-home mr-3" aria-hidden="true"></i>
+                            702 nguyen van linh st, dist 7, hcm
                         </p>
                     </div>
                 </div>
@@ -1510,43 +1498,39 @@
                             style="background-color: #3b5998"
                             href="#!"
                             role="button"
-                            ><i class="fab fa-facebook"></i
+                            ><i class="fab fa-facebook" aria-hidden="true"></i
                         ></a>
-
                         <!-- Twitter -->
                         <a
                             class="btn btn-primary btn-floating border-0"
                             style="background-color: #55acee"
                             href="#!"
                             role="button"
-                            ><i class="fab fa-twitter"></i
+                            ><i class="fab fa-twitter" aria-hidden="true"></i
                         ></a>
-
                         <!-- Google -->
                         <a
                             class="btn btn-primary btn-floating border-0"
                             style="background-color: #dd4b39"
                             href="#!"
                             role="button"
-                            ><i class="fab fa-google"></i
+                            ><i class="fab fa-google" aria-hidden="true"></i
                         ></a>
-
                         <!-- Instagram -->
                         <a
                             class="btn btn-primary btn-floating border-0"
                             style="background-color: #ac2bac"
                             href="#!"
                             role="button"
-                            ><i class="fab fa-instagram"></i
+                            ><i class="fab fa-instagram" aria-hidden="true"></i
                         ></a>
-
                         <!-- Linkedin -->
                         <a
                             class="btn btn-primary btn-floating border-0"
                             style="background-color: #0082ca"
                             href="#!"
                             role="button"
-                            ><i class="fab fa-linkedin"></i
+                            ><i class="fab fa-linkedin" aria-hidden="true"></i
                         ></a>
                         <!-- Github -->
                         <a
@@ -1554,12 +1538,11 @@
                             style="background-color: #333333"
                             href="#!"
                             role="button"
-                            ><i class="fab fa-github"></i
+                            ><i class="fab fa-github" aria-hidden="true"></i
                         ></a>
                     </div>
                 </div>
             </div>
-
             <div
                 class="text-lg-start p-3 fbottom"
                 style="background-color: rgba(0, 0, 0, 0.2)"
@@ -1571,16 +1554,12 @@
             </div>
         </footer>
         <!-- Footer END -->
-
         <script>
             var icon = document.getElementById("icon");
-
             if (localStorage.getItem("theme") == null) {
                 localStorage.setItem("theme", "light");
             }
-
             let localData = localStorage.getItem("theme");
-
             if (localData == "light") {
                 icon.src = "Images/moon.png";
                 document.body.classList.remove("dark-theme");
@@ -1588,11 +1567,10 @@
                 icon.src = "Images/sun.png";
                 document.body.classList.add("dark-theme");
             }
-
             icon.onclick = function () {
                 document.body.classList.toggle("dark-theme");
                 if (document.body.classList.contains("dark-theme")) {
-                    icon.src = "/Images/sun.png";
+                    icon.src = "Images/sun.png";
                     localStorage.setItem("theme", "dark");
                 } else {
                     icon.src = "Images/moon.png";
