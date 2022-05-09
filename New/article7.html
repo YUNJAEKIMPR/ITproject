@@ -1,0 +1,182 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="article">what does the calorie labeling law mean for people with eating disorders?</h1>
+    <div class="article"> 
+        on 2 may 2022
+        <br>
+        by abi sritharan
+        <br>
+    </div>
+    <div class="article"> 
+        <br>
+        the new calorie labeling legislation in england – aimed at tackling the obesity crisis – has been welcomed by many, but does it also carry a cause for concern? new food’s editorial assistant, abi sritharan, finds out.
+        <br>
+    </div>
+    <br>
+    <img class="article" src="https://res.edu.vn/wp-content/uploads/2021/12/get-the-right-food-to-stay-slim-res-edu-1.png" width="500px" height="500px">
+    <div class="article">
+        <div class="row">
+          <div class="col" id="article">
+            new calorie labeling regulations came into effect in england this month (april 2022), meaning many food and hospitality businesses will be required to serve customers something extra with their dishes: calorie information.
+            <h5><strong>what does the calorie labeling rules mean?
+            </strong></h5>
+            <br>
+            the calorie labeling (out of home sector) (england) regulations 2021 will require food businesses with more than 250 employees to provide calorie information on physical menus, online menus, food delivery platforms and/or food labels. in line with the calorie labeling regulations, businesses will be required to include the energy content of the food in kilocalories (kcal), reference the size of the portion that the calorie information relates to, and include the statement: ‘adults need around 2,000 kcals a day’.
+            <br>
+            <br>
+            “the legislation is part of the government’s strategy to tackle obesity and applies to all businesses in england that have more than 250 employees, but while it is aimed at larger businesses, smaller food businesses are also being encouraged to adopt voluntary calorie labeling,” said fleur key, the company nutritionist at brakes, a wholesale food service supplier in the uk.
+            <br>
+            <br>
+            the uk government states that “the legislation, which forms part of the government’s strategy to tackle obesity, aims to ensure people can make more informed, healthier choices when it comes to eating food out or ordering takeaways. displaying calorie information may also encourage businesses to provide lower calorie options for their customers”.
+            <br>
+            <br>
+            “it is crucial that we all have access to the information we need to maintain a healthier weight, and this starts with knowing how calorific our food is,” public health minister, maggie throup, noted. “we are used to knowing this when we are shopping in the supermarket, but this isn’t the case when we eat out or get a takeaway. as part of our efforts to tackle disparities and level up the nation’s health, these measures are an important building block to making it as easy as possible for people to make healthier food choices.”
+            <br>
+            <br>
+            in fact, on average we consume between a fifth and a quarter of our calories eating out or on the go, key informed new food. “this can sometimes make it difficult to monitor the calories that we’re eating,” she explained.   
+            <br>
+            <br>
+            “tackling this health crisis is vital, so the government’s commitment to make large takeaway, café and restaurant chains calorie-label the food they sell is a welcome move towards reducing the rising levels of obesity in the uk,” added bridget turner, director of policy, campaigns and improvement at diabetes uk.
+        </div>
+      </div>
+</body>
+
