@@ -1,0 +1,210 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="article">should you try the keto diet?</h1>
+    <div class="article"> 
+        on august 31, 2020
+        <br>
+        Harvard Medical School
+        <br>
+    </div>
+    <img class="article" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5287/b55ad7bb-6fab-42c9-a6d1-c4f9a53536cc.jpg" width="600px" height="600px">
+    <div class="article">
+        <div class="row">
+          <div class="col" id="article">
+            <br>
+             it's advertised as a weight-loss wonder, but this eating plan is actually a medical diet that comes with serious risks.
+             in the world of weight-loss diets, low-carbohydrate, high-protein eating plans often grab attention. the paleo, south beach, and atkins diets all fit into that category. they are sometimes referred to as ketogenic or "keto" diets.
+            <br>
+             but a true ketogenic diet is different. unlike other low-carb diets, which focus on protein, a keto plan centers on fat, which supplies as much as 90% of daily calories. and it's not the type of diet to try as an experiment.
+            <br>
+             "the keto diet is primarily used to help reduce the frequency of epileptic seizures in children. while it also has been tried for weight loss, only short-term results have been studied, and the results have been mixed. we don't know if it works in the long term, nor whether it's safe," warns registered dietitian kathy mcmanus, director of the department of nutrition at harvard-affiliated brigham and women's hospital.
+            <br>
+            <br>
+            <h5><strong>how does the keto diet work?</strong></h5>
+            <br>
+             here are the basics of keto: the diet aims to force your body into using a different type of fuel. instead of relying on sugar (glucose) that comes from carbohydrates (such as grains, legumes, vegetables, and fruits), the keto diet relies on ketone bodies, a type of fuel that the liver produces from stored fat.
+            <br>
+            burning fat seems like an ideal way to lose pounds. but getting the liver to make ketone bodies is tricky:
+            <br>
+            <p>
+                - it requires that you deprive yourself of carbohydrates, fewer than 20 to 50 grams of carbs per day (keep in mind that a medium-sized banana has about 27 grams of carbs).
+            </p>
+            <p>
+                - it typically takes a few days to reach a state of ketosis.   
+            </p>
+            <p>
+                - eating too much protein can interfere with ketosis.  
+            </p>
+            <br>
+            <h5><strong>what do you eat?</strong></h5>
+            <br>
+            because the keto diet has such a high fat requirement, followers must eat fat at each meal. in a daily 2,000-calorie diet, that might look like 165 grams of fat, 40 grams of carbs, and 75 grams of protein. however, the exact ratio depends on your particular needs.
+            <br>
+            some healthy unsaturated fats are allowed on the keto diet — like nuts (almonds, walnuts), seeds, avocados, tofu, and olive oil. but saturated fats from oils (palm, coconut), lard, butter, and cocoa butter are encouraged in high amounts.
+            <br>
+            protein is part of the keto diet, but it doesn't typically discriminate between lean protein foods and protein sources high in saturated fat such as beef, pork, and bacon.
+            <br>
+            what about fruits and vegetables? all fruits are rich in carbs, but you can have certain fruits (usually berries) in small portions. vegetables (also rich in carbs) are restricted to leafy greens (such as kale, swiss chard, spinach), cauliflower, broccoli, brussels sprouts, asparagus, bell peppers, onions, garlic, mushrooms, cucumber, celery, and summer squashes. a cup of chopped broccoli has about six carbs.
+            <br>
+            <br>
+            <h5><strong>keto diet risks</strong></h5>
+            <br>
+            a ketogenic diet has numerous risks. top of the list: it's high in saturated fat. mcmanus recommends that you keep saturated fats to no more than 7% of your daily calories because of the link to heart disease. and indeed, the keto diet is associated with an increase in "bad" ldl cholesterol, which is also linked to heart disease. other potential keto risks include these:
+            <br>
+            nutrient deficiency. "if you're not eating a wide variety of vegetables, fruits, and grains, you may be at risk for deficiencies in micronutrients, including selenium, magnesium, phosphorus, and vitamins b and c," mcmanus says.
+            <br>
+            liver problems. with so much fat to metabolize, the diet could make any existing liver conditions worse.
+            <br>
+            kidney problems. the kidneys help metabolize protein, and mcmanus says the keto diet may overload them. (the current recommended intake for protein averages 46 grams per day for women, and 56 grams for men).
+            <br>
+            constipation. the keto diet is low in fibrous foods like grains and legumes.
+            <br>
+            fuzzy thinking and mood swings. "the brain needs sugar from healthy carbohydrates to function. low-carb diets may cause confusion and irritability," mcmanus says. thoset risks add up — so make sure that you talk to a doctor and a registered dietitian before ever attempting a ketogenic diet.
+            <br>
+            <br>
+            <h5><strong>what about the other diets?</strong></h5>
+            <br>
+            the popular low-carb diets (such as atkinsa or paleo) modify a true keto diet. but they come with the same risks if you overdo it on fats and proteins and lay off the carbs. so why do people follow diets? "they're everywhere, and people hear anecdotally that they work," mcmanus says. theories about short-term low-carb diet success include lower appetite because fat burns slower than carbs. "but again, we don't know about the long term," she says. "and eating a restrictive diet, no matter what the plan, is difficult to sustain. once you resume a normal diet, the weight will likely return."
+          </div>
+      </div>
+</body>
+

@@ -1,0 +1,462 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="rec_title">Cookies & Cream Puff </h1>
+    <br>
+    <img src="https://cdn.shopify.com/s/files/1/1645/7877/products/Oreo-Cream-Puff-1_1080x.JPG?v=1585088314">
+    <div class="recipe">
+        <div class="row">
+          <div class="col" id="Ingredients">
+            <h3>ingredients</h3>
+            <br><br>
+            — 25 chocolate sandwich cookies
+            <br><br>
+            — 2 egg yolks
+            <br><br>
+            — 2 cups half & half(480 ml)
+            <br><br>
+            — ¼ cup granulated sugar(50 g)
+            <br><br>
+            — ¼ cup cornstarch(30 g)
+            <br><br>
+            — 1 cup water(240 ml)
+            <br><br>
+            — 8 tablespoons butter
+            <br><br>
+            — ½ cup flour(60 g)
+            <br><br>
+            — 4 eggs
+
+            
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <h3>description</h3>
+            <br><br>
+            1. preheat oven to 425°f (220°c).
+            <br><br>
+            2. using a knife, separate the cream from the cookies, and place them in two separate bowls.
+            <br><br>
+            3. crush cookies in a blender or a food processor until fine. set aside.
+            <br><br>
+            4. in a pot over low heat, combine egg yolks, half & half, sugar, and cornstarch. turn the heat up to medium-high, whisking constantly to prevent any lumps. once the mixture starts to thicken, add in half of the cookie cream, stirring until smooth.
+            <br><br>
+            5. transfer the cream mixture into a bowl, covering the top with plastic wrap and pressing the wrap down onto the surface of the cream to prevent a skin from forming. chill.
+            <br><br>
+            6. in a pot, combine the water and butter, bringing it to a boil. add the flour and ½ cup (40 grams) of the crushed cookie mixture, stirring until the dough comes together in a ball. remove from heat.
+            <br><br>
+            7. add in the eggs one at a time, stirring until the dough becomes a paste. transfer the dough into a piping bag with a large round tip.
+            <br><br>
+            8. on a baking sheet lined with parchment paper, pipe 1-inch mounds.
+            <br><br>
+            9. bake for 20-25 minutes until the pastry has risen considerably and the insides are dry.
+            <br><br>
+            10. transfer the chilled pastry cream into a piping bag with a small tip.
+            <br><br>
+            11. poke a hole in the centre of the bottom of each cream puff and fill each puff with the pastry cream.
+            <br><br>
+            12. microwave the remaining cookie cream for 30 seconds, stirring until smooth.
+            <br><br>
+            13. dip the top of each filled cream puff into the cookie cream, dripping off any excess.
+            <br><br>
+            14. sprinkle any remaining cookie crumbs on top of each cream puff.
+            
+            
+
+          </div>
+          <div class="col" id="nutrition">
+            <h3>nutrition</h3>
+            <br><br>
+            calories 207
+            <br><br>
+            fat 15g
+            <br><br>
+            carbs 12g
+            <br><br>
+            sugar 5g
+            <br><br>
+            protein 4g
+            <br><br>
+            
+          </div>
+          <div class="col" id="review">
+              <h3>reviews</h3>
+         
+        </div>
+      </div>
+
+    
+</body>
+
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="rec_title">Cookies & Cream Puff </h1>
+    <br>
+    <img src="https://cdn.shopify.com/s/files/1/1645/7877/products/Oreo-Cream-Puff-1_1080x.JPG?v=1585088314">
+    <div class="recipe">
+        <div class="row">
+          <div class="col" id="Ingredients">
+            <h3>ingredients</h3>
+            <br><br>
+            — 25 chocolate sandwich cookies
+            <br><br>
+            — 2 egg yolks
+            <br><br>
+            — 2 cups half & half(480 ml)
+            <br><br>
+            — ¼ cup granulated sugar(50 g)
+            <br><br>
+            — ¼ cup cornstarch(30 g)
+            <br><br>
+            — 1 cup water(240 ml)
+            <br><br>
+            — 8 tablespoons butter
+            <br><br>
+            — ½ cup flour(60 g)
+            <br><br>
+            — 4 eggs
+
+            
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <h3>description</h3>
+            <br><br>
+            1. preheat oven to 425°f (220°c).
+            <br><br>
+            2. using a knife, separate the cream from the cookies, and place them in two separate bowls.
+            <br><br>
+            3. crush cookies in a blender or a food processor until fine. set aside.
+            <br><br>
+            4. in a pot over low heat, combine egg yolks, half & half, sugar, and cornstarch. turn the heat up to medium-high, whisking constantly to prevent any lumps. once the mixture starts to thicken, add in half of the cookie cream, stirring until smooth.
+            <br><br>
+            5. transfer the cream mixture into a bowl, covering the top with plastic wrap and pressing the wrap down onto the surface of the cream to prevent a skin from forming. chill.
+            <br><br>
+            6. in a pot, combine the water and butter, bringing it to a boil. add the flour and ½ cup (40 grams) of the crushed cookie mixture, stirring until the dough comes together in a ball. remove from heat.
+            <br><br>
+            7. add in the eggs one at a time, stirring until the dough becomes a paste. transfer the dough into a piping bag with a large round tip.
+            <br><br>
+            8. on a baking sheet lined with parchment paper, pipe 1-inch mounds.
+            <br><br>
+            9. bake for 20-25 minutes until the pastry has risen considerably and the insides are dry.
+            <br><br>
+            10. transfer the chilled pastry cream into a piping bag with a small tip.
+            <br><br>
+            11. poke a hole in the centre of the bottom of each cream puff and fill each puff with the pastry cream.
+            <br><br>
+            12. microwave the remaining cookie cream for 30 seconds, stirring until smooth.
+            <br><br>
+            13. dip the top of each filled cream puff into the cookie cream, dripping off any excess.
+            <br><br>
+            14. sprinkle any remaining cookie crumbs on top of each cream puff.
+            
+            
+
+          </div>
+          <div class="col" id="nutrition">
+            <h3>nutrition</h3>
+            <br><br>
+            calories 207
+            <br><br>
+            fat 15g
+            <br><br>
+            carbs 12g
+            <br><br>
+            sugar 5g
+            <br><br>
+            protein 4g
+            <br><br>
+            
+          </div>
+          <div class="col" id="review">
+              <h3>reviews</h3>
+         
+        </div>
+      </div>
+
+    
+</body>
+
+>>>>>>> a2518661ec297dcd342d78e3dabc38e3732aa474
+</html>
