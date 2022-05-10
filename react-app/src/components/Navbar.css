@@ -1,0 +1,11 @@
+.nav {
+  margin-bottom: 10px;
+  background-color: var(--head);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  transition: 0s;
+  overflow: hidden;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--secondary-color);
+}

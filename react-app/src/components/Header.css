@@ -1,0 +1,84 @@
+@media screen and (max-width: 900px) {
+  /* variable group name padding */
+  .Gname {
+    padding: 5%;
+  }
+}
+
+.Gname h1 {
+  /* fixed name */
+  color: var(--Gname);
+}
+
+.Gname:hover {
+  opacity: 0.8;
+}
+
+.header {
+  /* header */
+  padding: 40px;
+  text-align: left;
+  background: var(--primary-color);
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  background-size: 100px 100px;
+  transition: 0.3s;
+}
+
+#search[type="text"] {
+  /*Search bar */
+  right: 65px;
+  padding: 6px;
+  width: 4in;
+  border: 1px;
+  color: black;
+  background-color: #ececec;
+  transition: 0.3s;
+}
+
+.submit button:hover {
+  opacity: 0.6;
+}
+
+.submit button {
+  /*Search bar submit button */
+  float: right;
+  top: 48px;
+  right: 90px;
+  padding: 6px 10px;
+  background: #c9c7c7;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.header .Right button {
+  float: right;
+  position: absolute;
+  top: 48px;
+  right: 94px;
+  padding: 6px 10px;
+  background: #c9c7c7;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .Right .moon {
+  float: right;
+  position: absolute;
+  background: #c9c7c7;
+  padding: 5px 3px;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  top: 48px;
+  right: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.moon:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,125 @@
+.joinbtn:hover {
+  opacity: 0.8;
+}
+
+.joinbtn {
+  text-transform: lowercase;
+  float: right;
+  top: 8px;
+  right: 16px;
+  padding: 6px;
+  margin-right: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.join input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 8px;
+  margin: 8px 0 0 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  line-height: 2px;
+}
+
+.join .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #d8837d;
+  border: none;
+}
+
+.joinHead h1 {
+  text-align: center;
+  margin: 6px 0 4px 0;
+  position: relative;
+  line-height: 2px;
+}
+
+.join .submit {
+  background: rgb(201, 199, 199);
+  padding: 12px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.join .container {
+  padding: 16px;
+  width: 100%;
+}
+
+.join span.psw {
+  float: right;
+  padding-top: 16px;
+  color: #333;
+}
+
+.alacc {
+  margin-bottom: -20px;
+}
+
+.join .close {
+  /*  Button (x) */
+  text-align: right;
+  padding-right: 1%;
+  position: relative;
+  z-index: 1000;
+  color: #333;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.join .close:hover,
+.close:focus {
+  cursor: pointer;
+}
+
+/* Zoom Animation */
+.join .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/*  small screens */
+@media screen and (max-width: 300px) {
+  .join span.psw {
+    display: block;
+    float: none;
+  }
+
+  .join .cancelbtn {
+    width: 100%;
+  }
+}
+
+.join .cancelbtn:hover {
+  opacity: 0.8;
+}
+
+.join .submit:hover {
+  opacity: 0.8;
+}

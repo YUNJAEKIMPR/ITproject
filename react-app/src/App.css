@@ -1,38 +1,136 @@
-.App {
+body {
+  /* This is css which is important to html as it gives the web page its look and also behavior*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--head);
+  transition: 0.3s;
+  height: 100%;
+}
+
+:root {
+  /* Default mode */
+  --head: #fff;
+  --primary-color: #f1f1f1;
+  --secondary-color: #1a1a1a;
+  --tertiary-color: #d3d3d3;
+  --fakeImg: #f7a9a9;
+  --Gname: #f78fa7;
+  --profileSide: #f7a9a9;
+  --footer1: #f8f9fa;
+  --cborder: #dee2e6;
+  --head2: #fff;
+}
+
+.dark-theme {
+  /*Dark mode*/
+  --head: #272727;
+  --primary-color: #141414;
+  --secondary-color: #f8f8f8;
+  --tertiary-color: #111111;
+  --fakeImg: #111111;
+  --Gname: #ffc1cc;
+  --profileSide: #1a1a1a;
+  --footer1: #272727;
+  --cborder: #1a1a1a;
+  --head2: #00000033;
+}
+
+/* bootstrap styling */
+.border {
+  border: 1px solid var(--cborder) !important;
+}
+
+.bg-light {
+  background-color: var(--footer1) !important;
+}
+
+.Contact {
+  color: var(--secondary-color) !important;
+}
+
+.Follow h6 {
+  color: var(--secondary-color) !important;
+}
+
+.footer-bottom {
+  color: var(--secondary-color) !important;
+}
+
+.sidebar-text {
+  color: var(--secondary-color) !important;
+}
+
+.card {
+  border: 1px solid var(--cborder) !important;
+}
+
+.card-header {
+  background-color: var(--head) !important;
+}
+
+.cb {
+  background-color: var(--head2) !important;
+}
+
+.Vcb {
+  background-color: var(--head) !important;
+}
+
+.sidebMain {
+  color: var(--secondary-color) !important;
+}
+
+.border-top {
+  border: 1px solid var(--cborder) !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #f78fa7;
+  border-color: #f78fa7;
+}
+
+.btn-primary:hover {
+  background-color: palevioletred;
+  border-color: #f78fa7;
+}
+
+.login {
+  border-style: solid;
+  border-width: thin;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  height: 55%;
+  width: 30%;
+}
+
+.homecook {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.bg-dark {
+  border-style: solid;
+  border-width: thick;
+  border-color: gray !important;
   text-align: center;
+  background-color: rgb(201, 199, 199) !important;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rating-color {
+  color: #fbc634 !important;
 }
