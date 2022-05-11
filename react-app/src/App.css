@@ -75,10 +75,6 @@ body {
   background-color: var(--head) !important;
 }
 
-.sidebMain {
-  color: var(--secondary-color) !important;
-}
-
 .border-top {
   border: 1px solid var(--cborder) !important;
 }

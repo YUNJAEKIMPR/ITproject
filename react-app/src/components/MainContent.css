@@ -1,0 +1,7 @@
+.main-content-section {
+  color: var(--secondary-color) !important;
+}
+
+.recipe-row {
+  padding: 10px;
+}

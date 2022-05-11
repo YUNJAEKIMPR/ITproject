@@ -1,4 +1,4 @@
-import moon from "../images/moon.png";
+import moon from "../../images/moon.png";
 import "./JoinUs.css";
 
 function JoinUs() {
