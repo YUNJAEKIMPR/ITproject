@@ -221,7 +221,7 @@ input[type=password] {
     opacity: 0.8;
 }
 
-.nav {
+.navi {
     margin-bottom: 10px;
     background-color: var(--head);
     box-shadow: 5px 5px 5px var(--tertiary-color);
