@@ -649,8 +649,6 @@ form .btn{
 }
 .article{
   width:auto;
-  padding-left: 300px;
-  padding-right: 300px;
   padding-top: 50px;
 
 
@@ -659,4 +657,7 @@ form .btn{
 
 .image{
   width : 30s0px
+}
+#searchbar{
+  padding-left: 600px;
 }
