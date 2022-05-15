@@ -1,0 +1,184 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <!-- article main search bar -->
+    <nav class="searchbar" id="searchbar">
+        <div class="searchbar">
+          <form class="searchbar">
+            <input class="searchbar" type="search" placeholder="Search" aria-label="Search">
+            <button class="searchbar" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <!--articles-->
+      <div class="container">
+        <div class="row row-cols-2 text-center">
+          <div class="col"><a class="articlemain" href="article1.html"><img class="article" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5287/b55ad7bb-6fab-42c9-a6d1-c4f9a53536cc.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article1.html"><img class="article" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5287/b55ad7bb-6fab-42c9-a6d1-c4f9a53536cc.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article1.html"><img class="article" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5287/b55ad7bb-6fab-42c9-a6d1-c4f9a53536cc.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article1.html"><img class="article" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5287/b55ad7bb-6fab-42c9-a6d1-c4f9a53536cc.jpg" width="300px" height="300px"></a> </div>
+        </div>
+        <!--articles-->
+      </div>
+
+      <!-- article grid  -->
+      <div class="articlemain">
+        <div class="row row-cols-2">
+          <div class="col"><a class="articlemain" href="article1.html"><img class="article" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5287/b55ad7bb-6fab-42c9-a6d1-c4f9a53536cc.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article2.html"><img class="article" src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/weight-loss-diets-reviewed-1296x728-feature.jpg?w=1575" width="300px" height="300px"></a> </div>
+          <div class="col"><a class="articlemain" href="article3.html"><img class="article" src="https://joybauer.com/wp-content/uploads/2016/02/thumb_2136_content_big_wide.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article6.html"><img class="article" src="https://www.helpguide.org/wp-content/uploads/calories-counting-diet-food-control-and-weight-loss-concept-calorie-1536.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article7.html"><img class="article" src="https://res.edu.vn/wp-content/uploads/2021/12/get-the-right-food-to-stay-slim-res-edu-1.png" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article8.html"><img class="article" src="https://bloganchoi.com/wp-content/uploads/2021/08/tu-lam-hamburger.jpg" width="300px" height="300px"></a> </div>
+          <div class="col"><a class="articlemain" href="article9.html"><img class="article" src="https://images.sadhguru.org/d/46272/1633186362-1633186361487.jpg" width="300px" height="300px"></a></div>
+          <div class="col"><a class="articlemain" href="article5.html"><img class="article" src="https://img.emg-services.net/educations/education982865/15230.png" width="300px" height="300px"></a></div>
+        
+        
+        
+        </div>
+      </div>
+
+
+
+
+
+</body>
+

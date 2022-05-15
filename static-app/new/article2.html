@@ -1,0 +1,230 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="article">3 popular weight loss diets reviewed</h1>
+    <div class="article"> 
+        on jan 3, 2019    
+        <br>
+        by adda bjarnadottir 
+        <br>
+    </div>
+   <div class="article">
+    there are many weight loss diets out there. some focus on reducing your appetite, while others restrict calories, carbs, or fat. since all of them claim to be superior, it can be hard to know which ones are worth trying. the truth is that no one diet is best for everyone — and what works for you may not work for someone else.
+    this article reviews the 9 most popular weight loss diets and the science behind them.
+   </div>
+    <br>
+    <img class="article" src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/weight-loss-diets-reviewed-1296x728-feature.jpg?w=1575" width="500px" height="600px">
+    <div class="article">
+        <div class="row">
+          <div class="col" id="article">
+            <h5><strong>1. the paleo diet</strong></h5>
+            <br>
+            the paleo diet claims that you should eat the same foods that your hunter-gatherer ancestors ate before agriculture developed. the theory is that most modern diseases can be linked to the western diet and the consumption of grains, dairy, and processed foods. while it’s debatable whether this diet really provides the same foods your ancestors ate, it is linked to several impressive health benefits.
+            but a true ketogenic diet is different. unlike other low-carb diets, which focus on protein, a keto plan centers on fat, which supplies as much as 90% of daily calories. and it's not the type of diet to try as an experiment.
+            <br>
+            how it works: the paleo diet emphasizes whole foods, lean protein, vegetables, fruits, nuts, and seeds, while discouraging processed foods, sugar, dairy, and grains. some more flexible versions of the paleo diet also allow for dairy like cheese and butter, as well as tubers like potatoes and sweet potatoes.
+            <br>
+            weight loss: several studies have shown that the paleo diet can lead to significant weight loss and reduced waist size. in studies, paleo dieters automatically eat much fewer carbs, more protein, and 300–900 fewer calories per day
+            <br>
+            other benefits: the diet seems effective at reducing risk factors for heart disease, such as cholesterol, blood sugar, blood triglycerides, and blood pressure
+            <br>
+            the downside: the paleo diet eliminates whole grains, legumes, and dairy, which are healthy and nutritious.
+            <br>
+            summary
+            <br>
+            the paleo diet emphasizes whole foods but bans grains and dairy. its multiple health benefits include weight loss.
+            <BR>
+            <br>
+            <h5><strong>2. the vegan diet</strong></h5>
+            <br>
+            the vegan diet restricts all animal products for ethical, environmental, or health reasons. veganism is also associated with resistance to animal exploitation and cruelty.
+            <br>
+            how it works: veganism is the strictest form of vegetarianism. in addition to eliminating meat, it eliminates dairy, eggs, and animal-derived products, such as gelatin, honey, albumin, whey, casein, and some forms of vitamin d3.
+            <br>
+            weight loss: a vegan diet seems to be very effective at helping people lose weight — often without counting calories — because its very low fat and high fiber content may make you feel fuller for longer. vegan diets are consistently linked to lower body weight and body mass index (bmi) compared to other diets one 18-week study showed that people on a vegan diet lost 9.3 pounds (4.2 kg) more than those on a control diet. the vegan group was allowed to eat until fullness, but the control group had to restrict calories. however, calorie for calorie, vegan diets are not more effective for weight loss than other diets. weight loss on vegan diets is primarily associated with reduced calorie intake.
+            <br>
+            other benefits: plant-based diets are linked to a reduced risk of heart disease, type 2 diabetes, and premature death. limiting processed meat may also reduce your risk of alzheimer’s disease and dying from heart disease or cancer
+            <br>
+            the downside: because vegan diets eliminate animal foods completely, they may be low in several nutrients, including vitamin b12, vitamin d, iodine, iron, calcium, zinc, and omega-3 fatty acids
+            <br>
+            summary
+            <br>
+            vegan diets exclude all animal products. they may cause weight loss due to lower calorie intake while reducing your risk of several diseases.
+            <br>
+            <h5><strong>what do you eat?</strong></h5>
+            <br>
+            because the keto diet has such a high fat requirement, followers must eat fat at each meal. in a daily 2,000-calorie diet, that might look like 165 grams of fat, 40 grams of carbs, and 75 grams of protein. however, the exact ratio depends on your particular needs.
+            <br>
+            some healthy unsaturated fats are allowed on the keto diet — like nuts (almonds, walnuts), seeds, avocados, tofu, and olive oil. but saturated fats from oils (palm, coconut), lard, butter, and cocoa butter are encouraged in high amounts.
+            <br>
+            protein is part of the keto diet, but it doesn't typically discriminate between lean protein foods and protein sources high in saturated fat such as beef, pork, and bacon.
+            <br>
+            what about fruits and vegetables? all fruits are rich in carbs, but you can have certain fruits (usually berries) in small portions. vegetables (also rich in carbs) are restricted to leafy greens (such as kale, swiss chard, spinach), cauliflower, broccoli, brussels sprouts, asparagus, bell peppers, onions, garlic, mushrooms, cucumber, celery, and summer squashes. a cup of chopped broccoli has about six carbs.
+            <br>
+            <br>
+            <h5><strong>3. low-carb diets</strong></h5>
+            <br>
+            low-carb diets have been popular for decades — especially for weight loss.
+            <br>
+            there are several types of low-carb diets, but all involve limiting carb intake to 20–150 grams per day. the primary aim of the diet is to force your body to use more fats for fuel instead of using carbs as a main source of energy.
+            <br>
+            how it works: low-carb diets emphasize unlimited amounts of protein and fat while severely limiting your carb intake. when carb intake is very low, fatty acids are moved into your blood and transported to your liver, where some of them are turned into ketones. your body can then use fatty acids and ketones in the absence of carbs as its primary energy source.
+            <br>
+            weight loss: numerous studies indicate that low-carb diets are extremely helpful for weight loss, especially in overweight and obese individuals. they seem to be very effective at reducing dangerous belly fat, which can become lodged around your organs. people on very low-carb diets commonly reach a state called ketosis. many studies note that ketogenic diets lead to more than twice the weight loss than a low-fat, calorie-restricted diet.
+            <br>
+            other benefits: low-carb diets tend to reduce your appetite and make you feel less hungry, leading to an automatic reduction in calorie intake. furthermore, low-carb diets may benefit many major disease risk factors, such as blood triglycerides, cholesterol levels, blood sugar levels, insulin levels, and blood pressure 
+            <br>
+            the downside: low-carb diets do not suit everyone. some feel great about them while others feel miserable. some people may experience an increase in “bad” ldl cholesterol. in extremely rare cases, very low-carb diets can cause a serious condition called nondiabetic ketoacidosis. this condition seems to be more common in lactating women and can be fatal if left untreated. however, low-carb diets are safe for the majority of people.
+            <br>
+            summary
+            <br>
+            low-carb diets severely limit carb intake and push your body to use fat for fuel. they aid weight loss and are linked to many other health benefits.
+            <br>
+          </div>
+      </div>
+      <br><br>
+      <button id="article"><a href="article.html">explore more article</a></button>
+      <br>
+      <br>
+      <br>
+      <br>
+</body>
+

@@ -1,0 +1,482 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="rec_title">golden mussel chowder recipe</h1>
+    <br>
+    <img src="https://www.foodrepublic.com/wp-content/uploads/2012/10/goldenmusselchowder.jpg">
+    <div class="recipe">
+        <div class="row">
+          <div class="col" id="Ingredients">
+            <h3>ingredients</h3>
+            <br><br>
+            — 2 pounds mussels
+            <br><br>
+            — 2 tablespoons olive oil
+            <br><br>
+            — 1 onion, sliced
+            <br><br>
+            — 2 stalks celery, sliced
+            <br><br>
+            — 2 cloves garlic, chopped
+            <br><br>
+            — 1 teaspoon golden spice mix (see below)
+            <br><br>
+            — 1 cup white wine
+            <br><br>
+            — 2 medium potatoes, peeled and diced
+            <br><br>
+            — 2 small leeks
+            <br><br>
+            — 1 cup heavy cream
+            <br><br>
+            — rind of one preserved lemon, rinsed and finely diced (or a tablespoon of fresh lemon zest)
+            <br><br>
+            — 10 saffron threads, roasted and crushed
+            <br><br>
+            — 1 tablespoon thyme leaves
+            <br><br>
+            — 2 medium tomatoes, seeded and finely diced
+            <br><br>
+            — freshly ground black pepper
+            <br><br>
+            — 4 slices bacon
+            <br><br>
+            — light brown sugar
+            <br><br>
+            — thin rounds of crispy fried leek, to garnish
+            <br><br>
+            <hr>
+            for the golden spice mix
+            <hr>
+            <br><br>
+            — 1 tablespoon ground coriander
+            <br><br>
+            — 1 tablespoon ground cumin
+            <br><br>
+            — ½ tablespoon ground turmeric
+            <br><br>
+            — ½ tablespoon ground ginger
+            <br><br>
+            — ¼ tablespoon chilli powder
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <h3>description</h3>
+            <br><br>
+            1. scrub the mussels clean and pull off the beards. 
+            <br><br>
+            2. discard any mussels that refuse to close after a sharp tap.
+            <br><br>
+            3. in a heavy-based saucepan, sauté the onion, celery, garlic and golden spice mix in the olive oil for about a minute, then add the wine and the mussels.
+            <br><br>
+            4. cover, turn the heat up and steam for 3 minutes. turn the mussels well, replace the lid and steam for a further two minutes or until the mussels have opened.
+            <br><br>
+            5. remove the pan from the heat and allow to steam for a further minute before taking off the lid and straining the liquor through a fine sieve to catch any dirt. reserve the liquor.
+            <br><br>
+            6. throw any unopened mussels back into the pot and steam for another minute or two. discard any that stubbornly refuse to open. allow the mussels to cool, and then remove them from their shells and cut in half.
+            <br><br>
+            7. steam the potatoes and whole leeks for 10-15 minutes, or until tender. remove from the heat and allow to cool a few minutes. split the legs in half lengthwise, then cut them into ½-inch slices.
+            <br><br>
+            8. return the mussel liquor to the pot, add the cream and bring to a boil add the potatoes, leeks and preserved lemon (or zest) then the saffron and thyme. heat thoroughly.
+            <br><br>
+            9. add the diced tomatoes and mussels and warm through briefly. season with pepper.
+            <br><br>
+            10. sprinkle the bacon liberally with brown sugar and fry until golden brown. shred and sprinkle on the soup and garnish with the crisp fried leeks. 
+            
+
+          </div>
+          <div class="col" id="nutrition">
+            <h3>nutrition</h3>
+
+          </div>
+          <div class="col" id="review">
+              <h3>reviews</h3>
+         
+        </div>
+      </div>
+
+    
+</body>
+
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook For You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <!--Webpage header-->
+        <div class="Gname">
+            <!--Web name-->
+            <a href="Homepage.html" class="text-decoration-none">
+                <!--Bootstrap class to remove text underline for <a> -->
+                <h1 class="d-none d-lg-block">Cook For You</h1>
+            </a>
+        </div>
+        <div class="Right">
+            <!--this is to create a searchbox allowing the user to type inside-->
+            <div class="moon">
+                <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+            </div>
+            <div><button class="joinbtn" onclick="document.getElementById('id01').style.display='block'">Join
+                    us!</button></div>
+        </div>
+
+        <div class="join">
+            <!--create modal which is a pop up box-->
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <div class="joinHead">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <script>
+                        // get modal
+                        var modal = document.getElementById('id01');
+
+                        // close when click outside
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <div class="container">
+                        <!-- creates a container sort of like a box for the user to sign up-->
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="uname"><b>First name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="uname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                        <button type="submit" class="submit">Join now!</button>
+                        <label class="alacc">
+                            <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1; height: fit-content;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+            <!--navigation bar redesign using bootstrap-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Grocery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+                        <div class="submit">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <h1 class="rec_title">golden mussel chowder recipe</h1>
+    <br>
+    <img src="https://www.foodrepublic.com/wp-content/uploads/2012/10/goldenmusselchowder.jpg">
+    <div class="recipe">
+        <div class="row">
+          <div class="col" id="Ingredients">
+            <h3>ingredients</h3>
+            <br><br>
+            — 2 pounds mussels
+            <br><br>
+            — 2 tablespoons olive oil
+            <br><br>
+            — 1 onion, sliced
+            <br><br>
+            — 2 stalks celery, sliced
+            <br><br>
+            — 2 cloves garlic, chopped
+            <br><br>
+            — 1 teaspoon golden spice mix (see below)
+            <br><br>
+            — 1 cup white wine
+            <br><br>
+            — 2 medium potatoes, peeled and diced
+            <br><br>
+            — 2 small leeks
+            <br><br>
+            — 1 cup heavy cream
+            <br><br>
+            — rind of one preserved lemon, rinsed and finely diced (or a tablespoon of fresh lemon zest)
+            <br><br>
+            — 10 saffron threads, roasted and crushed
+            <br><br>
+            — 1 tablespoon thyme leaves
+            <br><br>
+            — 2 medium tomatoes, seeded and finely diced
+            <br><br>
+            — freshly ground black pepper
+            <br><br>
+            — 4 slices bacon
+            <br><br>
+            — light brown sugar
+            <br><br>
+            — thin rounds of crispy fried leek, to garnish
+            <br><br>
+            <hr>
+            for the golden spice mix
+            <hr>
+            <br><br>
+            — 1 tablespoon ground coriander
+            <br><br>
+            — 1 tablespoon ground cumin
+            <br><br>
+            — ½ tablespoon ground turmeric
+            <br><br>
+            — ½ tablespoon ground ginger
+            <br><br>
+            — ¼ tablespoon chilli powder
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <h3>description</h3>
+            <br><br>
+            1. scrub the mussels clean and pull off the beards. 
+            <br><br>
+            2. discard any mussels that refuse to close after a sharp tap.
+            <br><br>
+            3. in a heavy-based saucepan, sauté the onion, celery, garlic and golden spice mix in the olive oil for about a minute, then add the wine and the mussels.
+            <br><br>
+            4. cover, turn the heat up and steam for 3 minutes. turn the mussels well, replace the lid and steam for a further two minutes or until the mussels have opened.
+            <br><br>
+            5. remove the pan from the heat and allow to steam for a further minute before taking off the lid and straining the liquor through a fine sieve to catch any dirt. reserve the liquor.
+            <br><br>
+            6. throw any unopened mussels back into the pot and steam for another minute or two. discard any that stubbornly refuse to open. allow the mussels to cool, and then remove them from their shells and cut in half.
+            <br><br>
+            7. steam the potatoes and whole leeks for 10-15 minutes, or until tender. remove from the heat and allow to cool a few minutes. split the legs in half lengthwise, then cut them into ½-inch slices.
+            <br><br>
+            8. return the mussel liquor to the pot, add the cream and bring to a boil add the potatoes, leeks and preserved lemon (or zest) then the saffron and thyme. heat thoroughly.
+            <br><br>
+            9. add the diced tomatoes and mussels and warm through briefly. season with pepper.
+            <br><br>
+            10. sprinkle the bacon liberally with brown sugar and fry until golden brown. shred and sprinkle on the soup and garnish with the crisp fried leeks. 
+            
+
+          </div>
+          <div class="col" id="nutrition">
+            <h3>nutrition</h3>
+
+          </div>
+          <div class="col" id="review">
+              <h3>reviews</h3>
+         
+        </div>
+      </div>
+
+    
+</body>
+
+>>>>>>> a2518661ec297dcd342d78e3dabc38e3732aa474
+</html>
