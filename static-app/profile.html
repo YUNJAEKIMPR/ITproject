@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cook For You</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/f945b90c71.js" crossorigin="anonymous"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-lowercase">
+  <!--header START-->
+  <div class="header">
+    <!--Webpage header-->
+    <div class="Gname">
+      <!--Web name-->
+      <a href="Homepage.html" class="text-decoration-none">
+        <!--Bootstrap class to remove text underline for <a> -->
+        <h1 class="d-none d-lg-block">Cook For You</h1>
+      </a>
+    </div>
+    <div class="Right">
+      <!--this is to create a searchbox allowing the user to type inside-->
+      <div class="moon">
+        <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+      </div>
+      <div>
+        <button class="joinbtn" data-bs-toggle="modal" data-bs-target="#sign-up">Join us!</button>
+      </div>
+    </div>
+
+    <div class="join">
+      <!--create modal which is a pop up box-->
+      <div id="sign-up" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="Signup">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="uname"><b>First name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                <label for="uname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                <button type="submit" class="submit">Join now!</button>
+                <label class="alacc">
+                  <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <nav class="navbar navbar-expand-lg navbar-light navi">
+      <!--navigation bar redesign using bootstrap-->
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="webMain.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Grocery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Recipe.html">Recipes</a>
+            </li>
+            <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">about us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+            <div class="submit">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--header END-->
+
+  <br>
+
+  <section>
+    <div class="container py-5">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-2 ps-5">
+                  <div class="avatar">
+                    <img src="Images/Palico.jpg" alt="avatar" class="rounded-circle img-fluid  border border-dark"
+                      style="width: 150px; margin-bottom: 30px;">
+                  </div>
+                </div>
+                <div class="col-6 mt-3">
+                  <h5 class="my-3">@Random-Palico</h5>
+                  <p class="text-muted mb-1">Just some random chef on here :)</p>
+                </div>
+
+                <br>
+                <div class="col-4">
+                  <div>
+                    <div>
+                      <button class="belll"><i class="fa fa-bell"></i></button>
+                    </div>
+                    <div>
+                      <button class="upload"><i class="fa fa-upload"></i></button>
+                    </div>
+                    <div>
+                      <button class="settings"><i class="fa fa-cog"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--User navigation-->
+                <nav>
+                  <div class="nav nav-tabs profileNav" id="nav-tab" role="tablist">
+                    <button class="nav-link active text-dark" id="nav-home-tab" data-bs-toggle="tab"
+                      data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                      aria-selected="true">Post</button>
+                    <button class="nav-link text-dark" id="nav-profile-tab" data-bs-toggle="tab"
+                      data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                      aria-selected="false">bookmarks</button>
+                    <button class="nav-link text-dark" id="nav-contact-tab" data-bs-toggle="tab"
+                      data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                      aria-selected="false">following</button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <br>
+                    <div class="foodnames">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-2 ps-5">
+                              <div class="avatar">
+                                <img src="Images/food2.jpg" alt="avatar" class="img-fluid  border border-2"
+                                  style="margin-bottom: 30px;">
+                              </div>
+                            </div>
+                            <div class="col-6 mt-4">
+                              <h5 class="my-3">Recipe Name</h5>
+                              <p class="text-muted mb-1">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="buttons">
+                            <div class="col-sm-12 text-center">
+                              <div>
+                                <div>
+                                  <button class="heart"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div>
+                                  <button class="comment"><i class="fa-regular fa-comment"></i></button>
+                                </div>
+                                <div>
+                                  <button class="share"><i class="fa-solid fa-share-nodes"></i></button>
+                                </div>
+                                <div>
+                                  <button class="ellip1"><i class="fa fa-ellipsis"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <br>
+                    <div class="bookmarks">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-2 ps-5">
+                              <div class="avatar">
+                                <img src="Images/food2.jpg" alt="avatar" class="img-fluid  border border-2"
+                                  style="margin-bottom: 30px;">
+                              </div>
+                            </div>
+                            <div class="col-6 mt-4">
+                              <h5 class="my-3">Recipe Name</h5>
+                              <p class="text-muted mb-1">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="buttons">
+                            <div class="col-sm-12 text-center">
+                              <div>
+                                <div>
+                                  <button class="bookms"><i class="fa fa-bookmark-o"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <br>
+                    <div class="following">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-2 ps-5">
+                              <div class="avatar">
+                                <img src="Images/food2.jpg" alt="avatar" class="img-fluid  border border-2"
+                                  style="margin-bottom: 30px;">
+                              </div>
+                            </div>
+                            <div class="col-6 mt-4">
+                              <h5 class="my-3">Recipe Name</h5>
+                              <p class="text-muted mb-1">Description</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="buttons">
+                            <div class="col-sm-12 text-center">
+                              <div>
+                                <div>
+                                  <button class="ellip2"><i class="fa fa-ellipsis"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  </footer>
+  <!-- Footer END -->
+
+
+  <script>
+
+    var icon = document.getElementById("icon")
+
+    if (localStorage.getItem("theme") == null) {
+      localStorage.setItem("theme", "light")
+    }
+
+    let localData = localStorage.getItem("theme")
+
+    if (localData == "light") {
+      icon.src = "Images/moon.png";
+      document.body.classList.remove("dark-theme");
+    }
+    else if (localData == "dark") {
+      icon.src = "Images/sun.png";
+      document.body.classList.add("dark-theme");
+    }
+
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "/Images/sun.png";
+        localStorage.setItem("theme", "dark")
+      } else {
+        icon.src = "Images/moon.png"
+        localStorage.setItem("theme", "light")
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cook For You</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/f945b90c71.js" crossorigin="anonymous"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-lowercase">
+  <!--header START-->
+  <div class="header">
+    <!--Webpage header-->
+    <div class="Gname">
+      <!--Web name-->
+      <a href="Homepage.html" class="text-decoration-none">
+        <!--Bootstrap class to remove text underline for <a> -->
+        <h1 class="d-none d-lg-block">Cook For You</h1>
+      </a>
+    </div>
+    <div class="Right">
+      <!--this is to create a searchbox allowing the user to type inside-->
+      <div class="moon">
+        <img src="/Images/moon.png" id="icon" style="width: 30px; height: 30px;">
+      </div>
+      <div>
+        <button class="joinbtn" data-bs-toggle="modal" data-bs-target="#sign-up">Join us!</button>
+      </div>
+    </div>
+
+    <div class="join">
+      <!--create modal which is a pop up box-->
+      <div id="sign-up" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="Signup">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="uname"><b>First name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                <label for="uname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                <button type="submit" class="submit">Join now!</button>
+                <label class="alacc">
+                  <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <nav class="navbar navbar-expand-lg navbar-light navi">
+      <!--navigation bar redesign using bootstrap-->
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="webMain.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Grocery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Recipe.html">Recipes</a>
+            </li>
+            <!-- <li class="nav-item dropdown"> This is the drop down menu
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">about us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input id="search" class="form-control me-2" type="text" placeholder="Search...">
+            <div class="submit">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--header START-->
+
+  <br>
+  <br>
+
+  <div class="container">
+      <div class="aboutus">
+          <h5>The long (group)</h5>
+          <p> we are a group of sleep deprived kids that just want to pass. one of us came up with the idea to make
+            something food related (they were hungry during the meeting), which is how ‘cook for you’ came about. our
+            objective was to create something interactive, easily accessible, and allows the user to enjoy themselves
+            while using our website.</p>
+            <br>
+            <h5>the short (individual)</h5>
+      </div>
+      <br>
+    <div class="row row-cols-2 text-center">
+      <div class="col">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Images/leon.png" class="img-fluid rounded-start" alt="liquidityCat" style="text-align: center;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">leon</h5>
+                            <p class="card-text">kitten</p>
+                            <div class="list text-start ps-4">
+                                <ul style="list-style-type: none;">
+                                    <li> has html - css - js - bootstrap experience through his gap year</li>
+                                    <li> always in a business mindset (blames his parents)</li>
+                                    <li> takes part in projects for his parents’ web and software company</li>
+                                    <li> crypto enjoyer</li>
+                                    <li> draws fat cats in his free time</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-3" style="height: 314px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Images/long.png" class="img-fluid rounded-start" alt="smileyCat" style="height: 240px; max-width: 260px; text-align: center;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">long</h5>
+                            <p class="card-text">doggo</p>
+                            <div class="list text-start ps-4">
+                                <ul style="list-style-type: none;">
+                                    <li> cs nerd</li>
+                                    <li> really into competitive programming</li>
+                                    <li> has an album of fat animals on his phone (187 pics)</li>
+                                    <li> wants to become a game and web/mobile app developer in the future</li>
+                                    <li> loves getting on people’s nerves</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-3" style="height: 314px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Images/vy.png" class="img-fluid rounded-start" alt="bears" style="height: 292px; max-width: 255px; text-align: center;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">vy</h5>
+                            <p class="card-text">grep</p>
+                            <div class="list text-start ps-4">
+                                <ul style="list-style-type: none;">
+                                    <li> zero experience in programming</li>
+                                    <li> trying her best</li>
+                                    <li> loves watching food videos</li>
+                                    <li> obsessive perfectionist</li>
+                                    <li> comes up with questionable interesting ideas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-3" style="height: 314px;" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Images/Yunjae.png" class="img-fluid rounded-start" alt="Catty" style="height: 292px; max-width: 350px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Yunjae</h5>
+                            <p class="card-text">gran</p>
+                            <div class="list text-start ps-4">
+                                <ul style="list-style-type: none;">
+                                    <li> leader™</li>
+                                    <li> used to be a physics major</li>
+                                    <li> mic never works properly</li>
+                                    <li> good at time management</li>
+                                    <li> has never hurt a living being in her entire life</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-3" style="height: 314px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Images/Trung.jpg" class="img-fluid rounded-start" alt="Teleportation" style="height: 292px; max-width: 350px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">trung</h5>
+                            <p class="card-text">enderman</p>
+                            <div class="list text-start ps-4">
+                                <ul style="list-style-type: none;">
+                                    <li> self-taught</li>
+                                    <li> software engineer !!1!!!1!!11!!!</li>
+                                    <li> can and has disappeared for a whole week</li>
+                                    <li> has approximately 36 tabs opened at all times</li>
+                                    <li> knows everything about everything</li>
+                                    <li> texts like your grandfather</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="bg-light overflow-hidden border-top">
+    <div class="row p-3 p-0">
+      <div class="col-12">
+        <div class="Contact">
+          <h6 class="mb-4">Contact us</h6>
+          <p><i class="fas fa-phone mr-3"></i> (+84) 28 3776 1369</p>
+          <p><i class="fas fa-envelope mr-3"></i> enquiriescookforyou@hub.com</p>
+          <p><i class="fas fa-home mr-3"></i> 702 nguyen van linh st, dist 7, hcm</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="Follow">
+          <h6 class="mb-4">Follow us</h6>
+          <!-- Facebook -->
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-primary btn-floating border-0 " style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin"></i></a>
+          <!-- Github -->
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  
+
+
+    <div class="text-lg-start p-3 fbottom" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2022:
+      <a class="text-primary text-decoration-none fw-bold" href="#">Cookforyou.com</a>
+    </div>
+
+  </footer>
+
+  <!-- Script for dark theme and icon switch + stay dark or light -->
+  <script>
+
+    var icon = document.getElementById("icon")
+
+    if (localStorage.getItem("theme") == null) {
+      localStorage.setItem("theme", "light")
+    }
+
+    let localData = localStorage.getItem("theme")
+
+    if (localData == "light") {
+      icon.src = "Images/moon.png";
+      document.body.classList.remove("dark-theme");
+    }
+    else if (localData == "dark") {
+      icon.src = "Images/sun.png";
+      document.body.classList.add("dark-theme");
+    }
+
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "/Images/sun.png";
+        localStorage.setItem("theme", "dark")
+      } else {
+        icon.src = "Images/moon.png"
+        localStorage.setItem("theme", "light")
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
