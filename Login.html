@@ -79,12 +79,173 @@
               </div>
               <br>
               <div class="button text-center">
-                <button type="submit" class="btn btn-primary text-center" style="width: 12rem;">sign up</button>
+                <button class="btn btn-primary text-center" style="width: 12rem;"  data-bs-toggle="modal" data-bs-target="#sign-up">sign up</button>
               </div>
+
+              
             </form>
+            
           </div>
           
         </div>
+
+        
+    <div class="join">
+      <!--create modal which is a pop up box-->
+      <!-- 1st modal page-->
+      <div id="sign-up" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="Signup">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="uname"><b>First name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                <label for="uname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="cpsw" required>
+
+                <button type="submit" class="submit" data-bs-toggle="modal" data-bs-target="#Preferences"
+                  data-bs-dismiss="modal">Continue</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--2nd modal page-->
+      <div class="modal fade" id="Preferences">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5>Please choose your preferences</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="Questions">
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      Are you on any diet?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Choose diet
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Paleo Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Vegan Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Low-carb Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Dukan diet</a></li>
+                        <li><a class="dropdown-item" href="#">ultra-low-fat diet</a></li>
+                        <li><a class="dropdown-item" href="#">Atkins diet</a></li>
+                        <li><a class="dropdown-item" href="#">Hcg diet</a></li>
+                        <li><a class="dropdown-item" href="#">zone diet</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      what type of cuisine?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        choose cuisine
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      any specific flavors?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle " style="width: 160px ;" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        choose flavor
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Sweet</a></li>
+                        <li><a class="dropdown-item" href="#">Sour</a></li>
+                        <li><a class="dropdown-item" href="#">Salty</a></li>
+                        <li><a class="dropdown-item" href="#">Bitter</a></li>
+                        <li><a class="dropdown-item" href="#">Savory</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      Any allergies?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px;" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        choose allergy
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Eggs</a></li>
+                        <li><a class="dropdown-item" href="#">Fish </a></li>
+                        <li><a class="dropdown-item" href="#">Milk</a></li>
+                        <li><a class="dropdown-item" href="#">Peanuts</a></li>
+                        <li><a class="dropdown-item" href="#">shellfish</a></li>
+                        <li><a class="dropdown-item" href="#">soy</a></li>
+                        <li><a class="dropdown-item" href="#">tree nuts</a></li>
+                        <li><a class="dropdown-item" href="#">wheats</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <button type="submit" class="submit">Join now!</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
       </div>
     </section>
   </div>
