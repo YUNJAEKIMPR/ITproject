@@ -8,6 +8,9 @@
 .Gname h1 {
   /* fixed name */
   color: var(--Gname);
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 60px;
+  margin: 0px;
 }
 
 .Gname:hover {
@@ -16,7 +19,7 @@
 
 .header {
   /* header */
-  padding: 40px;
+  padding: 30px;
   text-align: left;
   background: var(--primary-color);
   box-shadow: 5px 5px 5px var(--tertiary-color);

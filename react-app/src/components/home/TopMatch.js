@@ -1,13 +1,14 @@
-import { getPersonalSuggestion } from "../services/recipeService";
-import RecipeCard from "./RecipeCard";
+import { getTopMatch } from "../../services/recipeService";
 
-function PersonalSuggestion() {
+import RecipeCard from "../recipe/RecipeCard";
+
+function TopMatch() {
   const RecipeCards = () => {
     let resultRows = [];
     let recipes = [];
     let recipeCount = 0;
     let rowCount = 0;
-    getPersonalSuggestion().forEach((recipe) => {
+    getTopMatch().forEach((recipe) => {
       recipeCount++;
       recipes.push(
         <div key={recipe.id} className="col-sm-3">
@@ -31,7 +32,7 @@ function PersonalSuggestion() {
   return (
     <div className="border bg-light rounded main-content-section">
       <br />
-      <h5 style={{ textAlign: "center" }}>Personal Suggestion</h5>
+      <h5 style={{ textAlign: "center" }}>Top Match (Today)</h5>
       <br />
       {RecipeCards()}
       <br />
@@ -45,4 +46,4 @@ function PersonalSuggestion() {
   );
 }
 
-export default PersonalSuggestion;
+export default TopMatch;

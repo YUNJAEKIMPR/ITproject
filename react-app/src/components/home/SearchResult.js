@@ -1,6 +1,7 @@
-import AdvancedFilter from "./filters/AdvancedFilter";
-import { getAllRecipes } from "../services/recipeService";
-import RecipeCard from "./RecipeCard";
+import { getAllRecipes } from "../../services/recipeService";
+
+import RecipeCard from "../recipe/RecipeCard";
+import AdvancedFilter from "../filters/AdvancedFilter";
 
 function SearchResult() {
   const RecipeCards = () => {

@@ -1,5 +1,5 @@
-import ExistingIngredientFilter from "./filters/ExistingIngredientFilter";
-import IngredientFilter from "./filters/IngredientFilter";
+import ExistingIngredientFilter from "../filters/ExistingIngredientFilter";
+import IngredientFilter from "../filters/IngredientFilter";
 
 function Sidebar() {
   return (

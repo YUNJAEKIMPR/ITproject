@@ -9,7 +9,6 @@ function Header() {
         <h1 className="d-lg-block">Cook For You</h1>
       </div>
       <JoinUs />
-      <br />
       <Navbar />
     </div>
   );
