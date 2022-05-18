@@ -1,6 +1,9 @@
 function ExistingIngredientFilter(props) {
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{ boxShadow: "0 2px 8px rgba(0, 0, 0, 0.26)" }}
+    >
       <div className="card-header">
         <h3>
           {props.ingredientType}

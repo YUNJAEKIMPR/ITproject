@@ -3,19 +3,26 @@ import React, { useState, useEffect } from "react";
 const AuthContext = React.createContext({
   isLoggedIn: false,
   isRegistering: false,
+  currentPage: "",
   onLogout: () => {},
   onLogin: () => {},
   onRegister: () => {},
   onSwitchToRegister: () => {},
+  onGoToRecipes: () => {},
+  onGoToProfile: () => {},
 });
 
 export const AuthContextProvider = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
+  const [currentPage, setCurrentPage] = useState("");
 
   useEffect(() => {
     const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
-    if (storedIsLoggedIn === "1") setIsLoggedIn(true);
+    if (storedIsLoggedIn === "1") {
+      setIsLoggedIn(true);
+      setCurrentPage("recipes");
+    }
   }, []);
 
   const registerHandler = (email, password) => {
@@ -32,6 +39,7 @@ export const AuthContextProvider = (props) => {
     // But it's just a dummy/ demo anyways
     localStorage.setItem("isLoggedIn", "1");
     setIsLoggedIn(true);
+    setCurrentPage("recipes");
   };
 
   const logoutHandler = () => {
@@ -39,15 +47,26 @@ export const AuthContextProvider = (props) => {
     setIsLoggedIn(false);
   };
 
+  const goToRecipesHandler = () => {
+    setCurrentPage("recipes");
+  };
+
+  const goToProfileHandler = () => {
+    setCurrentPage("profile");
+  };
+
   return (
     <AuthContext.Provider
       value={{
         isLoggedIn: isLoggedIn,
         isRegistering: isRegistering,
+        currentPage: currentPage,
         onLogout: logoutHandler,
         onLogin: loginHandler,
         onRegister: registerHandler,
         onSwitchToRegister: switchToRegisterHandler,
+        onGoToRecipes: goToRecipesHandler,
+        onGoToProfile: goToProfileHandler,
       }}
     >
       {props.children}

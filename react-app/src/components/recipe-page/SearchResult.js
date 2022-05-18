@@ -37,9 +37,7 @@ function SearchResult() {
       <div className="alert alert-warning text-center mx-5" role="alert">
         we found something <i className="fa fa-smile"></i>
       </div>
-      <br />
       <AdvancedFilter />
-      <br />
       {RecipeCards()}
       <br />
       <div className="button text-center text-dark">

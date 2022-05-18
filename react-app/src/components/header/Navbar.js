@@ -24,12 +24,12 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#0">
-                Recipes
+                Articles
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#0">
-                about us
+                About Us
               </a>
             </li>
           </ul>

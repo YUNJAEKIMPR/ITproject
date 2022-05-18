@@ -11,6 +11,7 @@
   font-family: "Nanum Pen Script", cursive;
   font-size: 60px;
   margin: 0px;
+  cursor: pointer;
 }
 
 .Gname:hover {
@@ -75,13 +76,50 @@
   background: #c9c7c7;
   padding: 5px 3px;
   box-shadow: 5px 5px 5px var(--tertiary-color);
-  top: 48px;
-  right: 40px;
+  top: 45px;
+  right: 30px;
+  top: 45px;
+  right: 85px;
   border: none;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.avatar {
+  float: right;
+  position: absolute;
+  background: #c9c7c7;
+  top: 45px;
+  right: 30px;
+  padding: 5px 3px;
+  box-shadow: 5px 5px 5px var(--tertiary-color);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .Right button.logout {
+  float: right;
+  position: absolute;
+  top: 55px;
+  right: 140px;
+  padding: 5px 3px;
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--Gname);
+}
+
+.logout:hover {
+  text-decoration: underline;
+}
+
 .moon:hover {
+  opacity: 0.8;
+}
+
+.avatar:hover {
   opacity: 0.8;
 }

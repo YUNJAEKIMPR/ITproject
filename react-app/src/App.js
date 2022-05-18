@@ -1,26 +1,33 @@
+import React, { useContext } from "react";
+
 import "./App.css";
+
+import AuthContext from "./context/auth-context";
+
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import MainContent from "./components/home/MainContent";
-import Sidebar from "./components/home/Sidebar";
+import RecipePage from "./components/recipe-page/RecipePage";
+import Login from "./components/login-page/Login";
+import Register from "./components/register-page/Register";
+import ProfilePage from "./components/profile-page/ProfilePage";
 
 function App() {
+  const context = useContext(AuthContext);
   return (
     <div>
       <Header />
       <br />
-      <div>
-        <section>
-          <div className="container-fluid">
-            <div className="row">
-              <Sidebar />
-              <MainContent />
-            </div>
-          </div>
-        </section>
-        <br />
-        <Footer />
-      </div>
+      <main>
+        {context.isRegistering && <Register />}
+        {!context.isRegistering && !context.isLoggedIn && <Login />}
+        {!context.isRegistering &&
+          context.isLoggedIn &&
+          context.currentPage === "recipes" && <RecipePage />}
+        {!context.isRegistering &&
+          context.isLoggedIn &&
+          context.currentPage === "profile" && <ProfilePage />}
+      </main>
+      {context.isLoggedIn && <Footer />}
     </div>
   );
 }

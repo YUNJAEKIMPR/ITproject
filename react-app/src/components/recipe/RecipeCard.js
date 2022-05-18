@@ -13,7 +13,7 @@ function RecipeCard(props) {
   const year = props.recipe.updatedOn.getFullYear();
 
   return (
-    <Card>
+    <Card className="shadow">
       <img
         className="card-img-top"
         src={props.recipe.image}
