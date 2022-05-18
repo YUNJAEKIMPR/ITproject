@@ -1,3 +1,5 @@
+import "./RecipeCard.css";
+
 import Card from "../../shared/Card";
 import RecipeDialog from "./RecipeDialog";
 
@@ -12,6 +14,11 @@ function RecipeCard(props) {
 
   return (
     <Card>
+      <img
+        className="card-img-top"
+        src={props.recipe.image}
+        alt="recipe_image"
+      />
       <h5 className="card-title">
         <a href={props.recipe.link}>{props.recipe.name}</a>
       </h5>

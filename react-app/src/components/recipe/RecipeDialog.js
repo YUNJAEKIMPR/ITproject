@@ -1,4 +1,5 @@
 import Card from "../../shared/Card";
+import RecipeInstruction from "./RecipeInstruction";
 
 const RecipeDialog = (props) => {
   return (
@@ -6,8 +7,14 @@ const RecipeDialog = (props) => {
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header">
+            <img
+              src={props.recipe.image}
+              className="rounded-circle img-fluid  border border-dark"
+              style={{ width: "80px", marginRight: "20px" }}
+              alt="recipe_image"
+            />
             <h5 className="modal-title" id="view">
-              {props.recipe.name} <title></title>
+              {props.recipe.name}
             </h5>
             <button
               type="button"
@@ -22,98 +29,42 @@ const RecipeDialog = (props) => {
                 <div className="col-sm-8">
                   <div className="row">
                     <div className="col-sm-6">
-                      <h5>general</h5>
-                      <div className="foodescript ps-4">
-                        <h5>{props.recipe.name}</h5>
-                        <p>
-                          <b> Description:</b> {props.recipe.description}
-                        </p>
-                        <p>
-                          <b>Cuisine:</b> {props.recipe.cuisine}
-                        </p>
-                        <p>
-                          <b> Culture:</b> {props.recipe.culture}
-                        </p>
-                      </div>
-                      <div
-                        className="alert alert-warning text-center"
-                        role="alert"
-                      >
-                        {props.recipe.mood}
-                      </div>
-                      <div className="row">
-                        <div className="col-12">
-                          <div className="ingreps">
-                            <h5>Ingredients</h5>
-                            <div className="row  ps-4">
-                              <div className="col-sm-6">
-                                <div className="card">
-                                  <div className="card-body">
-                                    <p>ingredients 1</p>
-                                    <input
-                                      className="form-check-input"
-                                      type="checkbox"
-                                      value=""
-                                      id="flexCheckDefault"
-                                    />
-                                    <label className="form-check-label"></label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-sm-6">
-                                <div className="card">
-                                  <div className="card-body">
-                                    <p>ingredients 2</p>
-                                    <input
-                                      className="form-check-input"
-                                      type="checkbox"
-                                      value=""
-                                      id="flexCheckDefault"
-                                    />
-                                    <label className="form-check-label"></label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                      <h5>General</h5>
+                      <Card>
+                        <div className="foodescript ps-4">
+                          <p>
+                            <b> Description:</b> {props.recipe.description}
+                          </p>
+                          <p>
+                            <b>Cuisine:</b> {props.recipe.cuisine}
+                          </p>
+                          <p>
+                            <b> Culture:</b> {props.recipe.culture}
+                          </p>
                         </div>
-                      </div>
+                        <div
+                          className="alert alert-warning text-center"
+                          role="alert"
+                        >
+                          {props.recipe.mood}
+                        </div>
+                      </Card>
                       <br />
-                      <div className="Steps">
-                        <h5>Steps</h5>
-                        <div className="position-relative m-4">
-                          <div className="progress" style={{ height: "1px" }}>
-                            <div
-                              className="progress-bar"
-                              role="progressbar"
-                              style={{ width: "50%" }}
-                              aria-valuenow="50"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <button
-                            type="button"
-                            className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
-                            style={{ width: "2rem", height: "2rem" }}
-                          >
-                            1
-                          </button>
-                          <button
-                            type="button"
-                            className="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
-                            style={{ width: "2rem", height: "2rem" }}
-                          >
-                            2
-                          </button>
-                          <button
-                            type="button"
-                            className="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill"
-                            style={{ width: "2rem", height: "2rem" }}
-                          >
-                            3
-                          </button>
-                        </div>
+                      <div className="row">
+                        <h5>Ingredients</h5>
+                        <Card>
+                          <ul className="list-group list-group-flush">
+                            {props.recipe.ingredients.map(
+                              (ingredient, index) => {
+                                return (
+                                  <li key={index} className="list-group-item">
+                                    {ingredient}
+                                  </li>
+                                );
+                              }
+                            )}
+                          </ul>
+                        </Card>
                       </div>
                     </div>
 
@@ -123,10 +74,10 @@ const RecipeDialog = (props) => {
                         <div className="row ps-4">
                           <div className="col-sm-12">
                             <Card>
-                              {props.recipe.nutrient.map((item) => {
+                              {props.recipe.nutrient.map(({ key, value }) => {
                                 return (
-                                  <div key={item.key}>
-                                    {item.key}:{item.value}
+                                  <div key={key}>
+                                    {key}:{value}
                                     <br />
                                     <br />
                                   </div>
@@ -135,6 +86,14 @@ const RecipeDialog = (props) => {
                             </Card>
                           </div>
                         </div>
+                      </div>
+                      <br />
+                      <div className="Steps">
+                        <h5>Steps</h5>
+                        <br />
+                        <RecipeInstruction
+                          instructions={props.recipe.instructions}
+                        />
                       </div>
                     </div>
                   </div>
