@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="text-lowercase">
@@ -26,7 +26,7 @@
     <!--Webpage header-->
     <div class="Gname">
       <!--Web name-->
-      <a href="Homepage.html" class="text-decoration-none">
+      <a href="webMain.html" class="text-decoration-none">
         <!--Bootstrap class to remove text underline for <a> -->
         <h1 class="d-none d-lg-block">Cook For You</h1>
       </a>
@@ -43,8 +43,9 @@
 
     <div class="join">
       <!--create modal which is a pop up box-->
+      <!-- 1st modal page-->
       <div id="sign-up" class="modal fade" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Sign up</h5>
@@ -70,9 +71,10 @@
                 <label for="psw"><b>Confirm Password</b></label>
                 <input type="password" placeholder="Confirm Password" name="cpsw" required>
 
-                <button type="submit" class="submit">Join now!</button>
+                <button type="submit" class="submit" data-bs-toggle="modal" data-bs-target="#Preferences"
+                  data-bs-dismiss="modal">Continue</button>
                 <label class="alacc">
-                  <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                  <p>Already have an account? <a href="Login.html" style="text-decoration: underline;">Login!</a></p>
                 </label>
               </div>
             </div>
@@ -82,7 +84,126 @@
           </div>
         </div>
       </div>
+      <!--2nd modal page-->
+      <div class="modal fade" id="Preferences">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5>Please choose your preferences</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="Questions">
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      Are you on any diet?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Choose diet
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Paleo Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Vegan Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Low-carb Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Dukan diet</a></li>
+                        <li><a class="dropdown-item" href="#">ultra-low-fat diet</a></li>
+                        <li><a class="dropdown-item" href="#">Atkins diet</a></li>
+                        <li><a class="dropdown-item" href="#">Hcg diet</a></li>
+                        <li><a class="dropdown-item" href="#">zone diet</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      what type of cuisine?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        choose cuisine
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      any specific flavors?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle " style="width: 160px ;" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        choose flavor
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Sweet</a></li>
+                        <li><a class="dropdown-item" href="#">Sour</a></li>
+                        <li><a class="dropdown-item" href="#">Salty</a></li>
+                        <li><a class="dropdown-item" href="#">Bitter</a></li>
+                        <li><a class="dropdown-item" href="#">Savory</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      Any allergies?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px;" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        choose allergy
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Eggs</a></li>
+                        <li><a class="dropdown-item" href="#">Fish </a></li>
+                        <li><a class="dropdown-item" href="#">Milk</a></li>
+                        <li><a class="dropdown-item" href="#">Peanuts</a></li>
+                        <li><a class="dropdown-item" href="#">shellfish</a></li>
+                        <li><a class="dropdown-item" href="#">soy</a></li>
+                        <li><a class="dropdown-item" href="#">tree nuts</a></li>
+                        <li><a class="dropdown-item" href="#">wheats</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <button type="submit" class="submit">Join now!</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
 
     <br>
 
@@ -96,13 +217,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="webMain.html">Home</a>
+              <a class="nav-link" aria-current="page" href="webMain.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#">Grocery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Recipe.html">Recipes</a>
+              <a class="nav-link" href="Recipe.html">Recipes</a>
             </li>
             <!-- <li class="nav-item dropdown"> This is the drop down menu
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -142,14 +263,27 @@
           <!--when using bootstrap the webpage will be devided into rows and collumn a row will always be defined first before collumn. g-0 is gutters which are gaps between content-->
           <div class="col-md-4 Image">
             <!-- col is shortened for collumn and within a web page it is divided into 12 collumns. currently im using 4 collumns for the image-->
-            <img src="\Images\food1.jpg" class="img-fluid rounded-start" style="  height: 100%; width: 100%; ">
+            <img src="\Images\crispyChicken.png" class="img-fluid rounded-start"
+              style="  height: 280px; width: 600px; padding: 0px;">
             <!-- to add in image you'll use Img src="image link" and the class I use is bootstrap which allows the image to be responsive and have round coners-->
           </div>
           <div class="col-md-8">
-            <div class="card-body description">
-              <h1>Image 1</h1>
-              <p>blah blah blah</p>
-              <h6 class="card-text"><a href="">More Info</a></h6>
+            <div class="card-body">
+              <h1>Crispy Chicken With Za’atar-Olive Rice</h1>
+              <br>
+              <h6 class="text-start">Not only is ground chicken or turkey a fast-cooking weeknight superstar, but the
+                fat leftover from
+                crisping it up can get work done. Case in point, this low-lift one-pan dish. The leftover fat is used to
+                blister olives that then get mixed with cooked rice (or any other cooked grain you’ve got) and chopped
+                greens like spinach, kale, or chard. Za’atar provides another layer of flavor. Be sure to check the
+                ingredient list on your blend and season accordingly—if it includes salt, you might not need to add any
+                extra.
+              </h6>
+              <br>
+              <h6>The simple and fresh flavors are perfect for weeknight dinners</h6>
+              <br>
+              <h6 class="card-text align-bottom"><a
+                  href="https://www.bonappetit.com/recipe/crispy-chicken-with-zaatar-olive-rice">View more</a></h6>
             </div>
           </div>
         </div>
@@ -160,13 +294,28 @@
       <div class="card mb-3 topcard" style="max-width: 4000px;">
         <div class="row g-0">
           <div class="col-md-4 Image">
-            <img src="\Images\food3.jpg" class="img-fluid rounded-start" style="  height: 100%; width: 100%; ">
+            <img src="\Images\honeyBuns.png" class="img-fluid rounded-start"
+              style="  height: 280px; width: 600px; padding: 0px;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h1>Image 2</h1>
-              <p>blah blah blah</p>
-              <h6 class="card-text"><a href="">More Info</a></h6>
+              <h1>Honey Buns</h1>
+              <br>
+              <h6>These homemade honey buns are a cross between a donut and a cinnamon roll. They have a swirl of
+                cinnamon in them and
+                can be both fried and baked. They make a great breakfast or just a sweet treat to have on hand.
+              </h6>
+              <br>
+              <h6>
+                It uses a water-based roux called
+                tangzhong that’s used in milk bread recipes. Water and flour are cooked together and thickened before
+                being cooled and mixed into the dough. The gelatinization of the flour during this cooking process is
+                what helps the dough retain moisture, making the buns extra tender. The buns are then baked at a high
+                temperature, caramelizing and crisping the edges while leaving the center pillowy soft.
+              </h6>
+              <br>
+              <h6 class="card-text align-bottom"><a href="https://www.epicurious.com/recipes/food/views/honey-buns">view
+                  more</a></h6>
             </div>
           </div>
         </div>
@@ -177,13 +326,24 @@
       <div class="card mb-3 topcard" style="max-width: 4000px;">
         <div class="row g-0">
           <div class="col-md-4 Image">
-            <img src="\Images\food3.jpg" class="img-fluid rounded-start" style="  height: 100%; width: 100%; ">
+            <img src="\Images\eggSand.png" class="img-fluid rounded-start"
+              style="  height: 280px; width: 600px; padding: 0px;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h1>Image 3</h1>
-              <p>blah blah blah</p>
-              <h6 class="card-text"><a href="">More Info</a></h6>
+              <h1>fancy egg salad sandwich</h1>
+              <br>
+              <p>This is not your typical egg salad sandwich. This is a high-class, tantalizingly tasty Fancy Egg
+                Sandwich that takes the classic egg salad game to the next level. Even with its added fanciness it is
+                still quick, easy, and tastes like it's from a cafe! The homemade mayo is creamier and more flavorful
+                than anything you’ll find in a jar. The eggs are still fluffy and savory, pairing so well with the
+                crunchy chives and the mayo. Fancy Egg Salad Sandwich spreads perfectly over your favorite bread and
+                will become one of your favorite lunches after just one bite.
+              </p>
+              <br>
+              <br>
+              <h6 class="card-text"><a href="https://www.abeautifulplate.com/high-maintenance-egg-salad-sandwich/">View
+                  more</a></h6>
             </div>
           </div>
         </div>
@@ -241,30 +401,115 @@
     <!-- this is just the content of the webpage-->
     <div class="sidebar">
       <h2>Articles</h2>
-      <p>blah</p>
-      <p>blah</p>
-      <p>blah</p>
-      <p>blah</p>
-      <h3>Based on feelings</h3>
-      <p>What do you feel right now?</p>
-      <div class="exampleimg" style="height:100px;">Depressed</div><br>
+      <br>
+      <div class="articles">
+        <div class="card text-dark">
+          <img src="\Images\article1.jpg" class="card-img" alt="..." style="opacity: 0.3; height: 280px; width: 100%;">
+          <div class="card-img-overlay">
+            <h4 class="card-title">should you try the keto diet?</h4>
+            <p class="card-text">
+              It's advertised as a weight-loss wonder, but this eating plan is actually a medical diet that comes with
+              serious risks.
+            </p>
+            <h6 class="card-text">
+              <a href="https://www.health.harvard.edu/staying-healthy/should-you-try-the-keto-diet">View more </a>
+            </h6>
+            <br>
+            <p class="card-text text-muted">Last updated 3 mins ago</p>
+          </div>
+        </div>
+      </div>
+      <br>
       <!-- so i got lazy to find images so I decided to make a class called exampleimg or should I say fake lol-->
-      <div class="exampleimg" style="height:100px;">Sleep deprive</div><br>
-      <div class="exampleimg" style="height:100px;">Wanna get isekaid</div>
+      <div class="articles">
+        <div class="card text-dark">
+          <img src="\Images\diet.png" class="card-img" alt="..." style="opacity: 0.3; height: 280px; width: 100%;">
+          <div class="card-img-overlay">
+            <h4 class="card-title">9 popular weight loss diets reviewed</h4>
+            <p class="card-text">
+              there are many weight loss diets out there. some focus on reducing your appetite, while others restrict
+              calories, carbs, or fat...
+            <h6 class="card-text"><a href="https://www.healthline.com/nutrition/9-weight-loss-diets-reviewed ">View more</a></h6>
+            <br>
+            <p class="card-text text-muted">Last updated 10 mins ago</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="button text-center"> <a href="#" class="btn btn-primary">Show more</a></div>
     </div>
+
     <div class="main">
       <h2>What's new today?</h2>
       <h5>Great breakfast to start the day</h5>
-      <div class="exampleimg" style="height:256px;">mmm mmm mmm sooo good, what? no image just imagine a good food yo
+      <br>
+      <div class="topNews">
+        <div class="card mb-3" style="width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="\Images\bread.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Tips for Baking With Whole Grains</h5>
+                <p class="card-text">
+                  Simply swapping the whole-grain flour of your choice into a recipe developed for
+                  all-purpose flour, won't give you the
+                  results you're hoping for. Try these expert tips for fluffy, tasty whole-grain goods.
+                </p>
+                <h6 class="card-text"><a href="https://health.usnews.com/health-news/blogs/eat-run/slideshows/tips-for-baking-with-whole-grains">View more</a></h6>
+                <p class="card-text"><small class="text-muted">Last updated on April 14, 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <div class="topNews">
+        <div class="card mb-3" style="width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="\Images\fam.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">How to Become a Meal Prep Expert</h5>
+                <p class="card-text">
+                  These 15 tips can help you make healthy food faster.
+                </p>
+                <h6 class="card-text"><a href="https://health.usnews.com/wellness/food/slideshows/meal-prep-tips-for-healthy-eating">View more</a></h6>
+                <p class="card-text"><small class="text-muted">Last updated on March 23, 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topNews">
+        <div class="card mb-3" style="width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="\Images\godR.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">Gordon Ramsay shares video of mother’s hilarious response to his food</h5>
+                <p class="card-text">
+                  In the clip, the 55-year-old celebrity chef asked his mother to have “a little taste” of a topping that he made for one
+                  of his dishes. As Cosgrove tried the food, she made an unpleasant look on her face.
+                </p>
+                <h6 class="card-text"><a href="https://www.independent.co.uk/life-style/health-and-families/gordon-ramsay-mother-tastes-food-b2049220.html">View more</a></h6>
+                <p class="card-text"><small class="text-muted">Last updated on April 01 2022</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <br>
-
-      <h5>On the road trip</h5>
-      <div class="exampleimg" style="height:256px;">just bring snack lel</div>
-
+      <div class="button text-center"> <a href="#" class="btn btn-primary">Show more</a></div>
     </div>
   </div>
+
 
   <footer class="bg-light overflow-hidden border-top">
     <div class="row p-3 p-0">
@@ -280,25 +525,31 @@
         <div class="Follow">
           <h6 class="mb-4">Follow us</h6>
           <!-- Facebook -->
-          <a class="btn btn-primary btn-floating border-0" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook"></i></a>
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #3b5998" href="#!" role="button"><i
+              class="fab fa-facebook"></i></a>
 
           <!-- Twitter -->
-          <a class="btn btn-primary btn-floating border-0" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #55acee" href="#!" role="button"><i
+              class="fab fa-twitter"></i></a>
 
           <!-- Google -->
-          <a class="btn btn-primary btn-floating border-0" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #dd4b39" href="#!" role="button"><i
+              class="fab fa-google"></i></a>
 
           <!-- Instagram -->
-          <a class="btn btn-primary btn-floating border-0 " style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-primary btn-floating border-0 " style="background-color: #ac2bac" href="#!" role="button"><i
+              class="fab fa-instagram"></i></a>
 
           <!-- Linkedin -->
-          <a class="btn btn-primary btn-floating border-0" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin"></i></a>
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #0082ca" href="#!" role="button"><i
+              class="fab fa-linkedin"></i></a>
           <!-- Github -->
-          <a class="btn btn-primary btn-floating border-0" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+          <a class="btn btn-primary btn-floating border-0" style="background-color: #333333" href="#!" role="button"><i
+              class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
-  
+
 
 
     <div class="text-lg-start p-3 fbottom" style="background-color: rgba(0, 0, 0, 0.2)">
