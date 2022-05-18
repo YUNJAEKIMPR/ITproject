@@ -26,7 +26,7 @@
     <!--Webpage header-->
     <div class="Gname">
       <!--Web name-->
-      <a href="Homepage.html" class="text-decoration-none">
+      <a href="webMain.html" class="text-decoration-none">
         <!--Bootstrap class to remove text underline for <a> -->
         <h1 class="d-none d-lg-block">Cook For You</h1>
       </a>
@@ -43,8 +43,9 @@
 
     <div class="join">
       <!--create modal which is a pop up box-->
+      <!-- 1st modal page-->
       <div id="sign-up" class="modal fade" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Sign up</h5>
@@ -70,9 +71,10 @@
                 <label for="psw"><b>Confirm Password</b></label>
                 <input type="password" placeholder="Confirm Password" name="cpsw" required>
 
-                <button type="submit" class="submit">Join now!</button>
+                <button type="submit" class="submit" data-bs-toggle="modal" data-bs-target="#Preferences"
+                  data-bs-dismiss="modal">Continue</button>
                 <label class="alacc">
-                  <p>Already have an account? <a href="#" style="text-decoration: underline;">Login!</a></p>
+                  <p>Already have an account? <a href="Login.html" style="text-decoration: underline;">Login!</a></p>
                 </label>
               </div>
             </div>
@@ -82,7 +84,123 @@
           </div>
         </div>
       </div>
+      <!--2nd modal page-->
+      <div class="modal fade" id="Preferences">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5>Please choose your preferences</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="Questions">
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      Are you on any diet?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Choose diet
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Paleo Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Vegan Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Low-carb Diet</a></li>
+                        <li><a class="dropdown-item" href="#">Dukan diet</a></li>
+                        <li><a class="dropdown-item" href="#">ultra-low-fat diet</a></li>
+                        <li><a class="dropdown-item" href="#">Atkins diet</a></li>
+                        <li><a class="dropdown-item" href="#">Hcg diet</a></li>
+                        <li><a class="dropdown-item" href="#">zone diet</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      what type of cuisine?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        choose cuisine
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      any specific flavors?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle " style="width: 160px ;" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        choose flavor
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Sweet</a></li>
+                        <li><a class="dropdown-item" href="#">Sour</a></li>
+                        <li><a class="dropdown-item" href="#">Salty</a></li>
+                        <li><a class="dropdown-item" href="#">Bitter</a></li>
+                        <li><a class="dropdown-item" href="#">Savory</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="px-3 text-center">
+                      Any allergies?
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" style="width: 160px;" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        choose allergy
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Eggs</a></li>
+                        <li><a class="dropdown-item" href="#">Fish </a></li>
+                        <li><a class="dropdown-item" href="#">Milk</a></li>
+                        <li><a class="dropdown-item" href="#">Peanuts</a></li>
+                        <li><a class="dropdown-item" href="#">shellfish</a></li>
+                        <li><a class="dropdown-item" href="#">soy</a></li>
+                        <li><a class="dropdown-item" href="#">tree nuts</a></li>
+                        <li><a class="dropdown-item" href="#">wheats</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <button type="submit" class="submit">Join now!</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
 
     <br>
 
@@ -155,7 +273,7 @@
                 <div class="col-6">
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose mood
+                      choose mood
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       <li><a class="dropdown-item" href="#">😁 Very Happy</a></li>
@@ -170,13 +288,13 @@
               <div class="row">
                 <div class="col-6">
                   <div class="px-3 text-center">
-                    type of food
+                    what are you craving?
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose type
+                      choose type
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       <li><a class="dropdown-item" href="#">option 1</a></li>
@@ -190,19 +308,19 @@
               <div class="row">
                 <div class="col-6">
                   <div class="px-3 text-center">
-                    cuisine
+                    what type of cuisine?
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" style="width: 160px ;" type="button" id="dropdownMenuButton1"
                       data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose cuisine
+                      choose cuisine
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">🍔 Fast food</a></li>
-                      <li><a class="dropdown-item" href="#">🥗 Healthy</a></li>
-                      <li><a class="dropdown-item" href="#">🍨 Dessert</a></li>
+                      <li><a class="dropdown-item" href="#">Option 1</a></li>
+                      <li><a class="dropdown-item" href="#">Option 2</a></li>
+                      <li><a class="dropdown-item" href="#">Option 3</a></li>
                     </ul>
                   </div>
                 </div>
@@ -211,14 +329,14 @@
               <div class="row">
                 <div class="col-6">
                   <div class="px-3 text-center">
-                    flavor
+                    any specific flavors?
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle " style="width: 160px ;" type="button" id="dropdownMenuButton1"
                       data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose flavor
+                      choose flavor
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       <li><a class="dropdown-item" href="#">Sweet</a></li>
@@ -234,19 +352,25 @@
               <div class="row">
                 <div class="col-6">
                   <div class="px-3 text-center">
-                    are you on a diet?
+                    are you on any diet?
                   </div>
                 </div>
                 <div class="col-6">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                      value="option1">
-                    <label class="form-check-label" for="inlineRadio1">keto</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                      value="option2">
-                    <label class="form-check-label" for="inlineRadio2">vegiterian</label>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle " style="width: 160px ;" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      choose diet
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Paleo Diet</a></li>
+                      <li><a class="dropdown-item" href="#">Vegan Diet</a></li>
+                      <li><a class="dropdown-item" href="#">Low-carb Diet</a></li>
+                      <li><a class="dropdown-item" href="#">Dukan diet</a></li>
+                      <li><a class="dropdown-item" href="#">ultra-low-fat diet</a></li>
+                      <li><a class="dropdown-item" href="#">Atkins diet</a></li>
+                      <li><a class="dropdown-item" href="#">Hcg diet</a></li>
+                      <li><a class="dropdown-item" href="#">zone diet</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -258,7 +382,22 @@
                   </div>
                 </div>
                 <div class="col-6">
-                  <textarea class="form-control" style="width: 180px;" placeholder="insert text"></textarea>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" style="width: 160px;" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      choose allergy
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Eggs</a></li>
+                      <li><a class="dropdown-item" href="#">Fish </a></li>
+                      <li><a class="dropdown-item" href="#">Milk</a></li>
+                      <li><a class="dropdown-item" href="#">Peanuts</a></li>
+                      <li><a class="dropdown-item" href="#">shellfish</a></li>
+                      <li><a class="dropdown-item" href="#">soy</a></li>
+                      <li><a class="dropdown-item" href="#">tree nuts</a></li>
+                      <li><a class="dropdown-item" href="#">wheats</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <br>

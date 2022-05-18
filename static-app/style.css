@@ -606,13 +606,14 @@ input[type=password] {
 }
 
 .sidebar {
-    flex: 30%;
+    flex: 35%;
     padding: 50px;
     color: var(--secondary-color);
 }
 
+
 .main {
-    flex: 70%;
+    flex: 65%;
     padding: 50px;
     color: var(--secondary-color);
 }
@@ -809,3 +810,26 @@ form .btn {
 .expand-menu.animate {
     width: 100%;
 }
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .3em;
+    vertical-align: middle;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    float: right;
+    margin-top: 8px;
+}
+
+.articles {
+    box-shadow: 5px 5px 5px var(--tertiary-color);
+}
+
+.articles:hover {
+    opacity: 1;
+}
+
