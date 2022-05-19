@@ -105,8 +105,12 @@ const ProfilePage = () => {
                       </div>
                     </div>
                     <div className="col-6 mt-4">
-                      <h5 className="my-3">Recipe Name</h5>
-                      <p className="text-muted mb-1">Description</p>
+                      <h5 className="my-3">How to make butter chicken rice</h5>
+                      <p className="text-muted mb-1">
+                        Spicy and creamy 30-minute butter chicken with basmati
+                        rice and quick stove-top naan. This tasty meal will add
+                        spice and flavor to your lunch routine!
+                      </p>
                     </div>
                   </div>
                 </div>

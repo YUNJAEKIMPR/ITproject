@@ -106,7 +106,7 @@ const RecipeDialog = (props) => {
                       <div className="col-sm-8">
                         <div className="card">
                           <div className="card-body">
-                            This is some text within a card body.
+                            <strong>Yunjae:</strong> hello
                           </div>
                         </div>
                       </div>
@@ -116,7 +116,7 @@ const RecipeDialog = (props) => {
                       <div className="col-sm-8">
                         <div className="card">
                           <div className="card-body">
-                            This is some text within a card body.
+                            <strong>Long:</strong> very good
                           </div>
                         </div>
                       </div>
@@ -127,7 +127,7 @@ const RecipeDialog = (props) => {
                       <div className="col-sm-8">
                         <div className="card">
                           <div className="card-body">
-                            This is some text within a card body.
+                            <strong>Leon:</strong> cool!!!!
                           </div>
                         </div>
                       </div>

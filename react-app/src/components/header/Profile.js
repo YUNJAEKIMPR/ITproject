@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 
 import AuthContext from "../../context/auth-context";
+import NavContext from "../../context/nav-context";
 
 import moon from "../../images/moon.png";
 import avatar from "../../images/avatar.jpg";
 
 const Profile = () => {
-  const context = useContext(AuthContext);
+  const authContext = useContext(AuthContext);
+  const navContext = useContext(NavContext);
 
   return (
     <div className="Right">
@@ -24,10 +26,10 @@ const Profile = () => {
           alt="avatar"
           className="rounded-circle img-fluid  border border-dark"
           style={{ width: "40px", height: "40px" }}
-          onClick={context.onGoToProfile}
+          onClick={navContext.onGoToProfile}
         />
       </div>
-      <button className="logout" onClick={context.onLogout}>
+      <button className="logout" onClick={authContext.onLogout}>
         Logout
       </button>
     </div>
