@@ -49,3 +49,7 @@ We had similar career plans at the beginning of the semester, though not the sam
 ## Prototype
 
 ![diagram](docs/diagram.png)
+
+## Outcome
+
+![outcome](docs/outcome.png)
