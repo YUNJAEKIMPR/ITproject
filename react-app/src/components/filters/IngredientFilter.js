@@ -66,17 +66,27 @@ function IngredientFilter() {
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
                 <a className="dropdown-item" href="#0">
-                  option 1
+                  fast food
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#0">
-                  option 2
+                  fresh
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#0">
-                  option 3
+                  pastry
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#0">
+                  rice
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#0">
+                  dessert
                 </a>
               </li>
             </ul>
@@ -103,17 +113,17 @@ function IngredientFilter() {
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
                 <a className="dropdown-item" href="#0">
-                  🍔 Fast food
+                  Vietnamese
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#0">
-                  🥗 Healthy
+                  Western
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#0">
-                  🍨 Dessert
+                  International
                 </a>
               </li>
             </ul>
