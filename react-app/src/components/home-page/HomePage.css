@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 35%;
+  padding: 50px;
+  color: var(--secondary-color);
+}
+
+.main {
+  flex: 65%;
+  padding: 50px;
+  color: var(--secondary-color);
+}

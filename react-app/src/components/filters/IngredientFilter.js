@@ -170,7 +170,7 @@ function IngredientFilter() {
       <br />
       <div className="row">
         <div className="col-6">
-          <div className="px-3 text-center">How do you feel today?</div>
+          <div className="px-3 text-center">Are you on the diet?</div>
         </div>
         <div className="col-6">
           <div className="form-check form-check-inline">

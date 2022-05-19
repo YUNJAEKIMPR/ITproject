@@ -1,6 +1,9 @@
+import React, { useContext } from "react";
+import NavContext from "../../context/nav-context";
 import "./Navbar.css";
 
 function Navbar() {
+  const navContext = useContext(NavContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-light nav">
       <div className="container-fluid">
@@ -18,17 +21,30 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#0">
+              <a
+                className="nav-link"
+                aria-current="page"
+                href="#0"
+                onClick={navContext.onGoToGrocery}
+              >
                 Grocery
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#0">
-                Articles
+              <a
+                className="nav-link"
+                href="#0"
+                onClick={navContext.onGoToRecipes}
+              >
+                Recipes
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#0">
+              <a
+                className="nav-link"
+                href="#0"
+                onClick={navContext.onGoToAboutUs}
+              >
                 About Us
               </a>
             </li>
